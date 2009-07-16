@@ -1,0 +1,1222 @@
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass extbook
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\language portuguese
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Manual de Python
+\end_layout
+
+\begin_layout Author
+Francisco Silva, Tiago Dinis
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introdução
+\end_layout
+
+\begin_layout Standard
+Este manual foi escrito no intuito de apoiar os projectos por nós dirigidos
+ na Escola de Verão de Física, visto que ambos passam por aprender o básico
+ sobre Python - uma linguagem de programação simples e fácil de aprender.
+ 
+\end_layout
+
+\begin_layout Standard
+Mas, porquê escrever mais um manual de Python? É verdade que na internet
+ se encontram vários manuais de python, mas o problema é que esses manuais
+ ora estão em inglês ora são demasiado avançados ora estão centrados em
+ aspectos que não nos interessam...
+ E é por isso que nós nos juntamos para escrever um pequeno manual onde
+ explicamos aquilo que necessitamos da forma como queremos.
+ No fim da escola os alunos poderão guardar este manual como referência
+ caso queiram brincar um pouco mais com o Python.
+ 
+\end_layout
+
+\begin_layout Standard
+Este manual não pretende ser completo.
+ Caso se interessem por aprende mais podem começar por [link].
+\end_layout
+
+\begin_layout Section
+O que é simulação
+\end_layout
+
+\begin_layout Standard
+Suponhamos que estamos interessados em construir um carro que seja seguro.
+ Precisamos então de testar o comportamento do carro em vários tipos de
+ acidentes.
+ O modo mais directo de testar a sua segurança seria realizar uma colisão
+ real, ou seja, metemo-nos no carro aceleramos e chocamos contra um obstáculo.
+ Este método é incómodo pois só podemos fazer a experiência uma vez e nem
+ podemos analisar os resultados.
+\end_layout
+
+\begin_layout Standard
+E se no lugar de pessoas usássemos bonecos, os quais simulariam o condutor
+ e os passageiros? É certamente melhor para a nosssa integridade, e é uma
+ das técnicas que usam os fabricantes de automóveis.
+ 
+\end_layout
+
+\begin_layout Standard
+Mesmo assim temos um problema, para cada simulação precisamos dum carro,
+ o que fica extremamente caro.
+ Outra opção seria simular a situação dentro dum computador, poupando carros
+ e bonecos.
+ A ideia é o computador calcular todas as forças, velocidades e posições
+ do carro e dos passageiros ao longo do acidente, estimando no fim o dano
+ causado nos vários passageiros.
+ Podemos assim simular acidentes de forma muito mais barata e rápida e em
+ inúmeras situações diferentes.
+ 
+\end_layout
+
+\begin_layout Standard
+Claro que a simulação, em geral, é menos fidedigna que embater directamente
+ com um carro num obstáculo.
+ Por isso, usa-se as duas técnicas complementarmente - começa-se por se
+ simular no computador e numa fase mais avançada usa-se um protótipo.
+\end_layout
+
+\begin_layout Standard
+Note-se que há imensas situações as quais só se podem estudar por simulação
+ computacional - por exemplo a simulação da origem do universo ou nano-engrenage
+ns, até agora impossíveis de fabricar.
+\end_layout
+
+\begin_layout Section
+Linguagens de programação
+\end_layout
+
+\begin_layout Standard
+Claro que para dar as ordens ao computador precisamos de saber comunicar
+ com ele.
+ Ou seja, de usar uma linguagem que ele compreenda e existem muitos tipo
+ de linguagens:
+\end_layout
+
+\begin_layout Standard
+[Chico preenche isto que tu sabes mais]
+\end_layout
+
+\begin_layout Section
+Porquê Python
+\end_layout
+
+\begin_layout Standard
+O Python foi lançado por Guido van Rossum em 1991.
+ É uma linguagem que tem várias vantagens:
+\end_layout
+
+\begin_layout Itemize
+A sintaxe é clara, encorajando a legibilidade do código o que o torna mais
+ fácil de manter e reutilizar.
+\end_layout
+
+\begin_layout Itemize
+É uma linguagem simples e concisa tornando-a uma linguagem simples de usar
+ e de ler.
+\end_layout
+
+\begin_layout Itemize
+Não precisa de ser compilada.
+\end_layout
+
+\begin_layout Itemize
+Funciona em vários sistemas operativos.
+\end_layout
+
+\begin_layout Itemize
+Tem uma vasta biblioteca padrão, ou seja, praticamente tudo o que venhamos
+ a precisar está nessa biblioteca.
+\end_layout
+
+\begin_layout Standard
+Claro que outras linguagens têm outras vantagens e cada uma terá um domínio
+ onde é mais adequada.
+\end_layout
+
+\begin_layout Chapter
+Rudimentos de Python
+\end_layout
+
+\begin_layout Standard
+Neste capítulo vamos aprender a usar o básico do Python, com ele o aluno
+ será capaz de fazer vários programas, simples mas poderosos.
+ Supomos que o aluno usa Linux, as diferenças para outros sistemas operativos
+ (Windows, MacOSX...) não são significativas.
+ [pensar num apêndice]
+\end_layout
+
+\begin_layout Section
+Interpretador e Operações Básicas
+\end_layout
+
+\begin_layout Standard
+O método mais simples de trabalhar com Python é através do interpretador.
+ Este pode ser usado por várias maneiras: na linha de comandos, pelo internet
+ [], por interfaces gráficas próprias [] ou até dentro doutros programas.
+ Na Escola de Física será usado na linha de comandos.
+ Para abrir o interpretador, introduz-se 
+\emph on
+python
+\emph default
+ na linha de comandos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename consola.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O conceito do interpretador é simples, dá-se uma ordem e ele executa-a.
+ Para sair do interpretador escreve-se 
+\emph on
+exit()
+\emph default
+ ou prime-se Control-d.
+ 
+\end_layout
+
+\begin_layout Standard
+Comecemos por usar o interpretador como uma calculadora.
+ As operações elementares da álgebra:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Operação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Símbolo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Adição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Subtracção
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplicação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Divisão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+/
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exponenciação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+**
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note-se que a última só faz sentido entre números inteiros.
+\end_layout
+
+\begin_layout Subsection*
+Exercícios
+\end_layout
+
+\begin_layout Enumerate
+Calcule 
+\begin_inset Formula $4.5\times3.14+3.4^{2.1}$
+\end_inset
+
+.
+ Reparem que o Python usa um ponto como separador décimal.
+\end_layout
+
+\begin_layout Enumerate
+Quanto vale 
+\begin_inset Formula $3/2$
+\end_inset
+
+? E 
+\begin_inset Formula $3.01/2$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Quanto falta a 
+\begin_inset Formula $2354785$
+\end_inset
+
+ para ser um múltiplo de 
+\begin_inset Formula $7$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Section
+Variáveis
+\end_layout
+
+\begin_layout Subsection
+Variáveis numéricas
+\end_layout
+
+\begin_layout Standard
+Em Python existem três tipos principais de variáveis numéricas:
+\end_layout
+
+\begin_layout Itemize
+Os números inteiros, por exemplo 
+\begin_inset Formula $n=3$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Os números reais, por exemplo 
+\begin_inset Formula $x=-3.14$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+E os números complexos, como por exemplo 
+\begin_inset Formula $z=3.2+1j$
+\end_inset
+
+.
+ Notem que o Python usa 
+\begin_inset Formula $j$
+\end_inset
+
+, e não 
+\begin_inset Formula $i$
+\end_inset
+
+ como é habitual.
+\end_layout
+
+\begin_layout Standard
+Se não houver separador décimal o Python assume que o número é inteiro.
+ Isto pode trazer problemas nas divisões, por exemplo 
+\begin_inset Formula $1/2=0$
+\end_inset
+
+, mas 
+\begin_inset Formula $1./2.=0.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Quando se escreve 
+\begin_inset Formula $n=3$
+\end_inset
+
+ está-se a guardar o valor 
+\begin_inset Formula $3$
+\end_inset
+
+ em 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Vejamos o exemplo seguinte:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename atribuir.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O que acontece: 
+\end_layout
+
+\begin_layout Enumerate
+Na primeira linha guardamos o valor 
+\begin_inset Formula $3$
+\end_inset
+
+ na variável 
+\begin_inset Formula $n$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Na segunda guardamos o valor 
+\begin_inset Formula $5$
+\end_inset
+
+ em 
+\begin_inset Formula $m$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Na terceira linha estamos a copiar o valor da variável 
+\begin_inset Formula $n$
+\end_inset
+
+ (que neste caso é 
+\begin_inset Formula $3$
+\end_inset
+
+) para a variável 
+\begin_inset Formula $m$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Por fim perguntamos o valor de 
+\begin_inset Formula $m$
+\end_inset
+
+ ao computador.
+\end_layout
+
+\begin_layout Subsection*
+Exercício
+\end_layout
+
+\begin_layout Enumerate
+Se num quinto passo atribuirmos o valor 
+\begin_inset Formula $7$
+\end_inset
+
+ a 
+\begin_inset Formula $n$
+\end_inset
+
+, quanto vale agora 
+\begin_inset Formula $m$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Subsection
+Cadeias de caracteres
+\end_layout
+
+\begin_layout Standard
+Mas nem todas as variáveis são números, podemos também definir cadeias de
+ caracteres.
+ As cadeias de caracteres são delimitadas por 
+\begin_inset Quotes eld
+\end_inset
+
+ 
+\begin_inset Quotes erd
+\end_inset
+
+ ou por 
+\begin_inset Quotes els
+\end_inset
+
+ 
+\begin_inset Quotes ers
+\end_inset
+
+, vejamos um exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename string.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nem todos os caracteres se podem usar em cadeias de caracteres, por vezes
+ é preciso usar certos atalhos, por exemplo paradar uma nova linha usa-se
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+n
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As cadeias de caracteres são estruturas rígidas, ou seja, não se podem alterar.
+ Mas em contrapartida pode-se aceder a apenas parte da cadeia:
+\end_layout
+
+\begin_layout Itemize
+a[i] acede ao i-ésimo caracter, por exemplo a[4] é igual a 
+\begin_inset Quotes eld
+\end_inset
+
+v
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Note-se que a numeração dos caracteres começa pelo 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+a[:j] acede a todos os caracteres até à posição j, j não incluído, por exemplo
+ a[:8] é igual 
+\begin_inset Quotes eld
+\end_inset
+
+As aves 
+\begin_inset Quotes eld
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+a[i:] é igual ao anterior mas acedendo a todos os números após i, i incluído.
+\end_layout
+
+\begin_layout Itemize
+a[i:j] acede aos caracteres entre as posições i e j, por exemplo a[3:6]
+ é igual a 
+\begin_inset Quotes eld
+\end_inset
+
+ave
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De notar que o 
+\end_layout
+
+\begin_layout Standard
+Pode-se também juntar várias cadeias, usando um sinal de +, por exemplo
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Eu tenho uma
+\begin_inset Quotes erd
+\end_inset
+
++
+\begin_inset Quotes eld
+\end_inset
+
+ mesa.
+\begin_inset Quotes erd
+\end_inset
+
+ é igual a 
+\begin_inset Quotes eld
+\end_inset
+
+Eu tenho uma mesa.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exercícios
+\end_layout
+
+\begin_layout Enumerate
+Crie uma variável com o valor 
+\begin_inset Quotes eld
+\end_inset
+
+Das uvas se faz o vinho!
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Modifique a variável para 
+\begin_inset Quotes eld
+\end_inset
+
+Das macas se faz a cidra!
+\begin_inset Quotes erd
+\end_inset
+
+.
+ É possível pôr cedilhas e acentos nas palavras, mas nós vamos evitá-los.
+\end_layout
+
+\begin_layout Subsection
+Listas
+\end_layout
+
+\begin_layout Standard
+No contexto de variáveis a última coisa que nós vamos introduzir são as
+ listas.
+ Uma lista de objectos escreve-se entre parentesis rectos, por exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename lista.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como podem ver as listas são mais fléxiveis que as cadeias, por isso a sua
+ importância.
+ Vejamos algumas das operações que podemos realizar com elas:
+\end_layout
+
+\begin_layout Itemize
+A.append(X) acrescenta o elemento X ao fim da lista A.
+\end_layout
+
+\begin_layout Itemize
+A.insert(I,X) acrescenta o elemento X na posição I da lista A.
+\end_layout
+
+\begin_layout Itemize
+A.extend(B) une a lista A com a lista B.
+ Vom a B após a A.
+\end_layout
+
+\begin_layout Itemize
+A.index(X) devolve a posição da primeira aparição do elemento X na lista
+ A.
+\end_layout
+
+\begin_layout Itemize
+A.remove(X) apaga o primeiro elemento X da lista A.
+\end_layout
+
+\begin_layout Itemize
+A+B devolve a união das listas A e B.
+\end_layout
+
+\begin_layout Itemize
+n*A devolve a lista A repetida n vezes.
+\end_layout
+
+\begin_layout Standard
+Vejamos um exemplo:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename lista_op.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exercícios
+\end_layout
+
+\begin_layout Enumerate
+Crie duas listas, digamos A e B, e calcule A.append(B), o que é que acontece?
+\end_layout
+
+\begin_layout Enumerate
+Crie uma lista com todos os números inteiros ordenados entre 1 e 50.
+ Dica experimente o que acontece se fizer range(10).
+\end_layout
+
+\begin_layout Section
+Ficheiros Python (refazer)
+\end_layout
+
+\begin_layout Standard
+Imaginem que estamos a fazer um cálculo e ao final de 30 min reparamos que
+ nos enganamos.
+ Ora temos que repetir quase tudo.
+ Mas existe uma solução que é escrever num ficheiro as ordens, a que nós
+ chamamos normalmente de código, que nós queremos que o computador siga.
+\end_layout
+
+\begin_layout Standard
+Começamos por abrir um editor de texto qualquer (por exemplo o Gedit), escrevemo
+s
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gedit.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gravamos o ficheiro, por exemplo com o nome primeiro.py (o .py serve para
+ identificar os ficheiros de Python), e por fim corremos o python com o
+ ficheiro usando o comando python primeiro.py.
+\end_layout
+
+\begin_layout Standard
+Vamos analisar o programa:
+\end_layout
+
+\begin_layout Itemize
+#coding=utf8 permite usar caracteres acentuados e o ç.
+\end_layout
+
+\begin_layout Itemize
+frase=
+\begin_inset Quotes erd
+\end_inset
+
+Este é o meu primeiro programa.
+\begin_inset Quotes erd
+\end_inset
+
+ cria uma cadeia de caracteres.
+\end_layout
+
+\begin_layout Itemize
+#, a partir deste símbolo e até mudar de linha o python ignora, serve então
+ para escrever comentários.
+\end_layout
+
+\begin_layout Itemize
+print frase vai imprimir (ou escrever) o valor da variável frase na linha
+ de comandos.
+\end_layout
+
+\begin_layout Standard
+O código deve ser limpo, bem organizado e muito bem comentado.
+ Senão, ninguém será capaz de perceber o que vocês estão a fazer nem mesmo
+ vocês daqui a uma semana.
+ 
+\end_layout
+
+\begin_layout Section
+Funções
+\end_layout
+
+\begin_layout Subsection
+Print
+\end_layout
+
+\begin_layout Subsection
+Input
+\end_layout
+
+\begin_layout Subsection
+Definir funções
+\end_layout
+
+\begin_layout Subsection
+Usar funções
+\end_layout
+
+\begin_layout Section
+If e ciclos
+\end_layout
+
+\begin_layout Section
+Exercícios hiper-difíceis
+\end_layout
+
+\begin_layout Chapter
+Pitão mega-avançado
+\end_layout
+
+\begin_layout Section
+Bibliotecas
+\end_layout
+
+\begin_layout Subsection
+math
+\end_layout
+
+\begin_layout Subsection
+pylab
+\end_layout
+
+\begin_layout Section
+Gráficos
+\end_layout
+
+\begin_layout Section
+Exercícios tera-difíceis
+\end_layout
+
+\begin_layout Chapter
+Soluções
+\end_layout
+
+\begin_layout Section
+Soluções do capítulo 2
+\end_layout
+
+\begin_layout Section
+Soluções do capítulo 3
+\end_layout
+
+\begin_layout Chapter
+Problema do bêbado
+\end_layout
+
+\begin_layout Chapter
+Problema da moeda
+\end_layout
+
+\end_body
+\end_document

@@ -9,6 +9,10 @@
 \usepackage{textcomp}
 \usepackage{setspace}
 \usepackage{palatino}
+
+\theoremstyle{plain}
+\newtheorem{ex}{Exercício}[chapter]
+
 \renewcommand{\lstlistlistingname}{Code Listings}
 \renewcommand{\lstlistingname}{Code Listing}
 \definecolor{gray}{gray}{0.5}
@@ -83,7 +87,19 @@ theorems-ams
 \float_placement h
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_title "Manual de Python"
+\pdf_author "Tiago Fonseca, Francisco Silva"
+\pdf_subject "Python"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry false
 \use_amsmath 1
@@ -99,6 +115,7 @@ theorems-ams
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\bullet 1 0 9 -1
 \tracking_changes false
 \output_changes false
 \author "" 
@@ -537,20 +554,53 @@ end{center}
 Note-se que a última só faz sentido entre números inteiros.
 \end_layout
 
-\begin_layout Subsection*
-Exercícios
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
 Calcule 
 \begin_inset Formula $4.5\times3.14+3.4^{2.1}$
 \end_inset
 
 .
  Reparem que o Python usa um ponto como separador décimal.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
 Quanto vale 
 \begin_inset Formula $3/2$
 \end_inset
@@ -560,9 +610,34 @@ Quanto vale
 \end_inset
 
 ?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
 Quanto falta a 
 \begin_inset Formula $2354785$
 \end_inset
@@ -572,6 +647,19 @@ Quanto falta a
 \end_inset
 
 ?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -743,11 +831,19 @@ Por fim perguntamos o valor de
  ao computador.
 \end_layout
 
-\begin_layout Subsection*
-Exercício
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
 Se num quinto passo atribuirmos o valor 
 \begin_inset Formula $7$
 \end_inset
@@ -761,6 +857,19 @@ Se num quinto passo atribuirmos o valor
 \end_inset
 
 ?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -929,14 +1038,38 @@ Eu tenho uma mesa.
 \begin_inset Quotes erd
 \end_inset
 
+ Ou multiplicar uma cadeia por um número natural: 2*
+\begin_inset Quotes erd
+\end_inset
 
+po
+\begin_inset Quotes erd
+\end_inset
+
+ é igual a 
+\begin_inset Quotes eld
+\end_inset
+
+popo
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Subsection*
-Exercícios
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
 Crie uma variável com o valor 
 \begin_inset Quotes eld
 \end_inset
@@ -946,9 +1079,34 @@ Das uvas se faz o vinho!
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
 Modifique a variável para 
 \begin_inset Quotes eld
 \end_inset
@@ -959,6 +1117,19 @@ Das macas se faz a cidra!
 
 .
  É possível pôr cedilhas e acentos nas palavras, mas nós vamos evitá-los.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1020,29 +1191,34 @@ Como podem ver as listas são mais fléxiveis que as cadeias, por isso a sua
 \end_layout
 
 \begin_layout Itemize
-A.append(X) acrescenta o elemento X ao fim da lista A.
+A.append(X) acrescenta o elemento X ao fim da lista A;
 \end_layout
 
 \begin_layout Itemize
-A.insert(I,X) acrescenta o elemento X na posição I da lista A.
+A.insert(I,X) acrescenta o elemento X na posição I da lista A;
 \end_layout
 
 \begin_layout Itemize
 A.extend(B) une a lista A com a lista B.
- Vom a B após a A.
+ Com a B após a A;
 \end_layout
 
 \begin_layout Itemize
 A.index(X) devolve a posição da primeira aparição do elemento X na lista
- A.
+ A;
 \end_layout
 
 \begin_layout Itemize
-A.remove(X) apaga o primeiro elemento X da lista A.
+A.remove(X) apaga o primeiro elemento X da lista A;
 \end_layout
 
 \begin_layout Itemize
-A+B devolve a união das listas A e B.
+len(A) calcula o comprimento da lista A, ou seja, o número de elementos
+ que a lista A contém;
+\end_layout
+
+\begin_layout Itemize
+A+B devolve a união das listas A e B;
 \end_layout
 
 \begin_layout Itemize
@@ -1092,17 +1268,63 @@ end{center}
 
 \end_layout
 
-\begin_layout Subsection*
-Exercícios
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
 Crie duas listas, digamos A e B, e calcule A.append(B), o que é que acontece?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
 Crie uma lista com todos os números inteiros ordenados entre 1 e 50.
  Dica experimente o que acontece se fizer range(10).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1143,7 +1365,7 @@ begin{python}
 
 \begin_layout Plain Layout
 
-frase="Este é o meu primeiro programa|" #Isto é um comentário
+frase="Este é o meu primeiro programa!" #Isto é um comentário
 \end_layout
 
 \begin_layout Plain Layout
@@ -1210,52 +1432,3122 @@ O código deve ser limpo, bem organizado e muito bem comentado.
 Funções
 \end_layout
 
+\begin_layout Standard
+Imaginemos que queremos calcular o seno de 
+\begin_inset Formula $0.3$
+\end_inset
+
+, imprimir
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para nós imprimir significa que o nosso programa nos devolve algo, por exemplo
+ na linha de comandos, num ficheiro pdf ou em papel.
+\end_layout
+
+\end_inset
+
+ uma frase ou colocar uma lista em ordem alfabética.
+ Para efectuar estas tarefas vamos precisar de usar funções.
+\end_layout
+
 \begin_layout Subsection
 Print
+\end_layout
+
+\begin_layout Standard
+De nada nos vale fazer um programa se ele não comunica connosco.
+ A função print imprime aquilo que nós quisermos para a linha de comandos,
+ como podem ver no exemplo anterior.
+ Mas podemos fazer coisas mais complicadas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+n=5
+\end_layout
+
+\begin_layout Plain Layout
+
+print "Este é o meu primeiro cálculo:","
+\backslash
+n",n,"ao quadrado é",n**2
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O resultado é simples de interpretar:
+\end_layout
+
+\begin_layout Itemize
+Começamos por imprimir a frase: 
+\begin_inset Quotes eld
+\end_inset
+
+Este é o meu primeiro cálculo:
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Criamos uma nova linha com o 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+n
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Imprimimos o valor de n, lembrem-se que n vale 5;
+\end_layout
+
+\begin_layout Itemize
+Imprimimos 
+\begin_inset Quotes eld
+\end_inset
+
+ao quadrado é
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+E por fim, o programa devolve o valor de 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Crie um ficheiro que imprima a frase 
+\begin_inset Quotes eld
+\end_inset
+
+Se 
+\begin_inset Formula $n=3$
+\end_inset
+
+ e 
+\begin_inset Formula $m=2$
+\end_inset
+
+, então 
+\begin_inset Formula $n\times m=6$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, e onde seja fácil mudar os valores de 
+\begin_inset Formula $n$
+\end_inset
+
+ e 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Input
 \end_layout
 
+\begin_layout Standard
+Vamos ser audaciosos e construir um programa que peça valores ao utilizador:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+print "Eu sou um programa inteligente
+\backslash
+n" 
+\end_layout
+
+\begin_layout Plain Layout
+
+n=input("Escreve um número em que estejas a pensar:") 
+\end_layout
+
+\begin_layout Plain Layout
+
+print "
+\backslash
+nDepois de um esforço sobre-humano" 
+\end_layout
+
+\begin_layout Plain Layout
+
+print "descobri que estás a pensar no número",n
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A função input imprime um texto e fica à espera que o utilizador devolva
+ um número, uma lista, uma cadeia de caracteres...
+ escritos como se fosse no ficheiro, ou seja, no caso duma cadeia de caracteres
+ é preciso colocar as aspas.
+\end_layout
+
+\begin_layout Standard
+Existe uma outra versão que é
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+s=raw_input("Como é que te chamas?") 
+\end_layout
+
+\begin_layout Plain Layout
+
+print "O teu nome é",s
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta função faz exactamente a mesma coisa que input mas grava tudo o que
+ utilizador escrever em forma de cadeia de caracteres.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para inserir uma cadeia de caracteres não é preciso colocar aspas.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+[lembras-te daqueles joguinhos: pense num número, duplique some 10, bla
+ bla bla, estava a pensar nisso]
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Escreve um programa que dê uma lista com todos os números inteiros entre
+ dois valores definidos pelo utilizador.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transformar cadeias de caracteres em números e vice-versa
+\end_layout
+
+\begin_layout Standard
+Infelizmente o Python não consegue adivinhar quando nós queremos usar 
+\begin_inset Quotes eld
+\end_inset
+
+45
+\begin_inset Quotes erd
+\end_inset
+
+ como um número ou como uma cadeia de caracteres.
+ Felizmente podemos transformar uma na outra facilmente:
+\end_layout
+
+\begin_layout Itemize
+A função str() transforma um número ou uma lista numa cadeia de caracteres;
+\end_layout
+
+\begin_layout Itemize
+Enquanto que a função eval() faz a transformação inversa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Explique, passo por passo, o que acontece ao escrevermos:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+a=56
+\end_layout
+
+\begin_layout Plain Layout
+
+b=str(a)
+\end_layout
+
+\begin_layout Plain Layout
+
+c=2*b
+\end_layout
+
+\begin_layout Plain Layout
+
+d=eval(c)
+\end_layout
+
+\begin_layout Plain Layout
+
+print 2*d
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Definir funções
 \end_layout
 
+\begin_layout Standard
+Mas por vezes queremos usar funções que não estão já definidas, e então
+ temos de ser nós a defini-las.
+ Vejamos um exemplo:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+def soma(x,y):
+\end_layout
+
+\begin_layout Plain Layout
+
+  u=x+y
+\end_layout
+
+\begin_layout Plain Layout
+
+  return 2*u
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+g=3
+\end_layout
+
+\begin_layout Plain Layout
+
+h=2
+\end_layout
+
+\begin_layout Plain Layout
+
+print soma(g,h)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neste exemplo existem vários promenores importantes:
+\end_layout
+
+\begin_layout Itemize
+Uma função precisa dum nome, por exemplo, 
+\begin_inset Quotes eld
+\end_inset
+
+soma
+\begin_inset Quotes erd
+\end_inset
+
+, os nomes devem ser simples e explícitos;
+\end_layout
+
+\begin_layout Itemize
+Para definir uma função usa-se 
+\begin_inset Quotes eld
+\end_inset
+
+def função(variáveis):
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Pode haver quantas variáveis nós queiramos, de notar que os nomes que usamos
+ aqui só servem para a definição;
+\end_layout
+
+\begin_layout Itemize
+O python é uma linguagem de identação, ou seja, ele sabe que determinadas
+ ordens pertencem à função porque estão identadas;
+\end_layout
+
+\begin_layout Itemize
+Dentro da função podemos fazer o que quisermos;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+return
+\begin_inset Quotes erd
+\end_inset
+
+ devolve-nos o resultado da função, note-se que não é obrigatório haver
+ um resultado;
+\end_layout
+
+\begin_layout Itemize
+A função acaba quando o texto deixar de ser identado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Escreva um programa que nos devolva 
+\begin_inset Formula $n!$
+\end_inset
+
+.
+ Use o facto de se 
+\begin_inset Formula $n=1$
+\end_inset
+
+, 
+\begin_inset Formula $n!=1$
+\end_inset
+
+, escrito na linha: 
+\begin_inset Quotes eld
+\end_inset
+
+If n==1: return 1
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Controlo de fluxo
+\end_layout
+
+\begin_layout Standard
+Às vezes queremos que uma certa ordem seja realizada apenas se uma certa
+ condição é respeitada ou então queremos repetir uma acção umas tantas vezes.
+ A isso chamamos de controlo de fluxo.
+\end_layout
+
 \begin_layout Subsection
-Usar funções
+Condições
 \end_layout
 
-\begin_layout Section
-If e ciclos
+\begin_layout Standard
+Em linguagem corrente uma condição exprime-se 
+\begin_inset Quotes eld
+\end_inset
+
+Se chover eu não sairei de casa.
+\begin_inset Quotes erd
+\end_inset
+
+, ora em inglês 
+\begin_inset Quotes eld
+\end_inset
+
+se
+\begin_inset Quotes erd
+\end_inset
+
+ escreve-se 
+\begin_inset Quotes eld
+\end_inset
+
+if
+\begin_inset Quotes erd
+\end_inset
+
+, vejamos um exemplo:
 \end_layout
 
-\begin_layout Section
-Exercícios hiper-difíceis
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+n=input("Escreva um número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+if n==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "O número é nem positivo nem negativo"
+\end_layout
+
+\begin_layout Plain Layout
+
+elif n>0:
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "O número é positivo"
+\end_layout
+
+\begin_layout Plain Layout
+
+else:
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "O número é negativo"
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existe três comandos a ter em conta:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+If
+\begin_inset Quotes erd
+\end_inset
+
+ que significa 
+\begin_inset Quotes eld
+\end_inset
+
+se
+\begin_inset Quotes erd
+\end_inset
+
+, neste caso 
+\begin_inset Quotes eld
+\end_inset
+
+se n=0
+\begin_inset Quotes erd
+\end_inset
+
+ ele cumpre as ordens que aparecem em baixo identadas;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+elif
+\begin_inset Quotes erd
+\end_inset
+
+ significa 
+\begin_inset Quotes eld
+\end_inset
+
+senão se
+\begin_inset Quotes erd
+\end_inset
+
+, ou seja, se as condições que a precedem não forem respeitadas ela aplica
+ mais uma condição;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+else
+\begin_inset Quotes erd
+\end_inset
+
+ significa 
+\begin_inset Quotes eld
+\end_inset
+
+senão
+\begin_inset Quotes erd
+\end_inset
+
+ e significa que se nenhuma das condições anteriores for respeitada ela
+ cumpre as ordens que aparecem identadas em baixo.
+\end_layout
+
+\begin_layout Standard
+As condições podem ser escritas usando os símbolos apresentados na tabela:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+símbolo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+significado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $==$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+igual
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<>$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+diferente
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $>$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maior
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+menor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $>=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maior ou igual
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+menor ou igual
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos ainda combinar várias condições usando 
+\begin_inset Quotes eld
+\end_inset
+
+and
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+or
+\begin_inset Quotes erd
+\end_inset
+
+ e 
+\begin_inset Quotes eld
+\end_inset
+
+not
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Em português 
+\begin_inset Quotes eld
+\end_inset
+
+e
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+ou
+\begin_inset Quotes erd
+\end_inset
+
+ e 
+\begin_inset Quotes eld
+\end_inset
+
+não
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+, por exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+n=input("Escreva um número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+m=input("E um segundo número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if n>0 and m>0:
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "São ambos positivos."
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if (n>0 or m>0) and not (n>0 and m>0):
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "Um e só um é positivo."
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No primeiro exemplo temos que 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $n>0$
+\end_inset
+
+ e 
+\begin_inset Formula $m>0$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, enquanto que o segundo exemplo lê-se 
+\begin_inset Quotes eld
+\end_inset
+
+um ou outro
+\begin_inset Quotes erd
+\end_inset
+
+ e não 
+\begin_inset Quotes eld
+\end_inset
+
+um e outro
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Crie um programa que verifique se certo número é par ou impar.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Dado um determinado par de números queremos que um e apenas um seja positivo.
+ Já damos um exemplo de como fazer isso, dê outros exemplos.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Repetições: para ..
+ em ..
+\end_layout
+
+\begin_layout Standard
+Temos uma operação e queremo-la repetir mil vezes, não vamos escrever a
+ ordem mil vezes.
+ Exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+n=input("Até que limite? ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(n):
+\end_layout
+
+\begin_layout Plain Layout
+
+  print 2*i
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este programa imprime o dobro de todos os inteiros entre 0 e n-1.
+ Vejamos passo por passo:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+for i in range(n)
+\begin_inset Quotes erd
+\end_inset
+
+, significa que para todo o elemento, ao qual damos o nome de 
+\begin_inset Quotes eld
+\end_inset
+
+i
+\begin_inset Quotes erd
+\end_inset
+
+, que está na lista 
+\begin_inset Quotes eld
+\end_inset
+
+range(n)
+\begin_inset Quotes erd
+\end_inset
+
+ efectuamos as ordens seguintes;
+\end_layout
+
+\begin_layout Itemize
+As ordens aparecem nas linhas em baixo e aparecem identadas, neste caso
+ imprimimos o dobro de cada elemento.
+\end_layout
+
+\begin_layout Standard
+Por vezes, queremos parar um ciclo 
+\begin_inset Quotes eld
+\end_inset
+
+for
+\begin_inset Quotes erd
+\end_inset
+
+ abruptamente, para isso usamos o comando 
+\begin_inset Quotes eld
+\end_inset
+
+break
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+n=input("Até que número? ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(n):   
+\end_layout
+
+\begin_layout Plain Layout
+
+  print 2*i   
+\end_layout
+
+\begin_layout Plain Layout
+
+  if i>=100:     
+\end_layout
+
+\begin_layout Plain Layout
+
+    print "Atingiu o limite"     
+\end_layout
+
+\begin_layout Plain Layout
+
+    break
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note que:
+\end_layout
+
+\begin_layout Itemize
+As operações dentro do ciclo 
+\begin_inset Quotes eld
+\end_inset
+
+if
+\begin_inset Quotes erd
+\end_inset
+
+ estão identadas em relação ao 
+\begin_inset Quotes eld
+\end_inset
+
+if
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+O 
+\begin_inset Quotes eld
+\end_inset
+
+break
+\begin_inset Quotes erd
+\end_inset
+
+ quebra o ciclo 
+\begin_inset Quotes eld
+\end_inset
+
+for
+\begin_inset Quotes erd
+\end_inset
+
+ imediatamente antes do 
+\begin_inset Quotes eld
+\end_inset
+
+if
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Crie uma lista de naipes (paus, ouros, copas e espadas) e uma lista de valores
+ de cartas (Ás, 2, 3, 4, 5, 6, 7, Valete, Dama e Rei) e imprima todas as
+ cartas do baralho português.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Verifique se determinado número é primo.
+ Use a função 
+\begin_inset Quotes eld
+\end_inset
+
+break
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Faça um programa que gere uma lista de números primos.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Repetições: enquanto ..
+\end_layout
+
+\begin_layout Standard
+Podemos também repetir uma ordem enquanto (while em inglês) algo aconteça,
+ por exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+n=0
+\end_layout
+
+\begin_layout Plain Layout
+
+while n<=0:
+\end_layout
+
+\begin_layout Plain Layout
+
+  n=input("Escreva um número positivo: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+print n
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O ciclo vai ser repetido até que 
+\begin_inset Formula $n$
+\end_inset
+
+ seja positivo.
+\end_layout
+
+\begin_layout Standard
+Opcialmente o ciclo pode ser acompanhado por um 
+\begin_inset Quotes eld
+\end_inset
+
+else
+\begin_inset Quotes erd
+\end_inset
+
+ que será realizado assim que a condição deixe de ser cumprida.
+ 
+\end_layout
+
+\begin_layout Standard
+À imagem do ciclo 
+\begin_inset Quotes eld
+\end_inset
+
+for
+\begin_inset Quotes erd
+\end_inset
+
+ podemos quebrar um ciclo usando o comando 
+\begin_inset Quotes eld
+\end_inset
+
+break
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Nesse caso o 
+\begin_inset Quotes eld
+\end_inset
+
+else
+\begin_inset Quotes erd
+\end_inset
+
+ não vai ser realizado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Queremos calcular a raiz quadrada de 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Um método um pouco estúpido é de pedir estimativas ao utilizador até que
+ ele se aproxime o suficiente.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Um outro método é usando o algorítmo: seja 
+\begin_inset Formula $r$
+\end_inset
+
+ uma estimativa da raiz quadrada, sabemos que 
+\begin_inset Formula $\frac{1}{2}(r+\frac{n}{r})$
+\end_inset
+
+ vai estar mais próximo da raiz.
+ Calcule a raiz quadrada com uma boa precisão.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
-Pitão mega-avançado
+Python mais avançado
+\end_layout
+
+\begin_layout Section
+Ajuda
+\end_layout
+
+\begin_layout Standard
+Mesmo depois de usar Python durante anos, não é suposto saber tudo sobre
+ ele.
+ Para isso existem manuais, a internet e a ajuda do python.
+ Num interpretador de Python escrevam 
+\begin_inset Quotes eld
+\end_inset
+
+help(pow)
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename help.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como podem ver, o Python informa-nos sobre o programa 
+\begin_inset Quotes eld
+\end_inset
+
+pow
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Ele pega em dois ou três argumentos e devolve-nos um número.
+ 
 \end_layout
 
 \begin_layout Section
 Bibliotecas
 \end_layout
 
-\begin_layout Subsection
-math
+\begin_layout Standard
+Experimentem escrever 
+\begin_inset Quotes eld
+\end_inset
+
+cos(2.1)
+\begin_inset Quotes erd
+\end_inset
+
+ no interpretador.
+ Em princípio o Python não reconhece a função.
+ Mas o Python pode ser extendido graças a bibliotecas que contém a definição
+ de algumas funções:
+\end_layout
+
+\begin_layout Itemize
+A biblioteca padrão adiciona várias funcionalidades ditas padrão ao Python.
+ Dentro desta biblioteca existem vários módulos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O módulo math onde estão definidas várias funções como o seno, a exponencial,
+ o logaritmo, a raiz quadrada entre outras (ver a ajuda do math) e também
+ duas constantes o 
+\begin_inset Formula $\pi$
+\end_inset
+
+ e a constante de euler 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ Veremos na secção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:mathmath"
+
+\end_inset
+
+ como utilizar este módulo.
+ Só para números reais;
+\end_layout
+
+\begin_layout Itemize
+O módulo cmath permite funcionalidade parecidas com o módulo math mas definidas
+ para números complexos;
+\end_layout
+
+\begin_layout Itemize
+O módulo random permite-nos usar números pseudo-aleatórios;
+\end_layout
+
+\begin_layout Itemize
+O módulo time permite várias operações com o tempo;
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+A biblioteca matplotlib que contém o módulo pylab que define várias rotinas
+ para desenhar gráficos, ver secção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:pylab"
+
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+numpy extende as potencialidades do Python, definindo vectores, matrizes
+ multi-dimensionais bem como funções que operam nesses objectos.
+ Existe ainda o scipy que o complementa;
+\end_layout
+
+\begin_layout Standard
+Para aceder a um módulo usamos o comando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#Primeiro importamos o módulo
+\end_layout
+
+\begin_layout Plain Layout
+
+import modulo
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Para usar uma função presente no módulo, escrevemos:
+\end_layout
+
+\begin_layout Plain Layout
+
+modulo.funcao(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ou então
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#Importamos uma função presente no módulo
+\end_layout
+
+\begin_layout Plain Layout
+
+from modulo import funcao
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Para usar essa função presente no módulo, escrevemos:
+\end_layout
+
+\begin_layout Plain Layout
+
+funcao(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A primeira importa todo o módulo ao início enquanto que a segunda apenas
+ importa uma função presente no módulo.
+ A escolha de um dos métodos depende da nossa intenção.
+ 
 \end_layout
 
 \begin_layout Subsection
-pylab
+O módulo math
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:mathmath"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um dos módulos que nós mais vamos usar é o math, dele fazem parte as seguintes
+ funções:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Função 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comando
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coseno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cos()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Seno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sin()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tangente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tan()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arco-coseno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+acos()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arco-seno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+asin()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arco-tangente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+atan()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exponencial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+exp()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logaritmo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+log()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Raiz Quadrada
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqrt()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Potência (
+\begin_inset Formula $x^{y}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pow(x,y)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor absoluto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fabs()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arredondamento por cima
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ceil()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arredondamento por baixo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+floor()
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Constante de Euler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+e
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pi
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Duas notas.
+ O seno, coseno e tangente usam radianos.
+ No caso dos logaritmo não nepariano usa-se log(,base)
+\end_layout
+
+\begin_layout Standard
+Vamos ver alguns exemplos de utilização:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+import math
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+print "O coseno de pi sobre 3 é:",math.cos(math.pi/3)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ou então
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+from math import pow, pi
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+print "A raiz cúbica de pi é:",pow(pi,1./3.)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Imprima uma tabela com o coseno entre 0 e 1.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+O módulo pylab 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:pylab"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O nosso próximo passo vai ser aprender a fazer gráficos.
+\end_layout
+
+\begin_layout Standard
+Vejamos um exemplo de utilização:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Criamos duas listas com os valores de x e de y
+\end_layout
+
+\begin_layout Plain Layout
+
+lista_X=[1,2,3,4,5,6,7,8,9,10]
+\end_layout
+
+\begin_layout Plain Layout
+
+lista_Y=[1,3,7,10,5,7,2,0,-2,0]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Criamos um gráfico com as duas listas
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(lista_X,lista_Y,"--g")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Damos-lhe o título de "O meu primeiro grafico!"
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title("O meu primeiro grafico!")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Gravamos o gráfico no ficheiro grafico.png
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.savefig("grafico")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Desenhamos o gráfico no ecrã
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.show()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O módulo pylab contém muitas funções já pré-definidas, dentro das quais
+ encontramos:
+\end_layout
+
+\begin_layout Itemize
+plot(X,Y,opções), desenha um gráfico com as abcissas X, as ordenadas Y.
+ Nas opções podemos definir o estilo, a cor, a espessura, o nome entre outras
+ propriedades da linha (ver a ajuda de pylab.plot).
+ De notar que ele desenha o gráfico na memória mas não o mostra nem grava
+ nenhum ficheiro.
+ Podemos desenhar várias linhas.;
+\end_layout
+
+\begin_layout Itemize
+show(), comando que usaremos quase sempre no fim do programa.
+ Ele mostra os gráficos que nós desenhamos;
+\end_layout
+
+\begin_layout Itemize
+savefig(
+\begin_inset Quotes eld
+\end_inset
+
+figura
+\begin_inset Quotes erd
+\end_inset
+
+), grava o ficheiro em formato png com o nome figura.png;
+\end_layout
+
+\begin_layout Itemize
+title(
+\begin_inset Quotes eld
+\end_inset
+
+Titulo giro
+\begin_inset Quotes erd
+\end_inset
+
+), dá ao gráfico o título: 
+\begin_inset Quotes eld
+\end_inset
+
+Titulo giro
+\begin_inset Quotes erd
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Itemize
+xlabel(
+\begin_inset Quotes eld
+\end_inset
+
+x_nome
+\begin_inset Quotes erd
+\end_inset
+
+), dá um nome ao eixo das abcissas;
+\end_layout
+
+\begin_layout Itemize
+ylabel(
+\begin_inset Quotes eld
+\end_inset
+
+y_name
+\begin_inset Quotes erd
+\end_inset
+
+), o equivalente para o eixo das ordenadas;
+\end_layout
+
+\begin_layout Itemize
+axis([x_min,x_max,y_min,y_max]), define o tamanho dos eixos, permite outras
+ opções como 
+\begin_inset Quotes eld
+\end_inset
+
+auto
+\begin_inset Quotes erd
+\end_inset
+
+ que permite ao python de escolher os intervalos;
+\end_layout
+
+\begin_layout Itemize
+xlim(), o mesmo que axis() mas só para o eixo de x;
+\end_layout
+
+\begin_layout Itemize
+ylim(), o mesmo que axis() mas só para o eixo de y;
+\end_layout
+
+\begin_layout Itemize
+legend(), cria uma legenda.
+ Atenção que o nome que aparece é definido no plot() (ou no subplot());
+\end_layout
+
+\begin_layout Itemize
+subplot(), cria uma grelha de gráficos, útil para quando se quer desenhar
+ vários gráficos lado a lado;
+\end_layout
+
+\begin_layout Itemize
+hist(), faz um histograma;
+\end_layout
+
+\begin_layout Itemize
+figure(), cria um outro gráfico.
+ Útil quando se quer fazer vários gráficos, mas em janelas diferentes.
+ Quando se faz show() as várias figuras vão aparecer.
+ Pode ser escrito na forma fig=figure(), agora fig representa esta figura;
+\end_layout
+
+\begin_layout Itemize
+close(), serve para recomeçar um gráfico.
+ Pode ser usado em conjugação com o figure(), por exemplo, depois de fazer
+ 5 figuras (fig1, fig2, fig3, fig4 e fig5) e de as gravar todas em ficheiros,
+ queremos ver todas menos a 4ª.
+ Nesse caso fazemos close(fig4), e todas ficam activas excepto a 4ª.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Desenhe o gráfico do seno de 0 a 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+ Faça com 5, 100 e 1000 pontos.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Embeleze o gráfico com título, legenda, cores...
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Gráficos
+Trabalhar com ficheiros
 \end_layout
 
-\begin_layout Section
-Exercícios tera-difíceis
+\begin_layout Standard
+Frequentemente, necessitamos de guardar os resultados dos nossos programas
+ em ficheiros de texto.
+ Ou então ir buscar dados a um ficheiro...
+ Para abrir um ficheiro (quer ele exista ou não) usa-se o comando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Abrimos um ficheiro chamado dados.txt
+\end_layout
+
+\begin_layout Plain Layout
+
+fic=open("dados.txt","w")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Escrevemos uma frase no ficheiro
+\end_layout
+
+\begin_layout Plain Layout
+
+fic.write("Galileu Galilei morreu no ano:
+\backslash
+n")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Para escrever um número temos primeiro que convertê-lo em cadeia de caracteres
+\end_layout
+
+\begin_layout Plain Layout
+
+s=str(1642)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# E finalmente escrevê-lo no ficheiro
+\end_layout
+
+\begin_layout Plain Layout
+
+fic.write(s)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Fechamos o ficheiro
+\end_layout
+
+\begin_layout Plain Layout
+
+fic.close()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agora sempre que quisermos chamar o ficheiro usamos 
+\begin_inset Quotes eld
+\end_inset
+
+fic
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Devem ter reparado no 
+\begin_inset Quotes eld
+\end_inset
+
+w
+\begin_inset Quotes erd
+\end_inset
+
+ que vem do inglês write, isto quer dizer que abrimos um ficheiro para escrever
+ nele (caso já exista um ficheiro com esse nome o python apaga todo o seu
+ conteúdo).
+ No lugar do 
+\begin_inset Quotes eld
+\end_inset
+
+w
+\begin_inset Quotes erd
+\end_inset
+
+, poderiamos usar um 
+\begin_inset Quotes eld
+\end_inset
+
+r
+\begin_inset Quotes erd
+\end_inset
+
+ do inglês read e nesse caso só poderíamos ler o ficheiro.
+ Ou 
+\begin_inset Quotes eld
+\end_inset
+
+a
+\begin_inset Quotes erd
+\end_inset
+
+ de append, logo qualquer coisa que escrevamos vai imediatamente para o
+ fim do ficheiro.
+ E 
+\begin_inset Quotes eld
+\end_inset
+
+r+
+\begin_inset Quotes erd
+\end_inset
+
+ que nos permite ler e escrever.
+\end_layout
+
+\begin_layout Standard
+Para ler o ficheiro podemos usar:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Abrimos o ficheiro dados.txt em modo de leitura
+\end_layout
+
+\begin_layout Plain Layout
+
+fic=open("dados.txt","r")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Lemos a primeira e depois a segunda linha
+\end_layout
+
+\begin_layout Plain Layout
+
+print fic.readline()
+\end_layout
+
+\begin_layout Plain Layout
+
+print fic.readline()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Fechamos o ficheiro
+\end_layout
+
+\begin_layout Plain Layout
+
+fic.close()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O comando fic.readline() lê uma linha e passa para a seguinte.
+ Já o comando fic.read() lê o ficheiro completo.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Criar uma tabela com os pontos do gráfico do seno entre 
+\begin_inset Formula $0$
+\end_inset
+
+ e 
+\begin_inset Formula $\pi$
+\end_inset
+
+ com mil pontos.
+ Imprimi-la num ficheiro.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -1266,8 +4558,1517 @@ Soluções
 Soluções do capítulo 2
 \end_layout
 
+\begin_layout Enumerate
+Basta escrever no interpretador 4.5*3.14+3.4**2.1 o que resulta em 27.194889045094623.
+\end_layout
+
+\begin_layout Enumerate
+O primeiro vale 1 e o segundo vale 1.505.
+ O que acontece é que no primeiro caso ele está a dividir dois números inteiros
+ e então o resultado também vai ser um inteiro.
+\end_layout
+
+\begin_layout Enumerate
+A resposta é 7-2354785%7 que é igual a 1.
+\end_layout
+
+\begin_layout Enumerate
+m não muda, logo obtém-se 3.
+\end_layout
+
+\begin_layout Enumerate
+frase=
+\begin_inset Quotes erd
+\end_inset
+
+Das uvas se faz vinho!
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+frase=frase[:4]+
+\begin_inset Quotes erd
+\end_inset
+
+macas
+\begin_inset Quotes erd
+\end_inset
+
++frase[8:16]+
+\begin_inset Quotes erd
+\end_inset
+
+cidra!
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Se criarmos a lista A=[1,2,3] e B=[4,5,6], A.append(B) vai-nos dar A=[1,2,3,[4,5,
+6]], ou seja, o quarto elemento da nova lista A vai ser [4,5,6].
+\end_layout
+
+\begin_layout Enumerate
+Por exemplo X=range(1,51).
+\end_layout
+
+\begin_layout Enumerate
+Código:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+n=3
+\end_layout
+
+\begin_layout Plain Layout
+
+m=2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+print "Se n=",n,"e m=",m,", então nxm=",n*m 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+...
+\end_layout
+
+\begin_layout Enumerate
+Código:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Começamos por pedir os dois valores ao utilizador
+\end_layout
+
+\begin_layout Plain Layout
+
+x_min=input("Escreve o primeiro número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+x_max=input("Escreve o último número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Imprimimos o resultado
+\end_layout
+
+\begin_layout Plain Layout
+
+print range(x_min,x_max+1)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Passo por passo:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Criamos uma variável numérica com valor 56;
+\end_layout
+
+\begin_layout Enumerate
+Transformamo-la numa cadeia que vale 
+\begin_inset Quotes eld
+\end_inset
+
+56
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Duplicamos a cadeia: 
+\begin_inset Quotes eld
+\end_inset
+
+5656
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Transformamos a cedeia no número 5656;
+\end_layout
+
+\begin_layout Enumerate
+Duplicamos o número para 11312 e imprimimos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Código:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Criamos a função factorial
+\end_layout
+
+\begin_layout Plain Layout
+
+def fac(n)
+\end_layout
+
+\begin_layout Plain Layout
+
+  if n==1: 
+\end_layout
+
+\begin_layout Plain Layout
+
+    return 1
+\end_layout
+
+\begin_layout Plain Layout
+
+  return n*fac(n-1)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Pedimos um número ao utilizador
+\end_layout
+
+\begin_layout Plain Layout
+
+m=input("Escreva um número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Devolvemos o seu factorial
+\end_layout
+
+\begin_layout Plain Layout
+
+print m,"factorial vale",fac(m)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+# Pedimos um número
+\end_layout
+
+\begin_layout Plain Layout
+n=input("Escreva um número inteiro: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+# Verificamos se ele é par ou impar
+\end_layout
+
+\begin_layout Plain Layout
+if n%2==0:
+\end_layout
+
+\begin_layout Plain Layout
+  print n,"é par."
+\end_layout
+
+\begin_layout Plain Layout
+else:
+\end_layout
+
+\begin_layout Plain Layout
+  print n,"é impar."
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Pedimos ambos os números
+\end_layout
+
+\begin_layout Plain Layout
+
+n=input("Escreva um número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+m=input("E um segundo número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if (n>0 or m>0) and n*m<=0:
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "Um e só um é positivo."
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Criamos os naipes e os valores das cartas:
+\end_layout
+
+\begin_layout Plain Layout
+
+naipe=["paus","ouros","copas","espadas"]
+\end_layout
+
+\begin_layout Plain Layout
+
+valor=["Ás","Duque","Terno","Quadra","Quina","Sena","Bisca","Valete","Dama","Rei
+"]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Imprimimos as cartas todas
+\end_layout
+
+\begin_layout Plain Layout
+
+for r in valor:
+\end_layout
+
+\begin_layout Plain Layout
+
+  for s in naipe:
+\end_layout
+
+\begin_layout Plain Layout
+
+    print r,"de",s
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Pedimos um número
+\end_layout
+
+\begin_layout Plain Layout
+
+n=input("Escreva o número natural supostamente primo: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# p é uma variável auxiliar que valerá um se n não for primo.
+\end_layout
+
+\begin_layout Plain Layout
+
+p=0
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Verificamos se n é maior que 1 e inteiro
+\end_layout
+
+\begin_layout Plain Layout
+
+if n>1 and n%1==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Para todos os i entre 2 e n/2 testamos se é divisível
+\end_layout
+
+\begin_layout Plain Layout
+
+  for i in range(2,n/2+1):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%i==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      print "O número",n,"é divisível por",i
+\end_layout
+
+\begin_layout Plain Layout
+
+      p=1
+\end_layout
+
+\begin_layout Plain Layout
+
+      break
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Se p continuar nulo é porque n é primo
+\end_layout
+
+\begin_layout Plain Layout
+
+  if p==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+    print "O número",n,"é primo."
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Tratamos o caso da unidade à parte
+\end_layout
+
+\begin_layout Plain Layout
+
+elif n==1: 
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "A unidade não é um número primo."
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Só nos resta os número não inteiros positivos
+\end_layout
+
+\begin_layout Plain Layout
+
+else: 
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "O número não é inteiro positivo."
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+Como podem verificar este método é lento para números muito grandes, pois
+ ele tem que construir uma lista do tamanho de n mesmo que o número seja
+ par.
+ Um ciclo while (que aparece no capítulo a seguir) seria mais adequado:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Pedimos um número
+\end_layout
+
+\begin_layout Plain Layout
+
+n=input("Escreva o número natural supostamente primo: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def primo(n):
+\end_layout
+
+\begin_layout Plain Layout
+
+  i=2
+\end_layout
+
+\begin_layout Plain Layout
+
+  while(i<=n/2):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%i==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      print n,"é divísivel por",i
+\end_layout
+
+\begin_layout Plain Layout
+
+      return 0
+\end_layout
+
+\begin_layout Plain Layout
+
+  i=i+1
+\end_layout
+
+\begin_layout Plain Layout
+
+  return 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Verificamos se n é maior que 1 e inteiro
+\end_layout
+
+\begin_layout Plain Layout
+
+if n>1 and n%1==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+  if primo(n)==1:
+\end_layout
+
+\begin_layout Plain Layout
+
+    print n,"é primo."
+\end_layout
+
+\begin_layout Plain Layout
+
+elif n==1:
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "A unidade não é um número primo."
+\end_layout
+
+\begin_layout Plain Layout
+
+else: 
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "O número não é inteiro positivo."
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Vamos procurar primos até a N_max
+\end_layout
+
+\begin_layout Plain Layout
+
+N_max=2000
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Verifica se n é primo.
+ Devolve 1 se n for primo e 0 senão
+\end_layout
+
+\begin_layout Plain Layout
+
+def primo(n):
+\end_layout
+
+\begin_layout Plain Layout
+
+  for i in range(2,n/2+1):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%i==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      return 0
+\end_layout
+
+\begin_layout Plain Layout
+
+  return 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# O principal do programa
+\end_layout
+
+\begin_layout Plain Layout
+
+for n in range(2,N_max+1):
+\end_layout
+
+\begin_layout Plain Layout
+
+  if primo(n)==1:
+\end_layout
+
+\begin_layout Plain Layout
+
+    print n
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# n é o número a calcular a raiz quadrada, e é uma espécie de precisão
+\end_layout
+
+\begin_layout Plain Layout
+
+n=5
+\end_layout
+
+\begin_layout Plain Layout
+
+e=0.0005
+\end_layout
+
+\begin_layout Plain Layout
+
+m=1
+\end_layout
+
+\begin_layout Plain Layout
+
+print "Queremos calcular a raiz quadrada de",n
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Enquanto a aproximação for má, ele continua
+\end_layout
+
+\begin_layout Plain Layout
+
+while m**2>e**2:
+\end_layout
+
+\begin_layout Plain Layout
+
+  p=input("Escreva um número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+  m=p**2-n
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "A sua previsão falhou por:"m
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Imprime o resultado
+\end_layout
+
+\begin_layout Plain Layout
+
+print "A raiz quadrada é",p
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# n é o número a calcular a raiz quadrada, e é uma espécie de precisão
+\end_layout
+
+\begin_layout Plain Layout
+
+n=5
+\end_layout
+
+\begin_layout Plain Layout
+
+e=0.000005
+\end_layout
+
+\begin_layout Plain Layout
+
+r=1
+\end_layout
+
+\begin_layout Plain Layout
+
+print "Queremos calcular a raiz quadrada de",n
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Enquanto a aproximação for má, ele continua
+\end_layout
+
+\begin_layout Plain Layout
+
+while (r**2-n)**2>e**2:
+\end_layout
+
+\begin_layout Plain Layout
+
+  r=0.5*(r+n/r)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Imprime o resultado
+\end_layout
+
+\begin_layout Plain Layout
+
+print "A raiz quadrada é",r
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Soluções do capítulo 3
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Vamos buscar o coseno e o pi
+\end_layout
+
+\begin_layout Plain Layout
+
+from math import cos, pi
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Definimos o número de pontos
+\end_layout
+
+\begin_layout Plain Layout
+
+p=20
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Imprimimos o resultado
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(p):
+\end_layout
+
+\begin_layout Plain Layout
+
+  print cos(i*pi/p)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Vamos buscar o coseno e o pi e carregamos o módulo pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+from math import cos, pi
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Definimos o número de pontos
+\end_layout
+
+\begin_layout Plain Layout
+
+p=5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Criamos X e Y
+\end_layout
+
+\begin_layout Plain Layout
+
+Y=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+X=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(p):
+\end_layout
+
+\begin_layout Plain Layout
+
+  Y.append(cos(i*pi/p))
+\end_layout
+
+\begin_layout Plain Layout
+
+  X.append(i*pi/p)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Desenhamos o gráfico
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(X,Y)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.show()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Aquilo a que chamamos embelezar o gráfico é extremamente subjectico.
+ Aqui vão algumas dicas:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+from math import cos, pi
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+p=1000
+\end_layout
+
+\begin_layout Plain Layout
+
+Y=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+X=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(p):
+\end_layout
+
+\begin_layout Plain Layout
+
+  Y.append(cos(i*pi/p))
+\end_layout
+
+\begin_layout Plain Layout
+
+  X.append(i*pi/p)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria uma linha de nome cos, com espessura 2, tracejada e vermelha
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(X,Y,"--r",label="cos",linewidth=2)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Dá um título
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title("Grafico do coseno de x")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Nomeamos o eixo das abcissas de x
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.xlabel("x")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Nomeamos o eixo das ordenadas de y e rodamos o nome
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.ylabel("y",rotation="horizontal")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Criamos uma legenda
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.legend()
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.show()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Código:
+\lang portuguese
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Vamos buscar o coseno e o pi
+\end_layout
+
+\begin_layout Plain Layout
+
+from math import cos, pi
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Criamos um ficheiro
+\end_layout
+
+\begin_layout Plain Layout
+
+fic=open("dados.txt","w")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Definimos o número de pontos
+\end_layout
+
+\begin_layout Plain Layout
+
+p=1000
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Imprimimos o resultado
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(p):
+\end_layout
+
+\begin_layout Plain Layout
+
+  s=str(i*pi/p)+"  "+str(cos(i*pi/p))+"
+\backslash
+n"
+\end_layout
+
+\begin_layout Plain Layout
+
+  fic.write(s)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Fechamos o ficheiro
+\end_layout
+
+\begin_layout Plain Layout
+
+fic.close()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -1275,7 +6076,2143 @@ Problema do bêbado
 \end_layout
 
 \begin_layout Chapter
-Problema da moeda
+Caos
+\end_layout
+
+\begin_layout Standard
+Nesta secção apresento uma proposta de resolução do problema da moeda/bola
+ que cai por entre uma pirâmide de pregos/tubos.
+ Nas sub-secções seguintes apresentaremos outros modelos matemáticos com
+ propriedades parecidas.
+\end_layout
+
+\begin_layout Section
+O problema da pirâmide
+\end_layout
+
+\begin_layout Standard
+Temos uma pirâmide de tubos, como mostra na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:piramide"
+
+\end_inset
+
+, com aberturas em baixo e em cima.
+ Deixamos cair uma bola por entre os tubos e vamos vê-la cair pelos tubos
+ até que ao fim ela 
+\begin_inset Quotes eld
+\end_inset
+
+se decide
+\begin_inset Quotes erd
+\end_inset
+
+ parar numa certa caixa.
+ Qual é essa caixa?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename piramide.eps
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:piramide"
+
+\end_inset
+
+A bola vai cair no primeiro tubo e vai batendo nas várias paredes até chegar
+ à caixa 4.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Em que número é que fica
+\end_layout
+
+\begin_layout Standard
+Em 2008, depois de simplificar o modelo, chegamos à simulação:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+x=0.59864 #posição de entrada
+\end_layout
+
+\begin_layout Plain Layout
+
+b=5.12653 #comprimento do tubo
+\end_layout
+
+\begin_layout Plain Layout
+
+w=.301 #tangente do ângulo inicial
+\end_layout
+
+\begin_layout Plain Layout
+
+n=100 #nº de níveis
+\end_layout
+
+\begin_layout Plain Layout
+
+#a espessura dos tubos é 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+num=0 #indicador do número da caixa  
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#calculo a posição e o ângulo de saída para cada tubo 
+\end_layout
+
+\begin_layout Plain Layout
+
+#sabendo a posição e o ângulo de entrada
+\end_layout
+
+\begin_layout Plain Layout
+
+def saida(x,w):
+\end_layout
+
+\begin_layout Plain Layout
+
+  y=w*b+x
+\end_layout
+
+\begin_layout Plain Layout
+
+#int() devolve a parte inteira de y
+\end_layout
+
+\begin_layout Plain Layout
+
+  n=int(y)
+\end_layout
+
+\begin_layout Plain Layout
+
+  d=y-n
+\end_layout
+
+\begin_layout Plain Layout
+
+  if y>=0:
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%2==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=d
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=-w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=1-d
+\end_layout
+
+\begin_layout Plain Layout
+
+  else:
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%2==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=-w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=-d
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=1+d
+\end_layout
+
+\begin_layout Plain Layout
+
+  return [xf,wf]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#calcula fila por fila onde está a bola
+\end_layout
+
+\begin_layout Plain Layout
+
+for j in range(n):
+\end_layout
+
+\begin_layout Plain Layout
+
+  r= saida(x,w)
+\end_layout
+
+\begin_layout Plain Layout
+
+  if r[0]>0.5:
+\end_layout
+
+\begin_layout Plain Layout
+
+    x=r[0]-0.5
+\end_layout
+
+\begin_layout Plain Layout
+
+    num=num+1 
+\end_layout
+
+\begin_layout Plain Layout
+
+  else:
+\end_layout
+
+\begin_layout Plain Layout
+
+    x=0.5+r[0]
+\end_layout
+
+\begin_layout Plain Layout
+
+  w=r[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#resultado final
+\end_layout
+
+\begin_layout Plain Layout
+
+print num
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Trajectória da bola
+\end_layout
+
+\begin_layout Standard
+Neste mesmo ano desenhamos a trajectória da bola:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+import math
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+x=0.59864 #posiçao de entrada
+\end_layout
+
+\begin_layout Plain Layout
+
+b=5.12653 #comprimento
+\end_layout
+
+\begin_layout Plain Layout
+
+w=.301 #tangente do ângulo inicial
+\end_layout
+
+\begin_layout Plain Layout
+
+n=100 #nº de níveis 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#a espessura dos tubos é 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+titulo="Tangente do angulo ="+str(w) #titulo do gráfico
+\end_layout
+
+\begin_layout Plain Layout
+
+nome="traj_"+str(int(1000*w)) #nome do ficheiro
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+num=0 #indicador do número da caixa 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Pos_x=[] #abcissa = número da caixa 
+\end_layout
+
+\begin_layout Plain Layout
+
+Pos_y=[] #ordenada = nível 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#e=0.01
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#calculo a posição e o ângulo de saída para cada tubo 
+\end_layout
+
+\begin_layout Plain Layout
+
+#sabendo a posição e o ângulo de entrada
+\end_layout
+
+\begin_layout Plain Layout
+
+def saida(x,w):
+\end_layout
+
+\begin_layout Plain Layout
+
+  y=w*b+x
+\end_layout
+
+\begin_layout Plain Layout
+
+#int() devolve a parte inteira de y
+\end_layout
+
+\begin_layout Plain Layout
+
+  n=int(y)
+\end_layout
+
+\begin_layout Plain Layout
+
+  d=y-n
+\end_layout
+
+\begin_layout Plain Layout
+
+  if y>=0:
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%2==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=d
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=-w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=1-d
+\end_layout
+
+\begin_layout Plain Layout
+
+  else:
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%2==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=-w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=-d
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=1+d
+\end_layout
+
+\begin_layout Plain Layout
+
+  return [xf,wf]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#calcula fila por fila onde está a bola
+\end_layout
+
+\begin_layout Plain Layout
+
+for j in range(n):
+\end_layout
+
+\begin_layout Plain Layout
+
+  r= saida(x,w)
+\end_layout
+
+\begin_layout Plain Layout
+
+  #b=b+e #varia o tamanho do cilindro, aumenta a imprevisibilidade
+\end_layout
+
+\begin_layout Plain Layout
+
+  if r[0]>0.5:
+\end_layout
+
+\begin_layout Plain Layout
+
+    x=r[0]-0.5
+\end_layout
+
+\begin_layout Plain Layout
+
+    num=num+1
+\end_layout
+
+\begin_layout Plain Layout
+
+  else:
+\end_layout
+
+\begin_layout Plain Layout
+
+    x=0.5+r[0]
+\end_layout
+
+\begin_layout Plain Layout
+
+  w=r[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+  Pos_y.append(n-j) #ordenadas da trajectória
+\end_layout
+
+\begin_layout Plain Layout
+
+  Pos_x.append(num+(n-j)/2.) #abcissas da trajectória
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#desenha a trajectória
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(Pos_x,Pos_y)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.axis([0,n,0,n])
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title(titulo)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.savefig(nome)
+\end_layout
+
+\begin_layout Plain Layout
+
+#pylab.show()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vejamos o que devemos obter na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:traj"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename traj_3010.png
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename traj_3015.png
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:traj"
+
+\end_inset
+
+Trajectórias para duas configurações quase idẽnticas.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Variando o ângulo
+\end_layout
+
+\begin_layout Standard
+Para ver o que acontece se variarmos o ângulo, basta alterar o nosso programa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+import math
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+x=0.59864 #posiçao de entrada
+\end_layout
+
+\begin_layout Plain Layout
+
+B=5.12653 #comprimento
+\end_layout
+
+\begin_layout Plain Layout
+
+w_min=-1.343 #tangente do ângulo inicial mínimo
+\end_layout
+
+\begin_layout Plain Layout
+
+w_max=1.124 #tangente do ângulo inicial máximo
+\end_layout
+
+\begin_layout Plain Layout
+
+n=100 #nº de níveis 
+\end_layout
+
+\begin_layout Plain Layout
+
+P=3000 #número de lançamentos
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#a espessura dos tubos é 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Pos_x=[] #abcissa = tangente inicial 
+\end_layout
+
+\begin_layout Plain Layout
+
+Pos_y=[] #ordenada = número da caixa
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#e=0.01
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#calculo a posição e o ângulo de saída para cada tubo 
+\end_layout
+
+\begin_layout Plain Layout
+
+#sabendo a posição e o ângulo de entrada
+\end_layout
+
+\begin_layout Plain Layout
+
+def saida(x,w):
+\end_layout
+
+\begin_layout Plain Layout
+
+  y=w*b+x
+\end_layout
+
+\begin_layout Plain Layout
+
+#int() devolve a parte inteira de y
+\end_layout
+
+\begin_layout Plain Layout
+
+  n=int(y)
+\end_layout
+
+\begin_layout Plain Layout
+
+  d=y-n
+\end_layout
+
+\begin_layout Plain Layout
+
+  if y>=0:
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%2==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=d
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=-w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=1-d
+\end_layout
+
+\begin_layout Plain Layout
+
+  else:
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n%2==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=-w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=-d
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+      wf=w
+\end_layout
+
+\begin_layout Plain Layout
+
+      xf=1+d
+\end_layout
+
+\begin_layout Plain Layout
+
+  return [xf,wf]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#percorre os vários ângulos
+\end_layout
+
+\begin_layout Plain Layout
+
+for k in range(P):
+\end_layout
+
+\begin_layout Plain Layout
+
+  w=w_min+(w_max-w_min)/P)*k
+\end_layout
+
+\begin_layout Plain Layout
+
+  Pos_x.append(w) #tangente do ângulo de partida
+\end_layout
+
+\begin_layout Plain Layout
+
+  num=0
+\end_layout
+
+\begin_layout Plain Layout
+
+  b=B
+\end_layout
+
+\begin_layout Plain Layout
+
+#calcula fila por fila onde está a bola
+\end_layout
+
+\begin_layout Plain Layout
+
+  for j in range(n):
+\end_layout
+
+\begin_layout Plain Layout
+
+    r= saida(x,w)
+\end_layout
+
+\begin_layout Plain Layout
+
+    #b=b+e #varia o tamanho do cilindro, aumenta a impresibilidade
+\end_layout
+
+\begin_layout Plain Layout
+
+    if r[0]>0.5:
+\end_layout
+
+\begin_layout Plain Layout
+
+      x=r[0]-0.5
+\end_layout
+
+\begin_layout Plain Layout
+
+      num=num+1
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+      x=0.5+r[0]
+\end_layout
+
+\begin_layout Plain Layout
+
+    w=r[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  Pos_y.append(num) #número da caixa
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#desenha o gráfico
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(Pos_x,Pos_y,".")
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.xlabel("tangente do angulo inicial")
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.ylabel("numero da caixa final")
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title("O numero da caixa final em funcao da tangente
+\backslash
+ncom a altura da caixa dependente do nivel")
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.axis([-1.4,1.2,0,100])
+\end_layout
+
+\begin_layout Plain Layout
+
+#pylab.savefig("caos")
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.show() 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se tudo correr bem, isto resulta no gráfico 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename caos.png
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:caos"
+
+\end_inset
+
+Como varia o número da caixa final com a tangente do ângulo inicial.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Outros modelos
+\end_layout
+
+\begin_layout Standard
+Durante a idealização deste projecto investiguei vários modelos com característi
+cas semelhantes.
+ De entre todos os modelos escolhi a pirâmide por ser o mais adequado ao
+ estudo.
+ Mas aproveito que tenho os programas feitos para os apresentar.
+\end_layout
+
+\begin_layout Subsection
+Sistemas dinâmicos e coelhos
+\end_layout
+
+\begin_layout Standard
+Quanto mais coelhos houver mais eles se reproduzem e quanto mais houver
+ menos comida há e mais eles morrem.
+ Por outras palavras, a taxa de natalidade dos coelhos é proporcional à
+ quantidade de coelhos existentes (
+\begin_inset Formula $\sim u_{n}$
+\end_inset
+
+) e à comida existente (
+\begin_inset Formula $\sim(1-u_{n})$
+\end_inset
+
+).
+ Em que 
+\begin_inset Formula $u_{n}$
+\end_inset
+
+é a quantidade de coelhos devidamente normalizada.
+ Daí tiramos que a segunda geração de coelhos pode ser descrita pela equação:
+\begin_inset Formula \[
+u_{n+1}=A\ u_{n}(1-u_{n})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apesar do aparente ar inofensivo, esta equação esconde propriedades bastante
+ interessantes, para começar tem dois pontos fixos: 
+\begin_inset Formula $u_{n}=0$
+\end_inset
+
+, se não há coelhos no início não há procriação; 
+\begin_inset Formula $u_{n}=1-A^{-1}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $A<3$
+\end_inset
+
+ (valor aproximado) o sistema converge, depois tem um intervalo em que o
+ sistema alterna entre dois pontos, três pontos...
+ assim por diante, até que a partir de 
+\begin_inset Formula $3.6$
+\end_inset
+
+ ele começa a oscilar como um doido.
+ Como se pode ver no gráfico
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "coelho"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename coelhos.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "coelho"
+
+\end_inset
+
+Quando se varia a constante 
+\begin_inset Formula $A$
+\end_inset
+
+, obtém-se resulatdos completamente diferentes, desde regiões convergentes
+ até outras que são verdadeiramente caóticas.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O código usado foi:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#          Este programa simula uma população de coelhos
+\end_layout
+
+\begin_layout Plain Layout
+
+#                                                       
+\end_layout
+
+\begin_layout Plain Layout
+
+#  A taxa de natalidade dos coelhos numa sociedade é proporcional 
+\end_layout
+
+\begin_layout Plain Layout
+
+#       ao número de coelhos e à quantidade de comida, esta é      
+\end_layout
+
+\begin_layout Plain Layout
+
+#  proporcional também ao número de coelhos, ficamos assim com uma 
+\end_layout
+
+\begin_layout Plain Layout
+
+#               uma equação do tipo u->A u (1-u)                   
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+num=200 #quantidade de interacções 
+\end_layout
+
+\begin_layout Plain Layout
+
+Q=4 #1-Experiência Simples; 2-Variar número de coelhos; 
+\end_layout
+
+\begin_layout Plain Layout
+
+    #3-Variar constante; 4-Varia ambos 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N_A=2000 #número de passos (variar a constante) 
+\end_layout
+
+\begin_layout Plain Layout
+
+N_x=20 #número de passos (variar num de coelhos)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+A_min=0.
+ #constante mínima para 3 
+\end_layout
+
+\begin_layout Plain Layout
+
+A_max=4.
+ #constante máxima para 3 
+\end_layout
+
+\begin_layout Plain Layout
+
+A=[1.0,2.0,3.0] #constante para 1 e 2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+n_min=0.1 #número de coelhos mínimo para 2 
+\end_layout
+
+\begin_layout Plain Layout
+
+n_max=0.9 #número de coelhos máximo para 2 
+\end_layout
+
+\begin_layout Plain Layout
+
+n=[0.7] #número de coelhos para 1 e 3
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#cálculo da interacção seguinte 
+\end_layout
+
+\begin_layout Plain Layout
+
+def inter(a,u):
+\end_layout
+
+\begin_layout Plain Layout
+
+	return a*u*(1-u)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#                  Calcula o número de coelhos 
+\end_layout
+
+\begin_layout Plain Layout
+
+#    Desenha o gráfico da variação desse número em função do tempo 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def Simples():
+\end_layout
+
+\begin_layout Plain Layout
+
+	X=range(num)
+\end_layout
+
+\begin_layout Plain Layout
+
+	Y_num=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+	g=0
+\end_layout
+
+\begin_layout Plain Layout
+
+	for a in A:
+\end_layout
+
+\begin_layout Plain Layout
+
+		for x in n:
+\end_layout
+
+\begin_layout Plain Layout
+
+			Y_num.append([])
+\end_layout
+
+\begin_layout Plain Layout
+
+			s="numero="+str(x)+" e A="+str(a)
+\end_layout
+
+\begin_layout Plain Layout
+
+			for j in range(num):
+\end_layout
+
+\begin_layout Plain Layout
+
+				x=inter(a,x)
+\end_layout
+
+\begin_layout Plain Layout
+
+				Y_num[g].append(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+			pylab.plot(X,Y_num[g],",",label=s)
+\end_layout
+
+\begin_layout Plain Layout
+
+			g+=1
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.title("Numero de coelhos por interacao.")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.xlabel("Interacao")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.ylabel("Numero de coelhos")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.legend()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#       Calcula o número de coelhos depois de num interacções
+\end_layout
+
+\begin_layout Plain Layout
+
+#         Para diferentes quantidades iniciais de coelhos
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def Quantidade():
+\end_layout
+
+\begin_layout Plain Layout
+
+	for a in A:
+\end_layout
+
+\begin_layout Plain Layout
+
+		X_in=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+		Y_fin=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+		for i in range(N_x):
+\end_layout
+
+\begin_layout Plain Layout
+
+			x=n_min+i*1.*(n_max-n_min)/N_x
+\end_layout
+
+\begin_layout Plain Layout
+
+			X_in.append(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+			for j in range(num):
+\end_layout
+
+\begin_layout Plain Layout
+
+				x=inter(a,x)
+\end_layout
+
+\begin_layout Plain Layout
+
+			Y_fin.append(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+		s="A="+str(a)
+\end_layout
+
+\begin_layout Plain Layout
+
+		pylab.plot(X_in,Y_fin,",",label=s)
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.title("Numero de coelhos no final
+\backslash
+ndependendo do numero inicial")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.xlabel("Coelhos no inicio")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.ylabel("Coelhos no fim")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.legend()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#      Calcula o número de coelhos depois de num interacções
+\end_layout
+
+\begin_layout Plain Layout
+
+#                 Para diferentes constantes
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def Constante():
+\end_layout
+
+\begin_layout Plain Layout
+
+	for x in n:
+\end_layout
+
+\begin_layout Plain Layout
+
+		X_a=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+		Y_fin=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+	 	s="numero inicial = "+str(x) 		for i in range(N_A):
+\end_layout
+
+\begin_layout Plain Layout
+
+			a=A_min+i*1.*(A_max-A_min)/N_A
+\end_layout
+
+\begin_layout Plain Layout
+
+			X_a.append(a)
+\end_layout
+
+\begin_layout Plain Layout
+
+			u=x
+\end_layout
+
+\begin_layout Plain Layout
+
+			for j in range(num):
+\end_layout
+
+\begin_layout Plain Layout
+
+				u=inter(a,u)
+\end_layout
+
+\begin_layout Plain Layout
+
+			Y_fin.append(u)
+\end_layout
+
+\begin_layout Plain Layout
+
+		pylab.plot(X_a,Y_fin,",",label=s)
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.title("Numero de coelhos no final
+\backslash
+nem funcao da constante")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.xlabel("Constante")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.ylabel("Coelhos no fim")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.legend()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#       Calcula o número de coelhos depois de uma interacções
+\end_layout
+
+\begin_layout Plain Layout
+
+#                   Para diferentes constantes
+\end_layout
+
+\begin_layout Plain Layout
+
+#          É repetida para diferentes quantidades iniciais
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def Ambos():
+\end_layout
+
+\begin_layout Plain Layout
+
+	X_a=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Y_fin=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+	for i in range(N_A):
+\end_layout
+
+\begin_layout Plain Layout
+
+		a=A_min+(A_max-A_min)*i*1./N_A
+\end_layout
+
+\begin_layout Plain Layout
+
+		for k in range(N_x):
+\end_layout
+
+\begin_layout Plain Layout
+
+			x=n_min+k*1.*(n_max-n_min)/N_x
+\end_layout
+
+\begin_layout Plain Layout
+
+			X_a.append(a)
+\end_layout
+
+\begin_layout Plain Layout
+
+			for j in range(num):
+\end_layout
+
+\begin_layout Plain Layout
+
+				x=inter(a,x)
+\end_layout
+
+\begin_layout Plain Layout
+
+			Y_fin.append(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.plot(X_a,Y_fin,",")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.title("Numero de coelhos no final
+\backslash
+nem funcao da constante")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.xlabel("Constante")
+\end_layout
+
+\begin_layout Plain Layout
+
+	pylab.ylabel("Coelhos no fim")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#escolhe que rotina seguir
+\end_layout
+
+\begin_layout Plain Layout
+
+if Q==1:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Simples()
+\end_layout
+
+\begin_layout Plain Layout
+
+elif Q==2:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Quantidade()
+\end_layout
+
+\begin_layout Plain Layout
+
+elif Q==3:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Constante()
+\end_layout
+
+\begin_layout Plain Layout
+
+else:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Ambos()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#desenha o gráfico
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.savefig("coelhos")
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.show() 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mapa a 2 dimensões
+\end_layout
+
+\begin_layout Standard
+Um mapa a 2 dimensões consiste num conjunto de duas variáveis.
+ Em cada passo as duas variáveis mudam, vejamos alguns exemplos:
+\end_layout
+
+\begin_layout Enumerate
+Mapa de Duffing:
+\begin_inset Formula \[
+\left\{ \begin{array}{rcl}
+x_{n+1} & = & y_{n}\\
+y_{n+1} & = & -b\ x_{n}+a\ y_{n}-y_{n}^{3}\end{array}\right.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Mapa de Hénon:
+\begin_inset Formula \[
+\left\{ \begin{array}{rcl}
+x_{n+1} & = & y_{n}+1-a\ x_{n}^{2}\\
+y_{n+1} & = & b\ x_{n}\end{array}\right.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Mapa de Tinkerbell:
+\begin_inset Formula \[
+\left\{ \begin{array}{rcl}
+x_{n+1} & = & x_{n}^{2}-y_{n}^{2}+a\ x_{n}+b\ y_{n}\\
+y_{n+1} & = & 2\ x_{n}y_{n}+c\ x_{n}+d\ y_{n}\end{array}\right.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fica a cargo dos alunos mais interessados em programar estes sistemas e
+ escolher as informações relevantes a retirar daqui.
+\end_layout
+
+\begin_layout Subsection
+Funções por ramos
+\end_layout
+
+\begin_layout Standard
+Uma função por ramos é uma função que tem dois ou mais comportamentos distintos.
+ Quando iteradas várias vezes, algumas delas ganham um carácter imprivisível.
+\end_layout
+
+\begin_layout Standard
+Vejamos alguns exemplos:
+\end_layout
+
+\begin_layout Enumerate
+Mapa tenda:
+\begin_inset Formula \[
+x_{n+1}=\left\{ \begin{array}{rcl}
+\mu\ x_{n} & se & x_{n}<\frac{1}{2}\\
+\mu(1-x_{n}) & se & x_{n}>\frac{1}{2}\end{array}\right.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Mapa diático:
+\begin_inset Formula \[
+x_{n+1}=\left\{ \begin{array}{rcl}
+2\ x_{n} & se & x_{n}<\frac{1}{2}\\
+2\ x_{n}-1 & se & x_{n}>\frac{1}{2}\end{array}\right.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A programação destes modelos é idêntica às anteriores.
+ Sendo assim, fica como exercício aos eventuais leitores que chegaram até
+ aqui.
+\end_layout
+
+\begin_layout Subsection
+Geradores de números aleatórios
+\end_layout
+
+\begin_layout Standard
+Os computadores actuais são imcapazes de produzir números aleatórios.
+ No entanto, é possível produzir números pseudo-aleatórios.
+ Ou seja, são números que aparentemente são aleatórios apesar de não ser.
+ Nesta sub-secção dou alguns exemplos de geradores simples de números pseudo-ale
+atórios.
+ Nesta fase, já não é nenhum mistério porque é que estes algorítmos dão
+ números aparentemente caóticos (para usar a palavra caos):
+\end_layout
+
+\begin_layout Enumerate
+Método de Van Neumann:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Pegamos um número de 
+\begin_inset Formula $n$
+\end_inset
+
+ dígitos;
+\end_layout
+
+\begin_layout Enumerate
+Quadramo-lo;
+\end_layout
+
+\begin_layout Enumerate
+E pegamos nos 
+\begin_inset Formula $n$
+\end_inset
+
+ dígitos centrais.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Método de Fibonacci, seja 
+\begin_inset Formula $m$
+\end_inset
+
+ um primo grande:
+\begin_inset Formula \[
+x_{n}=(x_{n-1}+x_{n-k})\%m\]
+
+\end_inset
+
+em que 
+\begin_inset Formula $k$
+\end_inset
+
+ é 
+\begin_inset Formula $2$
+\end_inset
+
+ no caso mais simples mas pode ser 
+\end_layout
+
+\begin_layout Enumerate
+Método de Lehmner, sejam 
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $b$
+\end_inset
+
+ e 
+\begin_inset Formula $c$
+\end_inset
+
+ números grandes e primos entre si:
+\begin_inset Formula \[
+u_{n+1}=(a\ u_{n}+b)\ \%\ c\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body

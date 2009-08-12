@@ -1,4 +1,4 @@
-#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -229,13 +229,37 @@ Linguagens de programação
 
 \begin_layout Standard
 Claro que para dar as ordens ao computador precisamos de saber comunicar
- com ele.
- Ou seja, de usar uma linguagem que ele compreenda e existem muitos tipo
- de linguagens:
+ com ele, numa linguagem que ele compreenda.
+ Desde os primóridos da informática (>1940s) que se tem vindo a criar inúmeras
+ destas linguagens, chamadas linguagens de programação, cada uma com o seu
+ propósito e sua estrutura.
+ Dado isto, a escolha de uma linguagem de programação para uma dada tarefa
+ não deve ser aleatória - pensem na diferença entre um martelo e uma chave
+ de fendas - é possível colocar um parafuso à martelada, mas é muito mais
+ fácil com a chave.
+ 
 \end_layout
 
 \begin_layout Standard
-[Chico preenche isto que tu sabes mais]
+Assim, estas linguagens podem ser classificadas segundo vários critérios.
+ Por exemplo, dependendo da maneira como o programador dá as ordens ao computado
+r, existem linguagens imperativas ou declarativas.
+ Nas linguagens imperativas o programador escreve explicitamente todas as
+ acções que o computador deve fazer, à semelhança de uma receita.
+ Nas declarativas, de um modo geral, o programador escreve o que quer que
+ o programa calcule, sem específicar exactamente como ou a ordem das operações.
+ Notem que isto não quer dizer que o programador pode escrever 'Computador,
+ calcula-me o sentido da vida' - o computador não saberia o que fazer com
+ isto.
+ O programador necessita de utilizar os elementos básicos da linguagem e
+ relacioná-los de maneira a resolver o problema.
+ A diferença é que nas linguagens imperativas o programador dá ordens de
+ manipulação destes elementos, nas declarativas o programador estabelece
+ relações entre eles.
+ Embora fosse interessante, neste capítulo não vamos falar sobre várias
+ linguagens de programação diferentes, pois essa informação não ajuda a
+ transmitir a nossa mensagem.
+ No entanto, se forem curiosos, podem espreitar no apêndice NUMERODOAPENDICE.
 \end_layout
 
 \begin_layout Section
@@ -243,36 +267,45 @@ Porquê Python
 \end_layout
 
 \begin_layout Standard
-O Python foi lançado por Guido van Rossum em 1991.
- É uma linguagem que tem várias vantagens:
+Vejamos os nossos requerimentos para as nossas simulações:
 \end_layout
 
 \begin_layout Itemize
-A sintaxe é clara, encorajando a legibilidade do código o que o torna mais
- fácil de manter e reutilizar.
+Necessitamos de uma linguagem que nos permita fazer cálculos simples e manipular
+ os resultados facilmente.
 \end_layout
 
 \begin_layout Itemize
-É uma linguagem simples e concisa tornando-a uma linguagem simples de usar
- e de ler.
+Esta deve permitir-nos expôr os resultados de maneira conveniente - numéros,
+ gráficos, animações, etc.
 \end_layout
 
 \begin_layout Itemize
-Não precisa de ser compilada.
+Deve ser possível trabalhar com ela gratuitamente, em qualquer computador,
+ com o mínimo de tempo de instalação.
+ HMM N HÀ MELHOR MANEIRA DE DIZER ISTO?
 \end_layout
 
 \begin_layout Itemize
-Funciona em vários sistemas operativos.
-\end_layout
-
-\begin_layout Itemize
-Tem uma vasta biblioteca padrão, ou seja, praticamente tudo o que venhamos
- a precisar está nessa biblioteca.
+Necessitamos de uma linguagem com uma sintaxe simples cujos elementos básicos
+ possam ser ensinados em menos de 1 dia.
 \end_layout
 
 \begin_layout Standard
-Claro que outras linguagens têm outras vantagens e cada uma terá um domínio
- onde é mais adequada.
+Embora existam várias linguagens que de certo modo preencham os 4 requerimentos,
+ existe uma que achamos especialmente adequada: Python.
+ Esta distingue-se especialmente por ter uma sintaxe clara e ter elementos
+ básicos simples, sendo assim óptima no 4º ponto.
+ Esta tem ainda a vantagem de possuir bibliotecas igualmente simples de
+ usar.
+ Dado isto, passemos à acção.
+ 
+\end_layout
+
+\begin_layout Standard
+SERÀ QUE VALE A PENA ARGUMENTAR UM POUCO MAIS E COLOCAR MAIS VANTAGENS E
+ TAL? hmmm acho que assim está mais curto e conciso.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -1428,6 +1461,10 @@ O código deve ser limpo, bem organizado e muito bem comentado.
  
 \end_layout
 
+\begin_layout Standard
+FALTA FALAR DE IDENTAÇão
+\end_layout
+
 \begin_layout Section
 Funções
 \end_layout
@@ -2336,10 +2373,7 @@ igual
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $<>$
-\end_inset
-
-
+!=
 \end_layout
 
 \end_inset
@@ -4048,7 +4082,7 @@ pylab.title("O meu primeiro grafico!")
 
 \begin_layout Plain Layout
 
-pylab.savefig("grafico")
+pylab.savefig("grafico.png")
 \end_layout
 
 \begin_layout Plain Layout
@@ -4770,7 +4804,6 @@ Duplicamos o número para 11312 e imprimimos.
 
 \end_deeper
 \begin_layout Enumerate
-
 Código:
 \begin_inset ERT
 status open
@@ -4853,7 +4886,6 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
 \begin_inset ERT
 status open
@@ -4866,14 +4898,17 @@ begin{python}
 \end_layout
 
 \begin_layout Plain Layout
+
 #coding=utf8
 \end_layout
 
 \begin_layout Plain Layout
+
 # Pedimos um número
 \end_layout
 
 \begin_layout Plain Layout
+
 n=input("Escreva um número inteiro: ")
 \end_layout
 
@@ -4882,26 +4917,32 @@ n=input("Escreva um número inteiro: ")
 \end_layout
 
 \begin_layout Plain Layout
+
 # Verificamos se ele é par ou impar
 \end_layout
 
 \begin_layout Plain Layout
+
 if n%2==0:
 \end_layout
 
 \begin_layout Plain Layout
+
   print n,"é par."
 \end_layout
 
 \begin_layout Plain Layout
+
 else:
 \end_layout
 
 \begin_layout Plain Layout
+
   print n,"é impar."
 \end_layout
 
 \begin_layout Plain Layout
+
 
 \backslash
 end{python}
@@ -4913,10 +4954,7 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -4974,10 +5012,7 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -5046,10 +5081,7 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -5333,10 +5365,7 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -5434,10 +5463,7 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -5534,10 +5560,7 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -5628,10 +5651,7 @@ Soluções do capítulo 3
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -5703,10 +5723,7 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -5962,10 +5979,7 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-
 Código:
-\lang portuguese
-
 \begin_inset ERT
 status open
 
@@ -6073,6 +6087,10 @@ end{python}
 
 \begin_layout Chapter
 Problema do bêbado
+\end_layout
+
+\begin_layout Standard
+Vinho branco ou vinho tinto?
 \end_layout
 
 \begin_layout Chapter
@@ -8213,6 +8231,14 @@ u_{n+1}=(a\ u_{n}+b)\ \%\ c\]
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter*
+Apêndice 1 - Linguagens de Programação
+\end_layout
+
+\begin_layout Chapter*
+Apêndice 2 - Bibliotecas úteis e exemplos
 \end_layout
 
 \end_body

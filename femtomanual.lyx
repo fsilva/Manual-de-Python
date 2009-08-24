@@ -112,7 +112,7 @@ theorems-ams
 \paragraph_separation indent
 \defskip medskip
 \quotes_language english
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \bullet 1 0 9 -1
@@ -8233,12 +8233,236 @@ u_{n+1}=(a\ u_{n}+b)\ \%\ c\]
 
 \end_layout
 
-\begin_layout Chapter*
+\begin_layout Chapter
 Apêndice 1 - Linguagens de Programação
 \end_layout
 
-\begin_layout Chapter*
+\begin_layout Standard
+Neste apêndice vamos expôr algumas linguagens de programação que achamos
+ útil saber que existem, por uma questão de cultura geral.
+ Antes de passarmos a isso, vamos introduzir mais alguns conceitos.
+\end_layout
+
+\begin_layout Description
+Código-máquina Na verdade, os computadores falam apenas uma linguagem -
+ código máquina.
+ Esta linguagem não é universal - o código máquina que corre num computador
+ normal não é o mesmo que corre num telemóvel
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Um telemóvel é praticamente um computador.
+ Muitos deles até permitem programar em python!
+\end_layout
+
+\end_inset
+
+,por exemplo.
+ Assim, para ser executado qualquer programa, mesmo escrito noutra linguagem,
+ este tem eventualmente de ser traduzido para código máquina.
+ 
+\end_layout
+
+\begin_layout Description
+Linguagens-compiladas-e-interpretadas A tradução para código máquina pode
+ ser 
+\emph on
+à priori, 
+\emph default
+no caso de uma linguagem compilada, sendo o programa distribuido já em código
+ máquina, ou pode ser em tempo real, durante a execução do programa, no
+ caso de uma linguagem interpretada.
+ Cada tipo tem as suas vantagens e desvantagens - por exemplo, as interpretadas
+ são em geral mais lentas, mas quando existem erros no programa estes são
+ mais fáceis de identificar do que nas compiladas.
+ MAL.REVER ISTO.
+\end_layout
+
+\begin_layout Description
+Alto-nível-e-baixo-nível É frequente classificar as linguagens quanto ao
+ seu nível - quanto mais baixo fôr o nível de uma linguagem, mas próximo
+ esta a sua maneira de funcionar da do código máquina.
+ Numa linguagem de alto nível esta maneira de funcionar está completamente
+ abstraida, não tendo o programador de se preocupar com os detalhes do funcionam
+ento do computador (idealmente).
+ A diferença será mais aparente quando dermos exemplos de linguagens.
+ 
+\end_layout
+
+\begin_layout Standard
+Vamos expôr um programa exemplo para cada uma das linguagens: C, Java, Fortran,
+ Scheme, Perl, Ruby e Python.
+\end_layout
+
+\begin_layout Subsection*
+C
+\end_layout
+
+\begin_layout Standard
+#include <stdio.h> 
+\end_layout
+
+\begin_layout Standard
+int main(void) 
+\end_layout
+
+\begin_layout Standard
+{ 
+\end_layout
+
+\begin_layout Standard
+printf("Hello, world!
+\backslash
+n"); 
+\end_layout
+
+\begin_layout Standard
+return 0; 
+\end_layout
+
+\begin_layout Standard
+} 
+\end_layout
+
+\begin_layout Standard
+C é blablabla
+\end_layout
+
+\begin_layout Subsection*
+Fortran
+\end_layout
+
+\begin_layout Standard
+program hello 
+\end_layout
+
+\begin_layout Standard
+print*, 'Hello, world!' 
+\end_layout
+
+\begin_layout Standard
+end 
+\end_layout
+
+\begin_layout Standard
+Fortran blablabla
+\end_layout
+
+\begin_layout Subsection*
+Java
+\end_layout
+
+\begin_layout Standard
+public class HelloWorld 
+\end_layout
+
+\begin_layout Standard
+{ 
+\end_layout
+
+\begin_layout Standard
+public static void main(String[] args) 
+\end_layout
+
+\begin_layout Standard
+{ 
+\end_layout
+
+\begin_layout Standard
+System.out.println("Hello, world!"); 
+\end_layout
+
+\begin_layout Standard
+} 
+\end_layout
+
+\begin_layout Standard
+} 
+\end_layout
+
+\begin_layout Standard
+Java blablabla
+\end_layout
+
+\begin_layout Subsection*
+Perl
+\end_layout
+
+\begin_layout Standard
+print "Hello, world!
+\backslash
+n"; 
+\end_layout
+
+\begin_layout Standard
+perl blabla
+\end_layout
+
+\begin_layout Subsection*
+Ruby
+\end_layout
+
+\begin_layout Standard
+puts 'Hello, world!' 
+\end_layout
+
+\begin_layout Standard
+ruby blablabla
+\end_layout
+
+\begin_layout Subsection*
+Python
+\end_layout
+
+\begin_layout Standard
+print 'Hello, world!'
+\end_layout
+
+\begin_layout Subsection*
+Scheme
+\end_layout
+
+\begin_layout Standard
+(display "Hello, world!
+\backslash
+n") 
+\end_layout
+
+\begin_layout Standard
+Scheme blablabla
+\end_layout
+
+\begin_layout Chapter
 Apêndice 2 - Bibliotecas úteis e exemplos
+\end_layout
+
+\begin_layout Standard
+No capítulo 3 já foram usadas bibliotecas para poder usar funções matemáticas
+ ou fazer gráficos.
+ Neste capítulo vamos mostrar vários exemplos de código que usam bibliotecas
+ que podem ser úteis em várias situações.
+ 
+\end_layout
+
+\begin_layout Standard
+1) Grafico animado
+\end_layout
+
+\begin_layout Standard
+2) Mais um gráfico animado
+\end_layout
+
+\begin_layout Standard
+2) PyGame - jogo simples?
+\end_layout
+
+\begin_layout Standard
+3) Interface gráfico básico com Tkiter
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body

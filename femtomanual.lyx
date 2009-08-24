@@ -161,7 +161,7 @@ Este manual foi escrito no intuito de apoiar os projectos por nós dirigidos
 
 \begin_layout Standard
 Mas, porquê escrever mais um manual de Python? É verdade que na internet
- se encontram vários manuais de python, mas o problema é que esses manuais
+ se encontram vários manuais de Python, mas o problema é que esses manuais
  ora estão em inglês ora são demasiado avançados ora estão centrados em
  aspectos que não nos interessam...
  E é por isso que nós nos juntamos para escrever um pequeno manual onde
@@ -173,7 +173,7 @@ Mas, porquê escrever mais um manual de Python? É verdade que na internet
 
 \begin_layout Standard
 Este manual não pretende ser completo.
- Caso se interessem por aprende mais podem começar por [link].
+ Caso se interessem por aprender mais podem começar por [link].
 \end_layout
 
 \begin_layout Section
@@ -202,17 +202,17 @@ Mesmo assim temos um problema, para cada simulação precisamos dum carro,
  o que fica extremamente caro.
  Outra opção seria simular a situação dentro dum computador, poupando carros
  e bonecos.
- A ideia é o computador calcular todas as forças, velocidades e posições
- do carro e dos passageiros ao longo do acidente, estimando no fim o dano
- causado nos vários passageiros.
+ A estratégia passa por calcular todas as forças, velocidades e posições
+ do carro e dos passageiros ao longo do acidente usando um computador, estimando
+ no fim o dano causado nos vários passageiros.
  Podemos assim simular acidentes de forma muito mais barata e rápida e em
  inúmeras situações diferentes.
  
 \end_layout
 
 \begin_layout Standard
-Claro que a simulação, em geral, é menos fidedigna que embater directamente
- com um carro num obstáculo.
+Claro que a simulação computacional, em geral, é menos fidedigna que o embate
+ real dum carro num obstáculo.
  Por isso, usa-se as duas técnicas complementarmente - começa-se por se
  simular no computador e numa fase mais avançada usa-se um protótipo.
 \end_layout
@@ -234,32 +234,42 @@ Claro que para dar as ordens ao computador precisamos de saber comunicar
  destas linguagens, chamadas linguagens de programação, cada uma com o seu
  propósito e sua estrutura.
  Dado isto, a escolha de uma linguagem de programação para uma dada tarefa
- não deve ser aleatória - pensem na diferença entre um martelo e uma chave
- de fendas - é possível colocar um parafuso à martelada, mas é muito mais
- fácil com a chave.
+ não deve ser aleatória - imaginem que têm à vossa disposição um martelo
+ e uma chave de fendas - é possível colocar um parafuso à martelada, mas
+ é muito mais fácil com a chave.
  
 \end_layout
 
 \begin_layout Standard
-Assim, estas linguagens podem ser classificadas segundo vários critérios.
- Por exemplo, dependendo da maneira como o programador dá as ordens ao computado
-r, existem linguagens imperativas ou declarativas.
- Nas linguagens imperativas o programador escreve explicitamente todas as
+Estas linguagens podem ser classificadas segundo vários critérios.
+ Por exemplo, dependendo da forma como o programador dá as ordens ao computador,
+ existem linguagens imperativas ou declarativas.
+ 
+\end_layout
+
+\begin_layout Standard
+Nas linguagens imperativas o programador escreve explicitamente todas as
  acções que o computador deve fazer, à semelhança de uma receita.
- Nas declarativas, de um modo geral, o programador escreve o que quer que
- o programa calcule, sem específicar exactamente como ou a ordem das operações.
- Notem que isto não quer dizer que o programador pode escrever 'Computador,
- calcula-me o sentido da vida' - o computador não saberia o que fazer com
- isto.
+ 
+\end_layout
+
+\begin_layout Standard
+Nas declarativas, de um modo geral, o programador escreve o que quer que
+ o programa faça, sem específicar exactamente como ou em que ordem.
+ Notem que isto não quer dizer que o programador possa escrever 'Computador,
+ calcula-me o sentido da vida' - o computador não saberia o que fazer.
  O programador necessita de utilizar os elementos básicos da linguagem e
  relacioná-los de maneira a resolver o problema.
  A diferença é que nas linguagens imperativas o programador dá ordens de
  manipulação destes elementos, nas declarativas o programador estabelece
  relações entre eles.
- Embora fosse interessante, neste capítulo não vamos falar sobre várias
- linguagens de programação diferentes, pois essa informação não ajuda a
- transmitir a nossa mensagem.
- No entanto, se forem curiosos, podem espreitar no apêndice NUMERODOAPENDICE.
+ 
+\end_layout
+
+\begin_layout Standard
+Embora fosse interessante, não vamos falar aqui sobre as várias linguagens
+ de programação diferentes, está fora dos nossos objectivos.
+ No entanto, os mais curiosos podem espreitar no apêndice [NUMERODOAPENDICE].
 \end_layout
 
 \begin_layout Section
@@ -271,19 +281,19 @@ Vejamos os nossos requerimentos para as nossas simulações:
 \end_layout
 
 \begin_layout Itemize
-Necessitamos de uma linguagem que nos permita fazer cálculos simples e manipular
- os resultados facilmente.
+Necessitamos de uma linguagem que nos permita fazer cálculos e manipular
+ os resultados facilmente;
 \end_layout
 
 \begin_layout Itemize
-Esta deve permitir-nos expôr os resultados de maneira conveniente - numéros,
- gráficos, animações, etc.
+Esta deve permitir-nos expôr os resultados de forma conveniente - numéros,
+ gráficos, animações, etc;
 \end_layout
 
 \begin_layout Itemize
-Deve ser possível trabalhar com ela gratuitamente, em qualquer computador,
- com o mínimo de tempo de instalação.
- HMM N HÀ MELHOR MANEIRA DE DIZER ISTO?
+Deve ser de acesso fácil e gratuito, pômos assim de parte linguagens que
+ se pagam ou que necessitam de um curso só para as instalar; [Ainda não
+ é perfeito.]
 \end_layout
 
 \begin_layout Itemize
@@ -295,16 +305,15 @@ Necessitamos de uma linguagem com uma sintaxe simples cujos elementos básicos
 Embora existam várias linguagens que de certo modo preencham os 4 requerimentos,
  existe uma que achamos especialmente adequada: Python.
  Esta distingue-se especialmente por ter uma sintaxe clara e ter elementos
- básicos simples, sendo assim óptima no 4º ponto.
- Esta tem ainda a vantagem de possuir bibliotecas igualmente simples de
- usar.
- Dado isto, passemos à acção.
+ básicos simples.
+ Ser relativamente fácil de usar.
+ Esta tem ainda a vantagem de possuir vastas bibliotecas igualmente simples
+ de usar.
  
 \end_layout
 
 \begin_layout Standard
-SERÀ QUE VALE A PENA ARGUMENTAR UM POUCO MAIS E COLOCAR MAIS VANTAGENS E
- TAL? hmmm acho que assim está mais curto e conciso.
+Dado isto, passemos à acção.
  
 \end_layout
 
@@ -326,7 +335,7 @@ Interpretador e Operações Básicas
 
 \begin_layout Standard
 O método mais simples de trabalhar com Python é através do interpretador.
- Este pode ser usado por várias maneiras: na linha de comandos, pelo internet
+ Este pode ser usado por vários caminhos: na linha de comandos, pelo internet
  [], por interfaces gráficas próprias [] ou até dentro doutros programas.
  Na Escola de Física será usado na linha de comandos.
  Para abrir o interpretador, introduz-se 
@@ -391,7 +400,7 @@ exit()
 
 \begin_layout Standard
 Comecemos por usar o interpretador como uma calculadora.
- As operações elementares da álgebra:
+ Temos as operações elementares da álgebra:
 \end_layout
 
 \begin_layout Standard
@@ -584,10 +593,6 @@ end{center}
 \end_layout
 
 \begin_layout Standard
-Note-se que a última só faz sentido entre números inteiros.
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -741,7 +746,7 @@ E os números complexos, como por exemplo
 \end_layout
 
 \begin_layout Standard
-Se não houver separador décimal o Python assume que o número é inteiro.
+Caso não haja separador décimal o Python assume que o número é inteiro.
  Isto pode trazer problemas nas divisões, por exemplo 
 \begin_inset Formula $1/2=0$
 \end_inset
@@ -974,8 +979,8 @@ end{center}
 \end_layout
 
 \begin_layout Standard
-Nem todos os caracteres se podem usar em cadeias de caracteres, por vezes
- é preciso usar certos atalhos, por exemplo paradar uma nova linha usa-se
+Infelizmente, nem todos os caracteres se podem usar em cadeias de caracteres,
+ por vezes é preciso usar certos atalhos, por exemplo uma nova linha escreve-se
  
 \begin_inset Quotes eld
 \end_inset
@@ -986,7 +991,21 @@ n
 \begin_inset Quotes erd
 \end_inset
 
-.
+, as aspas 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+...
 \end_layout
 
 \begin_layout Standard
@@ -1042,10 +1061,6 @@ ave
 \end_layout
 
 \begin_layout Standard
-De notar que o 
-\end_layout
-
-\begin_layout Standard
 Pode-se também juntar várias cadeias, usando um sinal de +, por exemplo
  
 \begin_inset Quotes eld
@@ -1059,7 +1074,7 @@ Eu tenho uma
 \begin_inset Quotes eld
 \end_inset
 
- mesa.
+ mesa
 \begin_inset Quotes erd
 \end_inset
 
@@ -1067,10 +1082,11 @@ Eu tenho uma
 \begin_inset Quotes eld
 \end_inset
 
-Eu tenho uma mesa.
+Eu tenho uma mesa
 \begin_inset Quotes erd
 \end_inset
 
+.
  Ou multiplicar uma cadeia por um número natural: 2*
 \begin_inset Quotes erd
 \end_inset
@@ -1170,9 +1186,9 @@ Listas
 \end_layout
 
 \begin_layout Standard
-No contexto de variáveis a última coisa que nós vamos introduzir são as
- listas.
- Uma lista de objectos escreve-se entre parentesis rectos, por exemplo:
+Uma lista é um conjunto ordenado de objectos, estes podem ser números, cadeias
+ de caracteres ou mesmo outras listas.
+ Em Python uma lista é delimitada por parentesis rectos, por exemplo:
 \end_layout
 
 \begin_layout Standard
@@ -1218,8 +1234,7 @@ end{center}
 \end_layout
 
 \begin_layout Standard
-Como podem ver as listas são mais fléxiveis que as cadeias, por isso a sua
- importância.
+Como podem ver as listas são mais flexiveis que as cadeias.
  Vejamos algumas das operações que podemos realizar com elas:
 \end_layout
 
@@ -1373,7 +1388,7 @@ Imaginem que estamos a fazer um cálculo e ao final de 30 min reparamos que
 \end_layout
 
 \begin_layout Standard
-Começamos por abrir um edito de texto qualquer, escrevemos:
+Por isso, começamos por abrir um editor de texto qualquer, e escrevemos:
 \end_layout
 
 \begin_layout Standard
@@ -1420,8 +1435,12 @@ end{python}
 
 \begin_layout Standard
 Gravamos o ficheiro, por exemplo com o nome primeiro.py (o .py serve para
- identificar os ficheiros de Python), e por fim corremos o python com o
- ficheiro usando o comando python primeiro.py.
+ identificar os ficheiros de Python), e por fim corremos o Python com o
+ ficheiro usando o comando 
+\emph on
+python primeiro.py
+\emph default
+.
 \end_layout
 
 \begin_layout Standard
@@ -1429,7 +1448,7 @@ Vamos analisar o programa:
 \end_layout
 
 \begin_layout Itemize
-#coding=utf8 permite usar caracteres acentuados e o ç.
+#coding=utf8 permite usar caracteres acentuados e o ç;
 \end_layout
 
 \begin_layout Itemize
@@ -1441,28 +1460,29 @@ Este é o meu primeiro programa.
 \begin_inset Quotes erd
 \end_inset
 
- cria uma cadeia de caracteres.
+ cria uma cadeia de caracteres;
 \end_layout
 
 \begin_layout Itemize
-#, a partir deste símbolo e até mudar de linha o python ignora, serve então
- para escrever comentários.
+# indica um comentário, o Python ignora a partir deste símbolo até à mudança
+ de linha;
 \end_layout
 
 \begin_layout Itemize
-print frase vai imprimir (ou escrever) o valor da variável frase na linha
- de comandos.
+print frase é o comando que escreve (ou imprime) o valor da variável frase
+ na linha de comandos.
 \end_layout
 
 \begin_layout Standard
 O código deve ser limpo, bem organizado e muito bem comentado.
  Senão, ninguém será capaz de perceber o que vocês estão a fazer nem mesmo
  vocês daqui a uma semana.
- 
 \end_layout
 
 \begin_layout Standard
-FALTA FALAR DE IDENTAÇão
+No caso especial do Python, o código tem que ser devidamente indentado (que
+ consiste na adição de tabulações no início de cada linha), explicaremos
+ este conceito à medida que precisarmos dele.
 \end_layout
 
 \begin_layout Section
@@ -1476,11 +1496,11 @@ Imaginemos que queremos calcular o seno de
 
 , imprimir
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Para nós imprimir significa que o nosso programa nos devolve algo, por exemplo
- na linha de comandos, num ficheiro pdf ou em papel.
+Imprimir significa que o nosso programa nos devolve algo, por exemplo na
+ linha de comandos, num ficheiro pdf ou em papel.
 \end_layout
 
 \end_inset
@@ -1494,9 +1514,9 @@ Print
 \end_layout
 
 \begin_layout Standard
-De nada nos vale fazer um programa se ele não comunica connosco.
+De nada serve fazer um programa se ele não comunicar com o utilizador.
  A função print imprime aquilo que nós quisermos para a linha de comandos,
- como podem ver no exemplo anterior.
+ como viram no exemplo anterior.
  Mas podemos fazer coisas mais complicadas:
 \end_layout
 
@@ -1681,26 +1701,12 @@ begin{python}
 
 \begin_layout Plain Layout
 
-print "Eu sou um programa inteligente
-\backslash
-n" 
+n=input("Escreve um número:")  
 \end_layout
 
 \begin_layout Plain Layout
 
-n=input("Escreve um número em que estejas a pensar:") 
-\end_layout
-
-\begin_layout Plain Layout
-
-print "
-\backslash
-nDepois de um esforço sobre-humano" 
-\end_layout
-
-\begin_layout Plain Layout
-
-print "descobri que estás a pensar no número",n
+print "O número que escreveu foi",n
 \end_layout
 
 \begin_layout Plain Layout
@@ -1792,36 +1798,6 @@ begin{ex}
 
 \end_inset
 
-[lembras-te daqueles joguinhos: pense num número, duplique some 10, bla
- bla bla, estava a pensar nisso]
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{ex}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{ex}
-\end_layout
-
-\end_inset
-
 Escreve um programa que dê uma lista com todos os números inteiros entre
  dois valores definidos pelo utilizador.
 \begin_inset ERT
@@ -1844,7 +1820,7 @@ Transformar cadeias de caracteres em números e vice-versa
 \end_layout
 
 \begin_layout Standard
-Infelizmente o Python não consegue adivinhar quando nós queremos usar 
+Para o Python 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1852,8 +1828,9 @@ Infelizmente o Python não consegue adivinhar quando nós queremos usar
 \begin_inset Quotes erd
 \end_inset
 
- como um número ou como uma cadeia de caracteres.
- Felizmente podemos transformar uma na outra facilmente:
+ e 45 são coisas diferentes, sendo, respectivamente, uma cadeia de caracteres
+ e um número.
+ Mas podemos convertê-los facilmente:
 \end_layout
 
 \begin_layout Itemize
@@ -1951,9 +1928,12 @@ Definir funções
 \end_layout
 
 \begin_layout Standard
-Mas por vezes queremos usar funções que não estão já definidas, e então
- temos de ser nós a defini-las.
- Vejamos um exemplo:
+Por vezes queremos usar funções que ainda não estão definidas, nesse caso
+ temos que ser nós a defini-las.
+ Vejamos um exemplo duma definição:
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -2049,7 +2029,7 @@ Pode haver quantas variáveis nós queiramos, de notar que os nomes que usamos
 \end_layout
 
 \begin_layout Itemize
-O python é uma linguagem de identação, ou seja, ele sabe que determinadas
+O Python é uma linguagem de identação, ou seja, ele sabe que determinadas
  ordens pertencem à função porque estão identadas;
 \end_layout
 
@@ -2066,11 +2046,44 @@ return
 \end_inset
 
  devolve-nos o resultado da função, note-se que não é obrigatório haver
- um resultado;
+ um resultado, a função pode imprimir algo na linha de comandos;
 \end_layout
 
 \begin_layout Itemize
 A função acaba quando o texto deixar de ser identado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Escreva um programa que calcule 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2105,6 +2118,16 @@ Escreva um programa que nos devolva
 
 If n==1: return 1
 \begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Se n for igual a 1 devolve 1.
+\end_layout
+
 \end_inset
 
 
@@ -2194,6 +2217,11 @@ if n==0:
 \begin_layout Plain Layout
 
   print "O número é nem positivo nem negativo"
+\end_layout
+
+\begin_layout Plain Layout
+
+  print "Ou seja, é o zero."
 \end_layout
 
 \begin_layout Plain Layout
@@ -2727,14 +2755,13 @@ end{ex}
 \end_layout
 
 \begin_layout Subsection
-Repetições: para ..
- em ..
+Repetições: para ...
+ em ...
 \end_layout
 
 \begin_layout Standard
-Temos uma operação e queremo-la repetir mil vezes, não vamos escrever a
- ordem mil vezes.
- Exemplo:
+Temos uma operação e queremo-la repetir mil vezes.
+ Ou escrevemos a ordem mil vezes, ou usamos um ciclo for (para em inglês):
 \end_layout
 
 \begin_layout Standard
@@ -3054,7 +3081,7 @@ end{ex}
 \end_layout
 
 \begin_layout Subsection
-Repetições: enquanto ..
+Repetições: enquanto ...
 \end_layout
 
 \begin_layout Standard
@@ -3111,11 +3138,11 @@ end{python}
 \end_layout
 
 \begin_layout Standard
-O ciclo vai ser repetido até que 
+O ciclo vai ser repetido enquanto 
 \begin_inset Formula $n$
 \end_inset
 
- seja positivo.
+ for negativo.
 \end_layout
 
 \begin_layout Standard
@@ -3149,7 +3176,7 @@ break
 \end_inset
 
 .
- Nesse caso o 
+ E nesse caso o 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3178,8 +3205,8 @@ Queremos calcular a raiz quadrada de
 \end_inset
 
 .
- Um método um pouco estúpido é de pedir estimativas ao utilizador até que
- ele se aproxime o suficiente.
+ Um método rudimentar é de pedir estimativas ao utilizador até que ele se
+ aproxime o suficiente.
 \begin_inset ERT
 status open
 
@@ -3244,8 +3271,9 @@ Ajuda
 \begin_layout Standard
 Mesmo depois de usar Python durante anos, não é suposto saber tudo sobre
  ele.
- Para isso existem manuais, a internet e a ajuda do python.
- Num interpretador de Python escrevam 
+ Para isso existem manuais, a internet e a ajuda do Python.
+ É sobre a última que nos debruçaremos a seguir.
+ Num interpretador de Python escreva 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3280,6 +3308,53 @@ begin{center}
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Escreva um programa que nos devolva 
+\begin_inset Formula $n!$
+\end_inset
+
+.
+ Use o facto de se 
+\begin_inset Formula $n=1$
+\end_inset
+
+, 
+\begin_inset Formula $n!=1$
+\end_inset
+
+, escrito na linha: 
+\begin_inset Quotes eld
+\end_inset
+
+If n==1: return 1
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3299,7 +3374,7 @@ end{center}
 \end_layout
 
 \begin_layout Standard
-Como podem ver, o Python informa-nos sobre o programa 
+Como podem ver, o Python explica-nos como funciona a função 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3308,7 +3383,7 @@ pow
 \end_inset
 
 .
- Ele pega em dois ou três argumentos e devolve-nos um número.
+ Ela pega em dois ou três argumentos e devolve-nos um número.
  
 \end_layout
 
@@ -3317,7 +3392,7 @@ Bibliotecas
 \end_layout
 
 \begin_layout Standard
-Experimentem escrever 
+Experimente escrever 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3860,7 +3935,7 @@ pi
 \begin_layout Standard
 Duas notas.
  O seno, coseno e tangente usam radianos.
- No caso dos logaritmo não nepariano usa-se log(,base)
+ No caso do logaritmo não nepariano usa-se log(,base)
 \end_layout
 
 \begin_layout Standard
@@ -4196,7 +4271,7 @@ auto
 \begin_inset Quotes erd
 \end_inset
 
- que permite ao python de escolher os intervalos;
+ que permite ao Python de escolher os intervalos;
 \end_layout
 
 \begin_layout Itemize
@@ -4425,7 +4500,7 @@ w
 \end_inset
 
  que vem do inglês write, isto quer dizer que abrimos um ficheiro para escrever
- nele (caso já exista um ficheiro com esse nome o python apaga todo o seu
+ nele (caso já exista um ficheiro com esse nome o Python apaga todo o seu
  conteúdo).
  No lugar do 
 \begin_inset Quotes eld

@@ -112,7 +112,7 @@ theorems-ams
 \paragraph_separation indent
 \defskip medskip
 \quotes_language english
-\papercolumns 2
+\papercolumns 1
 \papersides 1
 \paperpagestyle default
 \bullet 1 0 9 -1
@@ -6169,14 +6169,20 @@ Vinho branco ou vinho tinto?
 \end_layout
 
 \begin_layout Chapter
-Caos
+Da ordem ao caos
 \end_layout
 
 \begin_layout Standard
-Nesta secção apresento uma proposta de resolução do problema da moeda/bola
- que cai por entre uma pirâmide de pregos/tubos.
- Nas sub-secções seguintes apresentaremos outros modelos matemáticos com
- propriedades parecidas.
+Segundo a física clássica o nosso mundo é determinístico.
+ Ou seja, se nós repetirmos a mesma experiência nas mesmas condições vamos
+ obter exactamente os mesmos resultados.
+ Porém não somos capazes de prever tudo.
+ Porquê? Esta dificuldade em prever certos fenómenos surge, de entre outras
+ causas, do caos.
+\end_layout
+
+\begin_layout Standard
+Para perceber donde surge o caos, propomos aqui um exemplo simples.
 \end_layout
 
 \begin_layout Section
@@ -6184,25 +6190,30 @@ O problema da pirâmide
 \end_layout
 
 \begin_layout Standard
-Temos uma pirâmide de tubos, como mostra na figura 
+Imaginemos um pequeno jogo.
+ 
+\end_layout
+
+\begin_layout Standard
+Temos uma pirâmide de tubos, tal como mostra a figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:piramide"
 
 \end_inset
 
-, com aberturas em baixo e em cima.
- Deixamos cair uma bola por entre os tubos e vamos vê-la cair pelos tubos
- até que ao fim ela 
+, abertos em baixo e em cima.
+ Deixamos cair uma bola por entre os tubos e deixamo-la cair por entre os
+ tubos até que por fim ela 
 \begin_inset Quotes eld
 \end_inset
 
-se decide
+se decida
 \begin_inset Quotes erd
 \end_inset
 
- parar numa certa caixa.
- Qual é essa caixa?
+ a parar numa certa caixa.
+ Agora queremos adivinhar que caixa é essa.
 \end_layout
 
 \begin_layout Standard
@@ -6210,10 +6221,6 @@ se decide
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -6245,8 +6252,8 @@ name "fig:piramide"
 
 \end_inset
 
-A bola vai cair no primeiro tubo e vai batendo nas várias paredes até chegar
- à caixa 4.
+Neste exemplo, a bola cai no primeiro tubo e vai batendo nas várias paredes
+ até chegar à caixa 4.
 \end_layout
 
 \end_inset
@@ -6263,12 +6270,18 @@ A bola vai cair no primeiro tubo e vai batendo nas várias paredes até chegar
 
 \end_layout
 
+\begin_layout Standard
+Infelizmente o problema é ainda muito complicado para ser tratado com todo
+ o pormenor em apenas uma semana.
+ Por isso, em 2008, decidimos simplificar o modelo desprezando a gravidade.
+\end_layout
+
 \begin_layout Subsection
-Em que número é que fica
+Caixa final
 \end_layout
 
 \begin_layout Standard
-Em 2008, depois de simplificar o modelo, chegamos à simulação:
+Para calcular a que caixa a bola chega utilizamos, em 2008, o seguinte programa:
 \end_layout
 
 \begin_layout Standard
@@ -6331,12 +6344,21 @@ num=0 #indicador do número da caixa
 
 \begin_layout Plain Layout
 
-#calculo a posição e o ângulo de saída para cada tubo 
+# saida(x,w) é uma função auxiliar que 
 \end_layout
 
 \begin_layout Plain Layout
 
-#sabendo a posição e o ângulo de entrada
+# calcula a posição e o ângulo de saída para cada tubo 
+\end_layout
+
+\begin_layout Plain Layout
+
+# sabendo a posição e o ângulo de entrada neste
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -6346,22 +6368,17 @@ def saida(x,w):
 
 \begin_layout Plain Layout
 
-  y=w*b+x
+  y=w*b+x #posição final se o tubo não tivesse paredes
 \end_layout
 
 \begin_layout Plain Layout
 
-#int() devolve a parte inteira de y
+  n=int(y) #devolve a parte inteira de y
 \end_layout
 
 \begin_layout Plain Layout
 
-  n=int(y)
-\end_layout
-
-\begin_layout Plain Layout
-
-  d=y-n
+  d=y-n #
 \end_layout
 
 \begin_layout Plain Layout
@@ -6445,7 +6462,7 @@ def saida(x,w):
 
 \begin_layout Plain Layout
 
-#calcula fila por fila onde está a bola
+# Calcula fila por fila onde está a bola
 \end_layout
 
 \begin_layout Plain Layout
@@ -6519,7 +6536,8 @@ Trajectória da bola
 \end_layout
 
 \begin_layout Standard
-Neste mesmo ano desenhamos a trajectória da bola:
+Para desenhar a trajectória bastou-nos registar a posição a cada nível e
+ no fim fazer um gráfico:
 \end_layout
 
 \begin_layout Standard
@@ -6852,14 +6870,14 @@ end{python}
 \end_layout
 
 \begin_layout Standard
-Vejamos o que devemos obter na figura 
+Podemos ver na figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:traj"
 
 \end_inset
 
-.
+ dois exemplos de trajectórias.
  
 \end_layout
 
@@ -6867,7 +6885,7 @@ reference "fig:traj"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -6914,7 +6932,7 @@ name "fig:traj"
 
 \end_inset
 
-Trajectórias para duas configurações quase idẽnticas.
+Trajectórias para duas configurações quase idênticas.
 \end_layout
 
 \end_inset
@@ -6936,7 +6954,9 @@ Variando o ângulo
 \end_layout
 
 \begin_layout Standard
-Para ver o que acontece se variarmos o ângulo, basta alterar o nosso programa:
+Para melhor testar a dependência do modelo nas condições iniciais, corremos
+ o programa variando o ângulo inicial.
+ Nesse intuíto alteramos o nosso programa:
 \end_layout
 
 \begin_layout Standard
@@ -7303,7 +7323,7 @@ end{python}
 \end_layout
 
 \begin_layout Standard
-Se tudo correr bem, isto resulta no gráfico 
+Isto resulta no gráfico 
 \begin_inset Float figure
 wide false
 sideways false
@@ -7346,7 +7366,8 @@ name "fig:caos"
 
 \end_inset
 
-Como varia o número da caixa final com a tangente do ângulo inicial.
+Gráfico da variação do número da caixa final em função da tangente do ângulo
+ inicial.
 \end_layout
 
 \end_inset
@@ -7359,16 +7380,58 @@ Como varia o número da caixa final com a tangente do ângulo inicial.
 .
 \end_layout
 
+\begin_layout Subsection
+Perguntas em aberto
+\end_layout
+
+\begin_layout Enumerate
+O que acontece se em vez de variarmos o ângulo inicial variarmos a posição
+ inicial?
+\end_layout
+
+\begin_layout Enumerate
+Será que podemos considerar a gravidade? Vai aumentar ou diminuir a imprevisibil
+idade?
+\end_layout
+
+\begin_layout Enumerate
+Existe alguma forma de calcular a imprevisibilidade? Calcula duas trajectórias
+ começando em condições semelhantes (mas não exactamente iguais) e veja
+ como divergem.
+ Repete a experiência várias vezes.
+\end_layout
+
+\begin_layout Enumerate
+E se o tamanho da caixa fosse aleatório, mas pré-definido?
+\end_layout
+
+\begin_layout Enumerate
+Qual é a probabilidade de a bola cair numa determinada posição?
+\end_layout
+
+\begin_layout Enumerate
+Imaginemos a mesma experiência, mas na qual a bola 
+\begin_inset Quotes eld
+\end_inset
+
+escolhe
+\begin_inset Quotes erd
+\end_inset
+
+ ir para o tubo à esquerda ou à direita aleatoriamente.
+ Como se comparam os resultados de ambas as experiências?
+\end_layout
+
 \begin_layout Section
 Outros modelos
 \end_layout
 
 \begin_layout Standard
-Durante a idealização deste projecto investiguei vários modelos com característi
-cas semelhantes.
- De entre todos os modelos escolhi a pirâmide por ser o mais adequado ao
- estudo.
- Mas aproveito que tenho os programas feitos para os apresentar.
+Na preparação deste projecto foram investigados vários modelos com característic
+as semelhantes.
+ O modelo da pirâmide foi escolhido por ser o mais adequado às pretenções
+ da Escola de Verão, mas existem outros igualmente interessantes.
+ Nesta secção fazemos uma pequena digressão sobre esses modelos.
 \end_layout
 
 \begin_layout Subsection
@@ -7376,24 +7439,31 @@ Sistemas dinâmicos e coelhos
 \end_layout
 
 \begin_layout Standard
-Quanto mais coelhos houver mais eles se reproduzem e quanto mais houver
- menos comida há e mais eles morrem.
- Por outras palavras, a taxa de natalidade dos coelhos é proporcional à
- quantidade de coelhos existentes (
+Numa certa ilha deserta existe uma população de coelhos, a densidade de
+ coelhos no momento 
+\begin_inset Formula $n$
+\end_inset
+
+ é dada por 
+\begin_inset Formula $u_{n}$
+\end_inset
+
+.
+ É normal considerar que a taxa de natalidade dos coelhos seja proporcional
+ à quantidade de coelhos existentes (
 \begin_inset Formula $\sim u_{n}$
 \end_inset
 
-) e à comida existente (
+).
+ Por outro lado, esperamos que a quantidade de coelhos dependa da quantidade
+ de comida disponível.
+ Por sua vez a quantidade de comida depende da concentração de coelhos (
 \begin_inset Formula $\sim(1-u_{n})$
 \end_inset
 
 ).
- Em que 
-\begin_inset Formula $u_{n}$
-\end_inset
-
-é a quantidade de coelhos devidamente normalizada.
- Daí tiramos que a segunda geração de coelhos pode ser descrita pela equação:
+ Podemos então dizer que a concentração na segunda geração de coelhos é
+ descrita pela equação:
 \begin_inset Formula \[
 u_{n+1}=A\ u_{n}(1-u_{n})\]
 
@@ -7403,13 +7473,14 @@ u_{n+1}=A\ u_{n}(1-u_{n})\]
 \end_layout
 
 \begin_layout Standard
-Apesar do aparente ar inofensivo, esta equação esconde propriedades bastante
- interessantes, para começar tem dois pontos fixos: 
-\begin_inset Formula $u_{n}=0$
+Apesar de parecer tão simples, esta equação esconde propriedades bastante
+ interessantes.
+ Para começar tem dois pontos fixos: 
+\begin_inset Formula $u=0$
 \end_inset
 
 , se não há coelhos no início não há procriação; 
-\begin_inset Formula $u_{n}=1-A^{-1}$
+\begin_inset Formula $u=1-A^{-1}$
 \end_inset
 
 .
@@ -7417,13 +7488,13 @@ Apesar do aparente ar inofensivo, esta equação esconde propriedades bastante
 \begin_inset Formula $A<3$
 \end_inset
 
- (valor aproximado) o sistema converge, depois tem um intervalo em que o
- sistema alterna entre dois pontos, três pontos...
+ (valor aproximado) o sistema converge sempre, depois tem um intervalo em
+ que o sistema alterna entre dois pontos, três pontos...
  assim por diante, até que a partir de 
 \begin_inset Formula $3.6$
 \end_inset
 
- ele começa a oscilar como um doido.
+ ele começa a visitar todos os pontos entre 0 e 1.
  Como se pode ver no gráfico
 \begin_inset space ~
 \end_inset
@@ -8137,7 +8208,8 @@ Mapa a 2 dimensões
 
 \begin_layout Standard
 Um mapa a 2 dimensões consiste num conjunto de duas variáveis.
- Em cada passo as duas variáveis mudam, vejamos alguns exemplos:
+ Em cada passo as duas variáveis são actualizadas em simultâneo, vejamos
+ alguns exemplos que apresentam caos:
 \end_layout
 
 \begin_layout Enumerate
@@ -8187,7 +8259,7 @@ Funções por ramos
 
 \begin_layout Standard
 Uma função por ramos é uma função que tem dois ou mais comportamentos distintos.
- Quando iteradas várias vezes, algumas delas ganham um carácter imprivisível.
+ Quando iteradas várias vezes, algumas delas ganham um carácter imprevisível.
 \end_layout
 
 \begin_layout Standard
@@ -8229,13 +8301,12 @@ Geradores de números aleatórios
 \end_layout
 
 \begin_layout Standard
-Os computadores actuais são imcapazes de produzir números aleatórios.
- No entanto, é possível produzir números pseudo-aleatórios.
- Ou seja, são números que aparentemente são aleatórios apesar de não ser.
- Nesta sub-secção dou alguns exemplos de geradores simples de números pseudo-ale
-atórios.
- Nesta fase, já não é nenhum mistério porque é que estes algorítmos dão
- números aparentemente caóticos (para usar a palavra caos):
+Os computadores actuais são incapazes de produzir números aleatórios, uma
+ vez que um computador só utiliza fenómenos deterministicos.
+ No entanto, é possível produzir números aparentemente aleatórios, que são
+ chamados números pseudo-aleatórios.
+ Não é de estranhar que os algorítmos usados sejam caóticos.
+ Vejamos alguns exemplos:
 \end_layout
 
 \begin_layout Enumerate
@@ -8244,7 +8315,11 @@ Método de Van Neumann:
 
 \begin_deeper
 \begin_layout Enumerate
-Pegamos um número de 
+Seja 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ um número de 
 \begin_inset Formula $n$
 \end_inset
 
@@ -8252,15 +8327,23 @@ Pegamos um número de
 \end_layout
 
 \begin_layout Enumerate
-Quadramo-lo;
+Calculamos 
+\begin_inset Formula $m^{2}$
+\end_inset
+
+;
 \end_layout
 
 \begin_layout Enumerate
-E pegamos nos 
+E isolamos os 
 \begin_inset Formula $n$
 \end_inset
 
- dígitos centrais.
+ dígitos centrais, temos assim o novo número 
+\begin_inset Formula $v_{n+1}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -8271,7 +8354,7 @@ Método de Fibonacci, seja
 
  um primo grande:
 \begin_inset Formula \[
-x_{n}=(x_{n-1}+x_{n-k})\%m\]
+x_{n+1}=(x_{n}+x_{n-k})\%m\]
 
 \end_inset
 
@@ -8279,11 +8362,7 @@ em que
 \begin_inset Formula $k$
 \end_inset
 
- é 
-\begin_inset Formula $2$
-\end_inset
-
- no caso mais simples mas pode ser 
+ é um número natural.
 \end_layout
 
 \begin_layout Enumerate
@@ -8308,8 +8387,13 @@ u_{n+1}=(a\ u_{n}+b)\ \%\ c\]
 
 \end_layout
 
+\begin_layout Standard
+O aluno interessado não terá dificuldade em programar estes geradores.
+\end_layout
+
 \begin_layout Chapter
-Apêndice 1 - Linguagens de Programação
+\start_of_appendix
+Linguagens de Programação
 \end_layout
 
 \begin_layout Standard
@@ -8509,7 +8593,7 @@ Scheme blablabla
 \end_layout
 
 \begin_layout Chapter
-Apêndice 2 - Bibliotecas úteis e exemplos
+Bibliotecas úteis e exemplos
 \end_layout
 
 \begin_layout Standard

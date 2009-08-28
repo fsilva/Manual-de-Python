@@ -3472,6 +3472,11 @@ reference "sub:pylab"
 \end_layout
 
 \begin_layout Itemize
+A biblioteca VPython ou Visual Python permite-nos criar, de forma simples,
+ gráficos e animações a 3d interactivos.
+\end_layout
+
+\begin_layout Itemize
 numpy extende as potencialidades do Python, definindo vectores, matrizes
  multi-dimensionais bem como funções que operam nesses objectos.
  Existe ainda o scipy que o complementa;
@@ -4382,6 +4387,160 @@ end{ex}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Visual Python
+\end_layout
+
+\begin_layout Standard
+Vejamos agora um exemplo simples da utilização do Visual Python:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+from visual import *
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+floor = box (pos=(0,0,0), length=4, height=0.5, width=4, color=color.blue)
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ball = sphere (pos=(0,4,0), radius=1, color=color.red) 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na primeira linha definimos um objecto chamado 
+\begin_inset Quotes eld
+\end_inset
+
+floor
+\begin_inset Quotes erd
+\end_inset
+
+ que é uma caixa (
+\begin_inset Quotes eld
+\end_inset
+
+box
+\begin_inset Quotes erd
+\end_inset
+
+) na posição (0,0,0) e um outro objecto chamado 
+\begin_inset Quotes eld
+\end_inset
+
+ball
+\begin_inset Quotes erd
+\end_inset
+
+ que é uma esfera (
+\begin_inset Quotes eld
+\end_inset
+
+sphere
+\begin_inset Quotes erd
+\end_inset
+
+) centrada no ponto (0,4,0).
+ 
+\end_layout
+
+\begin_layout Standard
+É possível rodar a figura mantendo o botão direito do rato premido sobre
+ a janela e movendo-o.
+ Procedendo da mesma maneira com o botão do meio permite-nos ampliar ou
+ reduzir.
+ As chamadas 
+\emph on
+box
+\emph default
+ e 
+\emph on
+sphere
+\emph default
+ criam os respectivos objectos.
+ Se for necessário referir-nos a esses objectos posteriormente é necessário
+ atribuir essas chamadas a uma variável como no exemplo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/tfonseca/.fr-QwaMUG/curso_python/images/vpython1.png
+	display false
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Exemplo de VPython
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Vectores
+\end_layout
+
+\begin_layout Standard
+O VPython suporta o tipo vector.
+\end_layout
+
+\begin_layout Standard
+Objectos
+\end_layout
+
+\begin_layout Standard
+Na tabela [tab:Objectos-VPython], <ponto> deve ser substituído por um dado
+ ponto no espaço 3D como por exemplo (1,2,3) e <vec> por um vector, como
+ por exemplo (1,0,0), e sendo <n> um número real.
 \end_layout
 
 \begin_layout Section

@@ -153,21 +153,21 @@ Introdução
 \end_layout
 
 \begin_layout Standard
-Este manual foi escrito no intuito de apoiar os projectos por nós dirigidos
- na Escola de Verão de Física, visto que ambos passam por aprender o básico
+Este manual foi escrito com o intuito de apoiar os projectos por nós dirigidos
+ na Escola de Verão de Física, visto que estes passam por aprender o básico
  sobre Python - uma linguagem de programação simples e fácil de aprender.
  
 \end_layout
 
 \begin_layout Standard
 Mas, porquê escrever mais um manual de Python? É verdade que na internet
- se encontram vários manuais de Python, mas o problema é que esses manuais
- ora estão em inglês ora são demasiado avançados ora estão centrados em
- aspectos que não nos interessam...
- E é por isso que nós nos juntamos para escrever um pequeno manual onde
- explicamos aquilo que necessitamos da forma como queremos.
- No fim da escola os alunos poderão guardar este manual como referência
- caso queiram brincar um pouco mais com o Python.
+ se encontram vários manuais de Python, no entanto estes manuais ora estão
+ em inglês ora são demasiado avançados ora estão centrados em aspectos que
+ não nos interessam...
+ Por isso decidimos escrever um pequeno manual onde explicamos aquilo que
+ necessitamos e da forma que nós queremos.
+ No fim da escola este manual será actualizado e os alunos poderão utilizá-lo
+ como referência caso queiram brincar um pouco mais com o Python.
  
 \end_layout
 
@@ -182,8 +182,7 @@ O que é simulação
 
 \begin_layout Standard
 Suponhamos que estamos interessados em construir um carro que seja seguro.
- Precisamos então de testar o comportamento do carro em vários tipos de
- acidentes.
+ Precisamos de testar o comportamento do carro em vários tipos de acidentes.
  O modo mais directo de testar a sua segurança seria realizar uma colisão
  real, ou seja, metemo-nos no carro aceleramos e chocamos contra um obstáculo.
  Este método é incómodo pois só podemos fazer a experiência uma vez e nem
@@ -198,7 +197,7 @@ E se no lugar de pessoas usássemos bonecos, os quais simulariam o condutor
 \end_layout
 
 \begin_layout Standard
-Mesmo assim temos um problema, para cada simulação precisamos dum carro,
+Mesmo assim temos um problema: para cada simulação precisamos dum carro,
  o que fica extremamente caro.
  Outra opção seria simular a situação dentro dum computador, poupando carros
  e bonecos.
@@ -206,21 +205,30 @@ Mesmo assim temos um problema, para cada simulação precisamos dum carro,
  do carro e dos passageiros ao longo do acidente usando um computador, estimando
  no fim o dano causado nos vários passageiros.
  Podemos assim simular acidentes de forma muito mais barata e rápida e em
- inúmeras situações diferentes.
+ inúmeras situações.
  
 \end_layout
 
 \begin_layout Standard
-Claro que a simulação computacional, em geral, é menos fidedigna que o embate
- real dum carro num obstáculo.
- Por isso, usa-se as duas técnicas complementarmente - começa-se por se
- simular no computador e numa fase mais avançada usa-se um protótipo.
+Claro que a simulação computacional é, em geral, menos fidedigna que o embate
+ dum carro num obstáculo.
+ Por isso usa-se as duas técnicas complementarmente: começa-se por simular
+ no computador e numa fase mais avançada usa-se um protótipo.
 \end_layout
 
 \begin_layout Standard
 Note-se que há imensas situações as quais só se podem estudar por simulação
- computacional - por exemplo a simulação da origem do universo ou nano-engrenage
-ns, até agora impossíveis de fabricar.
+ computacional: por exemplo a simulação da origem do universo ou nano-engrenagem
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+EXPLICAR UM POUCO
+\end_layout
+
+\end_inset
+
+, até agora impossíveis de fabricar.
 \end_layout
 
 \begin_layout Section
@@ -250,11 +258,7 @@ Estas linguagens podem ser classificadas segundo vários critérios.
 \begin_layout Standard
 Nas linguagens imperativas o programador escreve explicitamente todas as
  acções que o computador deve fazer, à semelhança de uma receita.
- 
-\end_layout
-
-\begin_layout Standard
-Nas declarativas, de um modo geral, o programador escreve o que quer que
+ Nas declarativas, de um modo geral, o programador escreve o que quer que
  o programa faça, sem específicar exactamente como ou em que ordem.
  Notem que isto não quer dizer que o programador possa escrever 'Computador,
  calcula-me o sentido da vida' - o computador não saberia o que fazer.
@@ -263,13 +267,20 @@ Nas declarativas, de um modo geral, o programador escreve o que quer que
  A diferença é que nas linguagens imperativas o programador dá ordens de
  manipulação destes elementos, nas declarativas o programador estabelece
  relações entre eles.
- 
+ [É PRECISO EXPLICAR MELHOR]
 \end_layout
 
 \begin_layout Standard
 Embora fosse interessante, não vamos falar aqui sobre as várias linguagens
- de programação diferentes, está fora dos nossos objectivos.
- No entanto, os mais curiosos podem espreitar no apêndice [NUMERODOAPENDICE].
+ de programação, pois está fora dos nossos objectivos.
+ No entanto, os mais curiosos podem espreitar no apêndice 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cha:Linguagens-de-Programação"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -291,9 +302,9 @@ Esta deve permitir-nos expôr os resultados de forma conveniente - numéros,
 \end_layout
 
 \begin_layout Itemize
-Deve ser de acesso fácil e gratuito, pômos assim de parte linguagens que
- se pagam ou que necessitam de um curso só para as instalar; [Ainda não
- é perfeito.]
+Deve ser gratuito, e fácil de instalar seja em Linux, em MacOSX ou em Windows.
+ Pômos assim de parte linguagens que se pagam ou que necessitam de um curso
+ só para as instalar;
 \end_layout
 
 \begin_layout Itemize
@@ -302,13 +313,12 @@ Necessitamos de uma linguagem com uma sintaxe simples cujos elementos básicos
 \end_layout
 
 \begin_layout Standard
-Embora existam várias linguagens que de certo modo preencham os 4 requerimentos,
+Embora existam várias linguagens que de certo modo preencham os 4 requisitos
  existe uma que achamos especialmente adequada: Python.
  Esta distingue-se especialmente por ter uma sintaxe clara e ter elementos
  básicos simples.
- Ser relativamente fácil de usar.
- Esta tem ainda a vantagem de possuir vastas bibliotecas igualmente simples
- de usar.
+ É relativamente fácil de usar e tem ainda a vantagem de possuir vastas
+ bibliotecas igualmente simples de usar.
  
 \end_layout
 
@@ -335,7 +345,7 @@ Interpretador e Operações Básicas
 
 \begin_layout Standard
 O método mais simples de trabalhar com Python é através do interpretador.
- Este pode ser usado por vários caminhos: na linha de comandos, pelo internet
+ Este pode ser usado por vários caminhos: na linha de comandos, pela internet
  [], por interfaces gráficas próprias [] ou até dentro doutros programas.
  Na Escola de Física será usado na linha de comandos.
  Para abrir o interpretador, introduz-se 
@@ -8394,6 +8404,13 @@ O aluno interessado não terá dificuldade em programar estes geradores.
 \begin_layout Chapter
 \start_of_appendix
 Linguagens de Programação
+\begin_inset CommandInset label
+LatexCommand label
+name "cha:Linguagens-de-Programação"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

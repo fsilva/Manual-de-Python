@@ -3318,53 +3318,6 @@ begin{center}
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{ex}
-\end_layout
-
-\end_inset
-
-Escreva um programa que nos devolva 
-\begin_inset Formula $n!$
-\end_inset
-
-.
- Use o facto de se 
-\begin_inset Formula $n=1$
-\end_inset
-
-, 
-\begin_inset Formula $n!=1$
-\end_inset
-
-, escrito na linha: 
-\begin_inset Quotes eld
-\end_inset
-
-If n==1: return 1
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{ex}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -4474,7 +4427,50 @@ sphere
 \end_inset
 
 ) centrada no ponto (0,4,0).
- 
+ O resultado pode ser visto na seguinte figura:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename visual.png
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4493,30 +4489,23 @@ sphere
  criam os respectivos objectos.
  Se for necessário referir-nos a esses objectos posteriormente é necessário
  atribuir essas chamadas a uma variável como no exemplo.
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename /home/tfonseca/.fr-QwaMUG/curso_python/images/vpython1.png
-	display false
-	width 50page%
-
+Para além de caixas e bolas é possível desenhar outros objectos:
+\begin_inset Newline newline
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
 
-\begin_layout Plain Layout
-Exemplo de VPython
+
+\backslash
+begin{center}
 \end_layout
 
 \end_inset
@@ -4524,23 +4513,585 @@ Exemplo de VPython
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Objecto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comando
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Algumas opções
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Caixa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+box
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,lenght=<x>,height=<x>,width=<x>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cilindro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cylinder
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,axis=<v>,radius=<x>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Esfera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sphere
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,radius=<x>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cone
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cone
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,axis=<v>,radius=<x>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pirâmide
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pyramid
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,size=<v>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Seta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+arrow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,axis=<v>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Elipsoide
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ellipsoid
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,lenght=<x>,height=<x>,width=<n>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Curva
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+curve
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=[<p
+\begin_inset Formula $_{1}$
 \end_inset
 
-Vectores
+>,<p
+\begin_inset Formula $_{2}$
+\end_inset
+
+>
+\begin_inset Formula $\ldots$
+\end_inset
+
+],radius=<x>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Anel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ring
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,axis=<v>,radius=<x>,thickness=<x>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hélice
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+helix
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,axis=<v>,radius=<x>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Etiqueta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+label
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pos=<p>,text=
+\begin_inset Quotes erd
+\end_inset
+
+Texto
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-O VPython suporta o tipo vector.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Objectos
+Em que <p> é um ponto, por exempo 
+\begin_inset Formula $(1,1,1)$
+\end_inset
+
+, <v> é um vector, por exemplo 
+\begin_inset Formula $(2,0,-1)$
+\end_inset
+
+, e <x> é um número real.
 \end_layout
 
 \begin_layout Standard
-Na tabela [tab:Objectos-VPython], <ponto> deve ser substituído por um dado
- ponto no espaço 3D como por exemplo (1,2,3) e <vec> por um vector, como
- por exemplo (1,0,0), e sendo <n> um número real.
+Com o Visual Python podemos animar facilmente objectos, basta para isso
+ actualizar as propriedades dos objectos, vejamos uma bola a orbitar em
+ torno dum cilindro:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+from visual import *
+\end_layout
+
+\begin_layout Plain Layout
+
+from math import *
+\end_layout
+
+\begin_layout Plain Layout
+
+import time
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N=1000  #Número de iterações
+\end_layout
+
+\begin_layout Plain Layout
+
+T=2*pi   #Amplitude total da órbita em radanos
+\end_layout
+
+\begin_layout Plain Layout
+
+x=sin(0) #Posição inicial
+\end_layout
+
+\begin_layout Plain Layout
+
+y=cos(0) #Posição inicial
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Definimos um cilindro e uma esfera
+\end_layout
+
+\begin_layout Plain Layout
+
+eixo=cylinder(pos=(0,0,-1),axis=(0,0,2),radius=0.2)
+\end_layout
+
+\begin_layout Plain Layout
+
+bola=sphere(pos=(x,y,0),radius=0.3)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Actualizamos a posição da esfera
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(N):
+\end_layout
+
+\begin_layout Plain Layout
+
+  time.sleep(0.01) #Faz uma pausa de 0.01 segundos
+\end_layout
+
+\begin_layout Plain Layout
+
+  x=sin(i*T/N)
+\end_layout
+
+\begin_layout Plain Layout
+
+  y=cos(i*T/N)
+\end_layout
+
+\begin_layout Plain Layout
+
+  bola.pos=(x,y,0)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+para actualizar a posição da bola basta-nos escrever bola.pos=<nova posição>.
+ 
+\end_layout
+
+\begin_layout Standard
+Podem encontrar no site 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://vpython.org/contents/doc.html
+\end_layout
+
+\end_inset
+
+ um tutorial informações mais detalhadas sobre o Visual Python
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{ex}
+\end_layout
+
+\end_inset
+
+Anime uma bola, fazendo-a aumentar e diminuir de volume sinusoidalmente.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{ex}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4803,7 +5354,7 @@ begin{ex}
 
 \end_inset
 
-Criar uma tabela com os pontos do gráfico do seno entre 
+Crie uma tabela com os pontos do gráfico do seno entre 
 \begin_inset Formula $0$
 \end_inset
 
@@ -4944,10 +5495,6 @@ end{python}
 \end_layout
 
 \begin_layout Enumerate
-...
-\end_layout
-
-\begin_layout Enumerate
 Código:
 \begin_inset ERT
 status open
@@ -5047,6 +5594,78 @@ Duplicamos o número para 11312 e imprimimos.
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Código:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+# Criamos a função quadrado
+\end_layout
+
+\begin_layout Plain Layout
+
+def quadrado(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+  return x**2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Pedimos um número ao utilizador
+\end_layout
+
+\begin_layout Plain Layout
+
+m=input("Escreva um número: ")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Devolvemos o seu factorial
+\end_layout
+
+\begin_layout Plain Layout
+
+print m,"ao quadrado é igual a ",quadrado(m)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 Código:
 \begin_inset ERT
@@ -6208,6 +6827,126 @@ pylab.legend()
 \begin_layout Plain Layout
 
 pylab.show()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Código: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8 
+\end_layout
+
+\begin_layout Plain Layout
+
+from visual import * 
+\end_layout
+
+\begin_layout Plain Layout
+
+from math import * 
+\end_layout
+
+\begin_layout Plain Layout
+
+import time
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+n=10       #Número de actualizações por segundo 
+\end_layout
+
+\begin_layout Plain Layout
+
+t=200      #Tempo que dura a animação 
+\end_layout
+
+\begin_layout Plain Layout
+
+r=1+sin(0) #Raio inicial
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Definimos uma esfera 
+\end_layout
+
+\begin_layout Plain Layout
+
+bola=sphere(pos=(0,0,0),radius=r,color=color.red)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Fixamos o tamanho da janela 
+\end_layout
+
+\begin_layout Plain Layout
+
+scene.range=(3,3,3)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Actualizamos o raio da esfera 
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(n*t): 
+\end_layout
+
+\begin_layout Plain Layout
+
+ time.sleep(1./n) #Faz uma pausa de 1/n segundos 
+\end_layout
+
+\begin_layout Plain Layout
+
+ r=1+sin(i*0.2*pi/n) 
+\end_layout
+
+\begin_layout Plain Layout
+
+ bola.radius=r
 \end_layout
 
 \begin_layout Plain Layout
@@ -8562,214 +9301,7 @@ O aluno interessado não terá dificuldade em programar estes geradores.
 
 \begin_layout Chapter
 \start_of_appendix
-Linguagens de Programação
-\begin_inset CommandInset label
-LatexCommand label
-name "cha:Linguagens-de-Programação"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Neste apêndice vamos expôr algumas linguagens de programação que achamos
- útil saber que existem, por uma questão de cultura geral.
- Antes de passarmos a isso, vamos introduzir mais alguns conceitos.
-\end_layout
-
-\begin_layout Description
-Código-máquina Na verdade, os computadores falam apenas uma linguagem -
- código máquina.
- Esta linguagem não é universal - o código máquina que corre num computador
- normal não é o mesmo que corre num telemóvel
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Um telemóvel é praticamente um computador.
- Muitos deles até permitem programar em python!
-\end_layout
-
-\end_inset
-
-,por exemplo.
- Assim, para ser executado qualquer programa, mesmo escrito noutra linguagem,
- este tem eventualmente de ser traduzido para código máquina.
- 
-\end_layout
-
-\begin_layout Description
-Linguagens-compiladas-e-interpretadas A tradução para código máquina pode
- ser 
-\emph on
-à priori, 
-\emph default
-no caso de uma linguagem compilada, sendo o programa distribuido já em código
- máquina, ou pode ser em tempo real, durante a execução do programa, no
- caso de uma linguagem interpretada.
- Cada tipo tem as suas vantagens e desvantagens - por exemplo, as interpretadas
- são em geral mais lentas, mas quando existem erros no programa estes são
- mais fáceis de identificar do que nas compiladas.
- MAL.REVER ISTO.
-\end_layout
-
-\begin_layout Description
-Alto-nível-e-baixo-nível É frequente classificar as linguagens quanto ao
- seu nível - quanto mais baixo fôr o nível de uma linguagem, mas próximo
- esta a sua maneira de funcionar da do código máquina.
- Numa linguagem de alto nível esta maneira de funcionar está completamente
- abstraida, não tendo o programador de se preocupar com os detalhes do funcionam
-ento do computador (idealmente).
- A diferença será mais aparente quando dermos exemplos de linguagens.
- 
-\end_layout
-
-\begin_layout Standard
-Vamos expôr um programa exemplo para cada uma das linguagens: C, Java, Fortran,
- Scheme, Perl, Ruby e Python.
-\end_layout
-
-\begin_layout Subsection*
-C
-\end_layout
-
-\begin_layout Standard
-#include <stdio.h> 
-\end_layout
-
-\begin_layout Standard
-int main(void) 
-\end_layout
-
-\begin_layout Standard
-{ 
-\end_layout
-
-\begin_layout Standard
-printf("Hello, world!
-\backslash
-n"); 
-\end_layout
-
-\begin_layout Standard
-return 0; 
-\end_layout
-
-\begin_layout Standard
-} 
-\end_layout
-
-\begin_layout Standard
-C é blablabla
-\end_layout
-
-\begin_layout Subsection*
-Fortran
-\end_layout
-
-\begin_layout Standard
-program hello 
-\end_layout
-
-\begin_layout Standard
-print*, 'Hello, world!' 
-\end_layout
-
-\begin_layout Standard
-end 
-\end_layout
-
-\begin_layout Standard
-Fortran blablabla
-\end_layout
-
-\begin_layout Subsection*
-Java
-\end_layout
-
-\begin_layout Standard
-public class HelloWorld 
-\end_layout
-
-\begin_layout Standard
-{ 
-\end_layout
-
-\begin_layout Standard
-public static void main(String[] args) 
-\end_layout
-
-\begin_layout Standard
-{ 
-\end_layout
-
-\begin_layout Standard
-System.out.println("Hello, world!"); 
-\end_layout
-
-\begin_layout Standard
-} 
-\end_layout
-
-\begin_layout Standard
-} 
-\end_layout
-
-\begin_layout Standard
-Java blablabla
-\end_layout
-
-\begin_layout Subsection*
-Perl
-\end_layout
-
-\begin_layout Standard
-print "Hello, world!
-\backslash
-n"; 
-\end_layout
-
-\begin_layout Standard
-perl blabla
-\end_layout
-
-\begin_layout Subsection*
-Ruby
-\end_layout
-
-\begin_layout Standard
-puts 'Hello, world!' 
-\end_layout
-
-\begin_layout Standard
-ruby blablabla
-\end_layout
-
-\begin_layout Subsection*
-Python
-\end_layout
-
-\begin_layout Standard
-print 'Hello, world!'
-\end_layout
-
-\begin_layout Subsection*
-Scheme
-\end_layout
-
-\begin_layout Standard
-(display "Hello, world!
-\backslash
-n") 
-\end_layout
-
-\begin_layout Standard
-Scheme blablabla
-\end_layout
-
-\begin_layout Chapter
-Bibliotecas úteis e exemplos
+- Bibliotecas úteis e exemplos 
 \end_layout
 
 \begin_layout Standard
@@ -8780,23 +9312,2152 @@ No capítulo 3 já foram usadas bibliotecas para poder usar funções matemátic
  
 \end_layout
 
-\begin_layout Standard
-1) Grafico animado
+\begin_layout Subsection*
+1) Grafico animado (matplotlib)
 \end_layout
 
 \begin_layout Standard
-2) Mais um gráfico animado
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+import random
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Pede ao pylab para entrar no modo interactivo (ion = interactive on) 
+\end_layout
+
+\begin_layout Plain Layout
+
+# Assim podemos alterar os gráficos em tempo real, dentro do nosso programa
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.ion()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria as listas que representam a nossa trajectória x,y 
+\end_layout
+
+\begin_layout Plain Layout
+
+# inicialmente estamos no ponto (0,0) 
+\end_layout
+
+\begin_layout Plain Layout
+
+x = [0] 
+\end_layout
+
+\begin_layout Plain Layout
+
+y = [0]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Desenha um linha com a trajectória x,y 
+\end_layout
+
+\begin_layout Plain Layout
+
+#  azul (b), com pontos (o) e linhas (-), semitransparente (alpha=0.5) 
+\end_layout
+
+\begin_layout Plain Layout
+
+line, = pylab.plot(x,y,'bo-',alpha='0.5')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Adiciona um ponto novo à trajectória e desenha-a novamente no ecrã 100
+ vezes 
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in xrange(100):
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Adiciona valores as listas com os dados de x e y da nossa trajectória
+\end_layout
+
+\begin_layout Plain Layout
+
+    # segundo um passeio aleatorio
+\end_layout
+
+\begin_layout Plain Layout
+
+    p = random.random()*4
+\end_layout
+
+\begin_layout Plain Layout
+
+    if(p < 1):
+\end_layout
+
+\begin_layout Plain Layout
+
+         x.append(x[-1]+1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        y.append(y[-1])
+\end_layout
+
+\begin_layout Plain Layout
+
+    elif(p < 2):
+\end_layout
+
+\begin_layout Plain Layout
+
+         x.append(x[-1]-1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        y.append(y[-1])
+\end_layout
+
+\begin_layout Plain Layout
+
+    elif(p < 3):
+\end_layout
+
+\begin_layout Plain Layout
+
+         x.append(x[-1])
+\end_layout
+
+\begin_layout Plain Layout
+
+        y.append(y[-1]-1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:=======
+\end_layout
+
+\begin_layout Plain Layout
+
+        x.append(x[-1])
+\end_layout
+
+\begin_layout Plain Layout
+
+        y.append(y[-1]+1)
+\end_layout
+
+\begin_layout Plain Layout
+
+      # Muda os valores de x e y da linha que já desenhamos
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Notem que podem ter comprimentos diferentes do gráfico original
+\end_layout
+
+\begin_layout Plain Layout
+
+    line.set_data(x,y)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Define os limites do gráfico novamente.
+\end_layout
+
+\begin_layout Plain Layout
+
+     # Se não fizessemos isto ele usaria os limites do primeiro gráfico
+\end_layout
+
+\begin_layout Plain Layout
+
+    pylab.xlim(-20,20)
+\end_layout
+
+\begin_layout Plain Layout
+
+    pylab.ylim(-20,20)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Desenha o gráfico outra vez
+\end_layout
+
+\begin_layout Plain Layout
+
+    pylab.draw()                        
+\end_layout
+
+\begin_layout Plain Layout
+
+                     
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+2) Vários gráficos animados na mesma janela (matplotlib)
 \end_layout
 
 \begin_layout Standard
-2) PyGame - jogo simples?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab 
+\end_layout
+
+\begin_layout Plain Layout
+
+import random 
+\end_layout
+
+\begin_layout Plain Layout
+
+import numpy
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Rotina que retorna dois vectores com um passeio aleatório de comprimento
+ 'tamanho', que começa no ponto (x0,y0)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def passeio_aleatorio(x0,y0,tamanho):
+\end_layout
+
+\begin_layout Plain Layout
+
+    #Cria 2 vectores, cada um com comprimento 'tamanho'
+\end_layout
+
+\begin_layout Plain Layout
+
+    x = numpy.zeros(tamanho)
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = numpy.zeros(tamanho)
+\end_layout
+
+\begin_layout Plain Layout
+
+    #O ponto inicial é (x0,y0)
+\end_layout
+
+\begin_layout Plain Layout
+
+    x[0] = x0
+\end_layout
+
+\begin_layout Plain Layout
+
+    y[0] = y0
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i in xrange(1,tamanho):
+\end_layout
+
+\begin_layout Plain Layout
+
+        p = random.random()*4
+\end_layout
+
+\begin_layout Plain Layout
+
+        if(p < 1):
+\end_layout
+
+\begin_layout Plain Layout
+
+             x[i] = x[i-1]+1
+\end_layout
+
+\begin_layout Plain Layout
+
+            y[i] = y[i-1]
+\end_layout
+
+\begin_layout Plain Layout
+
+        elif(p < 2):
+\end_layout
+
+\begin_layout Plain Layout
+
+            x[i] = x[i-1]-1
+\end_layout
+
+\begin_layout Plain Layout
+
+            y[i] = y[i-1]
+\end_layout
+
+\begin_layout Plain Layout
+
+        elif(p < 3):
+\end_layout
+
+\begin_layout Plain Layout
+
+            x[i] = x[i-1]
+\end_layout
+
+\begin_layout Plain Layout
+
+            y[i] = y[i-1]-1
+\end_layout
+
+\begin_layout Plain Layout
+
+        else:
+\end_layout
+
+\begin_layout Plain Layout
+
+            x[i] = x[i-1]
+\end_layout
+
+\begin_layout Plain Layout
+
+            y[i] = y[i-1]+1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return x,y
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# # # Programa principal # #
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Dados do programa 
+\end_layout
+
+\begin_layout Plain Layout
+
+num_iteracoes = 100 
+\end_layout
+
+\begin_layout Plain Layout
+
+tamanho = 32
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Pede ao pylab para entrar no modo interactivo (ion = interactive on) 
+\end_layout
+
+\begin_layout Plain Layout
+
+# Assim podemos alterar os gráficos em tempo real, dentro do nosso programa
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.ion()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria a janela com 9x9 polegadas, com cor branca (w=white) 
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.figure(0,figsize=(9,9),facecolor='w')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Escreve o título do gráfico pylab.suptitle('Demonstracao passeio aleatorio')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Reserva espaco para o passeio aleatorio num vector 
+\end_layout
+
+\begin_layout Plain Layout
+
+passeio_x = numpy.zeros((num_iteracoes*tamanho))
+\end_layout
+
+\begin_layout Plain Layout
+
+passeio_y = numpy.zeros((num_iteracoes*tamanho))
+\end_layout
+
+\begin_layout Plain Layout
+
+#preenche os primeiros 'tamanho' pontos dos vectores com um passeio aleatorio
+ que começa em (0,0)
+\end_layout
+
+\begin_layout Plain Layout
+
+passeio_x[0:tamanho],passeio_y[0:tamanho] = passeio_aleatorio(0,0,tamanho)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Grafico 1: 1 Passeio aleatório (o primeiro de uma matrix de 2x2)
+\end_layout
+
+\begin_layout Plain Layout
+
+passeio_subplot = pylab.subplot(221)
+\end_layout
+
+\begin_layout Plain Layout
+
+passeio_subplot.set_title('Passeio aleatorio (1 particula)') 
+\end_layout
+
+\begin_layout Plain Layout
+
+passeio_line, = pylab.plot(passeio_x[0:tamanho],passeio_y[0:tamanho])
+\end_layout
+
+\begin_layout Plain Layout
+
+#Calcula o desvio quadrático da trajectoria 
+\end_layout
+
+\begin_layout Plain Layout
+
+r_quadrado = passeio_x**2+passeio_y**2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Grafico 2: Desvio Quadrático Médio para uma particula (o segundo de uma
+ matrix de 2x2)
+\end_layout
+
+\begin_layout Plain Layout
+
+desvio_subplot = pylab.subplot(222)
+\end_layout
+
+\begin_layout Plain Layout
+
+ desvio_subplot.set_title('Desvio Quadratico Medio (1 particula)')
+\end_layout
+
+\begin_layout Plain Layout
+
+desvio_line, = pylab.plot(r_quadrado)
+\end_layout
+
+\begin_layout Plain Layout
+
+desvio_subplot.set_xlim(0,num_iteracoes*tamanho)
+\end_layout
+
+\begin_layout Plain Layout
+
+desvio_subplot.set_ylim(0,10000)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Reserva espaço para as trajectorias de 10 particulas em vectores (num_iteracoe
+s*tamanho,10)
+\end_layout
+
+\begin_layout Plain Layout
+
+passeios_10_x = numpy.zeros((num_iteracoes*tamanho,10))
+\end_layout
+
+\begin_layout Plain Layout
+
+passeios_10_y = numpy.zeros((num_iteracoes*tamanho,10))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Preenche os inicios dos vectores com vários passeios aleatórios
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in xrange(10):
+\end_layout
+
+\begin_layout Plain Layout
+
+    passeios_10_x[0:tamanho,i],passeios_10_y[0:tamanho,i] = passeio_aleatorio(0,
+0,tamanho)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Grafico 3: passeios aleatorios de 10 particulas (o terceiro de uma matrix
+ de 2x2)
+\end_layout
+
+\begin_layout Plain Layout
+
+passeios_10_subplot = pylab.subplot(223)
+\end_layout
+
+\begin_layout Plain Layout
+
+ passeios_10_subplot.set_title('Passeios Aleatorios (10 particulas)')
+\end_layout
+
+\begin_layout Plain Layout
+
+passeios_10_lines = pylab.plot(passeios_10_x[0:tamanho,:],passeios_10_y[0:tamanho
+,:])
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Calcula os desvios quadráticos médios, fazendo a soma dos quadrados das
+ matrizes e
+\end_layout
+
+\begin_layout Plain Layout
+
+#     somando ao longo do eixo das partículas.
+ (eixo das trajectorias = 0, eixo das particulas = 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+ r_quadrado10 = numpy.sum(passeios_10_x**2+passeios_10_y**2,axis=1)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Grafico 4:Desvio quadratico medio para 10 particulas (o quarto de uma matrix
+ de 2x2)
+\end_layout
+
+\begin_layout Plain Layout
+
+desvios10_subplot = pylab.subplot(224)
+\end_layout
+
+\begin_layout Plain Layout
+
+desvios10_subplot.set_title('Desvio Quadratico Medio (10 particulas)')
+\end_layout
+
+\begin_layout Plain Layout
+
+desvios10_line, = pylab.plot(r_quadrado10)
+\end_layout
+
+\begin_layout Plain Layout
+
+desvios10_subplot.set_xlim(0,num_iteracoes*tamanho)
+\end_layout
+
+\begin_layout Plain Layout
+
+desvios10_subplot.set_ylim(0,50000)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Para cada iteracção 
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in xrange(num_iteracoes-1):
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    #Adiciona mais pontos ao vector do passeio aleatório
+\end_layout
+
+\begin_layout Plain Layout
+
+    x,y = passeio_aleatorio(passeio_x[(i+1)*tamanho-1],passeio_y[(i+1)*tamanho-1
+],tamanho)
+\end_layout
+
+\begin_layout Plain Layout
+
+    passeio_x[(i+1)*tamanho:(i+2)*tamanho] = x
+\end_layout
+
+\begin_layout Plain Layout
+
+    passeio_y[(i+1)*tamanho:(i+2)*tamanho] = y
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    #Actualiza o grafico do passeio aleatorio
+\end_layout
+
+\begin_layout Plain Layout
+
+    passeio_line.set_data(passeio_x[:(i+2)*tamanho],passeio_y[:(i+2)*tamanho])
+\end_layout
+
+\begin_layout Plain Layout
+
+     passeio_subplot.set_xlim(-100,100)
+\end_layout
+
+\begin_layout Plain Layout
+
+    passeio_subplot.set_ylim(-100,100)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    #Recalcula o desvio quadratico médio de 1 particula e actualiza os dados
+ do grafico
+\end_layout
+
+\begin_layout Plain Layout
+
+    r_quadrado = passeio_x**2+passeio_y**2
+\end_layout
+
+\begin_layout Plain Layout
+
+    desvio_line.set_ydata(r_quadrado)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    #Adiciona mais pontos às várias trajectorias dos passeios aleatorios
+ de 10 particulas e actualiza os dados do graficos
+\end_layout
+
+\begin_layout Plain Layout
+
+    for j in xrange(10):
+\end_layout
+
+\begin_layout Plain Layout
+
+        x,y = passeio_aleatorio(passeios_10_x[(i+1)*tamanho-1,j],passeios_10_y[(
+i+1)*tamanho-1,j],tamanho)
+\end_layout
+
+\begin_layout Plain Layout
+
+        passeios_10_x[(i+1)*tamanho:(i+2)*tamanho,j] = x
+\end_layout
+
+\begin_layout Plain Layout
+
+        passeios_10_y[(i+1)*tamanho:(i+2)*tamanho,j] = y
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        passeios_10_lines[j].set_data(passeios_10_x[:(i+2)*tamanho,j],passeios_10
+_y[:(i+2)*tamanho,j])
+\end_layout
+
+\begin_layout Plain Layout
+
+    passeios_10_subplot.set_xlim(-100,100)
+\end_layout
+
+\begin_layout Plain Layout
+
+    passeios_10_subplot.set_ylim(-100,100)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    #Recalcula o desvios quadratico médio dos passeios das 10 partículas
+\end_layout
+
+\begin_layout Plain Layout
+
+    r_quadrado10 = numpy.sum(passeios_10_x**2+passeios_10_y**2,axis=1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    desvios10_line.set_ydata(r_quadrado10)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Desenha o gráfico outra vez
+\end_layout
+
+\begin_layout Plain Layout
+
+    pylab.draw()    
+\end_layout
+
+\begin_layout Plain Layout
+
+         
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+3) Gráficos z=f(x,y) e o conjunto de mandelbrot (matplotlib)
 \end_layout
 
 \begin_layout Standard
-3) Interface gráfico básico com Tkiter
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab 
+\end_layout
+
+\begin_layout Plain Layout
+
+import numpy
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Rotina que retorna uma matrix (w,h) com o conjunto de mandelbrot 
+\end_layout
+
+\begin_layout Plain Layout
+
+#   uma boa explicação do que é em http://en.wikipedia.org/wiki/Mandelbrot_set
+ def mandelbrot( h,w,x0,y0,dx,dy, maxit=50 ):         # codigo retirado
+ de http://www.scipy.org/Tentative_NumPy_Tutorial/Mandelbrot_Set_Example
+\end_layout
+
+\begin_layout Plain Layout
+
+        y,x = numpy.ogrid[ (y0-dy):(y0+dy):w*1j ,(x0-dx):x0+dx:h*1j]
+\end_layout
+
+\begin_layout Plain Layout
+
+        c = x+y*1j
+\end_layout
+
+\begin_layout Plain Layout
+
+        z = c
+\end_layout
+
+\begin_layout Plain Layout
+
+        divtime = maxit + numpy.zeros(z.shape, dtype=int)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        for i in xrange(maxit):
+\end_layout
+
+\begin_layout Plain Layout
+
+                z  = z**2 + c                 diverge = z*numpy.conj(z) >
+ 2**2            # who is diverging
+\end_layout
+
+\begin_layout Plain Layout
+
+                div_now = diverge & (divtime==maxit)  # who is diverging
+ now
+\end_layout
+
+\begin_layout Plain Layout
+
+                divtime[div_now] = i                 # note when
+\end_layout
+
+\begin_layout Plain Layout
+
+                z[diverge] = 2                       # avoid diverging too
+ much
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        return divtime
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# 
+\end_layout
+
+\begin_layout Plain Layout
+
+# 
+\end_layout
+
+\begin_layout Plain Layout
+
+# Programa principal 
+\end_layout
+
+\begin_layout Plain Layout
+
+# 
+\end_layout
+
+\begin_layout Plain Layout
+
+#
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Pede ao pylab para entrar no modo interactivo (ion = interactive on) 
+\end_layout
+
+\begin_layout Plain Layout
+
+# Assim podemos alterar os gráficos em tempo real, dentro do nosso programa
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.ion()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Título pylab.title('Conjunto de Mandelbrot')
+\end_layout
+
+\begin_layout Plain Layout
+
+# Ponto à volta do qual vamos fazer zoom 
+\end_layout
+
+\begin_layout Plain Layout
+
+x0, y0 = -0.1528,1.0397
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mandelbrot_image = pylab.imshow(mandelbrot(64,64,-0.5,0,2,2))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in xrange(100):
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    #conjunto de mandelbrot
+\end_layout
+
+\begin_layout Plain Layout
+
+    dx = 2*numpy.exp(-i*0.1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    dy = 2*numpy.exp(-i*0.1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    mandelbrot_image.set_data(mandelbrot(64,64,x0,y0,dx,dy))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Desenha o gráfico outra vez     
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.draw()    
+\end_layout
+
+\begin_layout Plain Layout
+
+         
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+4) Como desenhar imagens e animações no ecrã (pygame)
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import random
+\end_layout
+
+\begin_layout Plain Layout
+
+import math
+\end_layout
+
+\begin_layout Plain Layout
+
+import pygame
+\end_layout
+
+\begin_layout Plain Layout
+
+from pygame.locals import * #para podermos usar o QUIT, KEYDOWN e K_ESCAPE
+\end_layout
+
+\begin_layout Plain Layout
+
+     
+\end_layout
+
+\begin_layout Plain Layout
+
+# Documentação do PyGame - http://pygame.org/docs/index.html
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Inicializa o PyGame
+\end_layout
+
+\begin_layout Plain Layout
+
+pygame.init()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria uma variável 'screen' que representa a janela, na qual podemos desenhar
+\end_layout
+
+\begin_layout Plain Layout
+
+# Tem 800x600 pixeis
+\end_layout
+
+\begin_layout Plain Layout
+
+screen = pygame.display.set_mode((800, 600))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# O título da janela
+\end_layout
+
+\begin_layout Plain Layout
+
+pygame.display.set_caption('Satélites')
+\end_layout
+
+\begin_layout Plain Layout
+
+# Faz load de uma imagem da terra, para a podermos desenhar
+\end_layout
+
+\begin_layout Plain Layout
+
+# um ficheiro adequado: http://www.windypundit.com/archives/2005/images/20050528-G
+oogleEarthScreen2.jpg
+\end_layout
+
+\begin_layout Plain Layout
+
+ imagem_terra = pygame.image.load('terra.jpg')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# desenha a terra no centro da janela
+\end_layout
+
+\begin_layout Plain Layout
+
+screen.blit(imagem_terra, (400-imagem_terra.get_width()/2.,300-imagem_terra.get_heig
+ht()/2.))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria N satélites para orbitar a terra
+\end_layout
+
+\begin_layout Plain Layout
+
+# cria 4 listas: 2 para a posição (x e y) e 2 para a velocidade (vx e vy)
+\end_layout
+
+\begin_layout Plain Layout
+
+N = 10
+\end_layout
+
+\begin_layout Plain Layout
+
+satelite_x  = [random.random()*800  for i in xrange(25)]
+\end_layout
+
+\begin_layout Plain Layout
+
+ #http://www.network-theory.co.uk/docs/pytut/ListComprehensions.html
+\end_layout
+
+\begin_layout Plain Layout
+
+satelite_y  = [random.random()*600  for i in xrange(25)]
+\end_layout
+
+\begin_layout Plain Layout
+
+satelite_vx = [random.random()*10-5 for i in xrange(25)]
+\end_layout
+
+\begin_layout Plain Layout
+
+satelite_vy = [random.random()*10-5 for i in xrange(25)]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria uma lista de N cores aleatórias
+\end_layout
+
+\begin_layout Plain Layout
+
+# cada cor sao 3 valores entre 0 e 255, segundo o sistema RGB http://en.wikipedia.
+org/wiki/RGB
+\end_layout
+
+\begin_layout Plain Layout
+
+satelite_cor = [(random.randrange(10,250),random.randrange(10,250),random.randrange
+(10,250)) for i in xrange(25)]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Guarda o tempo em milisegundos, para podermos apagar o ecrã de 20 em 20
+ segundos
+\end_layout
+
+\begin_layout Plain Layout
+
+ultimo_instante = pygame.time.get_ticks()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Corre em ciclo enquanto o utilizador não tentar sair
+\end_layout
+
+\begin_layout Plain Layout
+
+while 1:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    #vamos calcular a energia total em cada ciclo.
+ é suposto ficar constante
+\end_layout
+
+\begin_layout Plain Layout
+
+    #inicia como zero
+\end_layout
+
+\begin_layout Plain Layout
+
+    energia_total = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Actualiza as posições dos satélites
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i in xrange(N):
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        #calcula a aceleração devido à força gravítica         
+\end_layout
+
+\begin_layout Plain Layout
+
+        dx = float(satelite_x[i])-400.
+\end_layout
+
+\begin_layout Plain Layout
+
+        dy = float(satelite_y[i])-300.
+\end_layout
+
+\begin_layout Plain Layout
+
+        r = math.sqrt(dx**2+dy**2) #distância ao centro da terra
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        constante = 2500
+\end_layout
+
+\begin_layout Plain Layout
+
+  #valor arbitrário, neste programa não precisamos de valores realistas
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        #aceleracao = 1./r**2, mas decompondo nas duas componentes ax,ay
+ temos:
+\end_layout
+
+\begin_layout Plain Layout
+
+        ax = -constante*dx/r**3
+\end_layout
+
+\begin_layout Plain Layout
+
+        ay = -constante*dy/r**3
+\end_layout
+
+\begin_layout Plain Layout
+
+        dt = 0.25
+\end_layout
+
+\begin_layout Plain Layout
+
+  # valor arbitrário, neste programa não precisamos de valores realistas.
+\end_layout
+
+\begin_layout Plain Layout
+
+         # quanto mais pequeno este valor fôr, mais estáveis serão os resultados
+\end_layout
+
+\begin_layout Plain Layout
+
+         # (isto é, há menos satélites a sair disparados sem motivo quando
+ se aproximam muito da terra)
+\end_layout
+
+\begin_layout Plain Layout
+
+         # integração utilizando o método de euler-cromer -  
+\end_layout
+
+\begin_layout Plain Layout
+
+         # http://wiki.vdrift.net/Numerical_Integration#Newton-Stormer-Verlet_.28NS
+V.29_.2F_Symplectic_Euler_.2F_Euler.E2.80.93Cromer_algorithm
+\end_layout
+
+\begin_layout Plain Layout
+
+        satelite_vx[i] += dt*ax
+\end_layout
+
+\begin_layout Plain Layout
+
+             satelite_vy[i] += dt*ay 
+\end_layout
+
+\begin_layout Plain Layout
+
+       satelite_x[i] += dt*satelite_vx[i]
+\end_layout
+
+\begin_layout Plain Layout
+
+        satelite_y[i] += dt*satelite_vy[i]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        # Se o satelite se afastar muito, volta a colocá-lo no ecrã com
+ velocidade aleatoria
+\end_layout
+
+\begin_layout Plain Layout
+
+        if(r > 1000):
+\end_layout
+
+\begin_layout Plain Layout
+
+             satelite_x[i]  = random.random()*800
+\end_layout
+
+\begin_layout Plain Layout
+
+              satelite_y[i]  = random.random()*600
+\end_layout
+
+\begin_layout Plain Layout
+
+            satelite_vx[i] = random.random()*10-5
+\end_layout
+
+\begin_layout Plain Layout
+
+             satelite_vy[i] = random.random()*10-5
+\end_layout
+
+\begin_layout Plain Layout
+
+            print 'Um novo satélite foi gerado.
+ A energia total será diferente'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        # Calcula a energia do satélite e adiciona à total
+\end_layout
+
+\begin_layout Plain Layout
+
+        massa  = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        energia_satelite = 1./2.* massa * (satelite_vx[i]**2 + satelite_vy[i]**2)
+ - constante*massa/r
+\end_layout
+
+\begin_layout Plain Layout
+
+        energia_total += energia_satelite
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    print 'Energia total = ',energia_total
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Escreve a energia total no título
+\end_layout
+
+\begin_layout Plain Layout
+
+    #pygame.display.set_caption('Satélites - energia total = %f'%energia_total)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # desenha os N satélites como circunferências  na janela screen
+\end_layout
+
+\begin_layout Plain Layout
+
+    # na posição (satelite_x[i],satelite_y[i]), com raio 2 e espessura da
+ linha 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i in xrange(N):
+\end_layout
+
+\begin_layout Plain Layout
+
+        pygame.draw.circle(screen, satelite_cor[i], (int(satelite_x[i]),int(sateli
+te_y[i])), 2,1)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Pergunta ao PyGame se o utilizador tentou interagir com a janela e
+ percorre todos os eventos que aconteceram dessa interacção
+\end_layout
+
+\begin_layout Plain Layout
+
+    for event in pygame.event.get():
+\end_layout
+
+\begin_layout Plain Layout
+
+        if event.type == QUIT:  #Se ele tentou fechar a janela          
+   quit()
+\end_layout
+
+\begin_layout Plain Layout
+
+        elif event.type == KEYDOWN and event.key == K_ESCAPE:
+\end_layout
+
+\begin_layout Plain Layout
+
+#Se carregou numa tecla e essa tecla era o Escape
+\end_layout
+
+\begin_layout Plain Layout
+
+            quit()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    pygame.display.flip() #actualiza o conteúdo da janela
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Se ja passaram 20 segundos, limpa a janela
+\end_layout
+
+\begin_layout Plain Layout
+
+    este_instante = pygame.time.get_ticks()
+\end_layout
+
+\begin_layout Plain Layout
+
+    if(este_instante - ultimo_instante > 20000):
+\end_layout
+
+\begin_layout Plain Layout
+
+        #preenche a janela de preto
+\end_layout
+
+\begin_layout Plain Layout
+
+        screen.fill((0,0,0))
+\end_layout
+
+\begin_layout Plain Layout
+
+        #desenha a terra
+\end_layout
+
+\begin_layout Plain Layout
+
+        screen.blit(imagem_terra, (400-imagem_terra.get_width()/2.,300-imagem_terra.
+get_height()/2.))
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+        # faz com que isto so aconteça outra vez daqui a 10 segs
+\end_layout
+
+\begin_layout Plain Layout
+
+        ultimo_instante = este_instante       
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+5) Interface gráfico básico (Tkiter)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Tkiter é um biblioteca que nos permite fazer interfaces gráficos 
+\end_layout
+
+\begin_layout Plain Layout
+
+import Tkinter
+\end_layout
+
+\begin_layout Plain Layout
+
+import math   
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+#Rotinas
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Rotina a ser chamada quando se clicka no botão 'sair'
+\end_layout
+
+\begin_layout Plain Layout
+
+def sair():
+\end_layout
+
+\begin_layout Plain Layout
+
+    quit()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Rotina a ser chamada quando se clicka no botão 'calcula'
+\end_layout
+
+\begin_layout Plain Layout
+
+def calcula():
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Diz ao python que queremos acesso a estas variáveis globais, que foram
+ definidas fora desta função
+\end_layout
+
+\begin_layout Plain Layout
+
+    global texto_vx, texto_h, texto_t, texto_distancia
+\end_layout
+
+\begin_layout Plain Layout
+
+         # Obtem o texto que o utilizador escreveu no interface gráfico
+ (texto_XX.get()) e converte para um numero real (float(XX))
+\end_layout
+
+\begin_layout Plain Layout
+
+    vx = float(texto_vx.get())
+\end_layout
+
+\begin_layout Plain Layout
+
+    h = float(texto_h.get())
+\end_layout
+
+\begin_layout Plain Layout
+
+         # Faz os cálculos
+\end_layout
+
+\begin_layout Plain Layout
+
+    t = math.sqrt(2*h/9.8)
+\end_layout
+
+\begin_layout Plain Layout
+
+    distancia = vx*t          
+\end_layout
+
+\begin_layout Plain Layout
+
+# Escreve o texto no interface gráfico.
+ Notem que é preciso convertê-lo para uma cadeia de texto (string)
+\end_layout
+
+\begin_layout Plain Layout
+
+    texto_t["text"] = str(t)
+\end_layout
+
+\begin_layout Plain Layout
+
+    texto_distancia["text"] = str(distancia)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria a janela 
+\end_layout
+
+\begin_layout Plain Layout
+
+janela = Tkinter.Tk() 
+\end_layout
+
+\begin_layout Plain Layout
+
+# Muda o título 
+\end_layout
+
+\begin_layout Plain Layout
+
+janela.title('Projectil')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria um contentor dos elementos do interface gráfico (invisível) 
+\end_layout
+
+\begin_layout Plain Layout
+
+contentor = Tkinter.Frame(janela) # Adiciona o contentor  
+\end_layout
+
+\begin_layout Plain Layout
+
+contentor.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Cria os vários elementos do interface gráfico: texto simples (Label) ou
+ caixas de edição de texto (Entry)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+titulo_vx = Tkinter.Label(contentor,text='vx (m/s)') titulo_vx.pack() 
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_vx = Tkinter.Entry(contentor,justify=Tkinter.RIGHT)
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_vx.insert(Tkinter.END, '1') #Escreve '1' na caixa de texto, inicialmente
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_vx.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+titulo_h = Tkinter.Label(contentor,text='altura (m)') titulo_h.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_h = Tkinter.Entry(contentor,justify=Tkinter.RIGHT)
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_h.insert(Tkinter.END, '1')
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_h.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+titulo_t= Tkinter.Label(contentor,text='t (s)') titulo_t.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_t= Tkinter.Label(contentor,text='-')
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_t.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+titulo_distancia= Tkinter.Label(contentor,text='Distancia (m)')
+\end_layout
+
+\begin_layout Plain Layout
+
+titulo_distancia.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+texto_distancia = Tkinter.Label(contentor,text='-') texto_distancia.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Adiciona dois botões, os quais chamam as funções calcula ou sair quando
+ são clickados
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+botao1 = Tkinter.Button(contentor, text="Calcula", command=calcula)
+\end_layout
+
+\begin_layout Plain Layout
+
+botao1.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+botao2 = Tkinter.Button(contentor, text="Sair", command=sair) botao2.pack()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Calcula os resultados com os valores iniciais
+\end_layout
+
+\begin_layout Plain Layout
+
+calcula()      
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Corre o ciclo principal da janela.
+ Isto quer dizer que a janela vai esperar  # que o utilizador interaja com
+ ela para fazer alguma coisa.
+ A execução vai ficar
+\end_layout
+
+\begin_layout Plain Layout
+
+# parada nesta linha até que a janela seja fechada.
+\end_layout
+
+\begin_layout Plain Layout
+
+janela.mainloop()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

@@ -100,20 +100,22 @@ theorems-ams
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
-\papersize default
-\use_geometry false
+\papersize a4paper
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
+\leftmargin 3cm
+\rightmargin 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
 \defskip medskip
 \quotes_language english
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \bullet 1 0 9 -1
 \tracking_changes false
@@ -171,11 +173,6 @@ Mas, porquê escrever mais um manual de Python? É verdade que na internet
  
 \end_layout
 
-\begin_layout Standard
-Este manual não pretende ser completo.
- Caso se interessem por aprender mais podem começar por [link].
-\end_layout
-
 \begin_layout Section
 O que é simulação
 \end_layout
@@ -223,7 +220,17 @@ Note-se que há imensas situações as quais só se podem estudar por simulaçã
 status open
 
 \begin_layout Plain Layout
-EXPLICAR UM POUCO
+Podem ver no sítio 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+http://static.howstuffworks.com/flash/nanotechnology.swf
+\end_layout
+
+\end_inset
+
+ uma animação de uma engrenagem nanoscópica, composta por poucos átomos.
 \end_layout
 
 \end_inset
@@ -249,38 +256,64 @@ Claro que para dar as ordens ao computador precisamos de saber comunicar
 \end_layout
 
 \begin_layout Standard
-Estas linguagens podem ser classificadas segundo vários critérios.
- Por exemplo, dependendo da forma como o programador dá as ordens ao computador,
- existem linguagens imperativas ou declarativas.
+Neste manual não vamos falar de várias linguagens, nem dos seus propósitos
+ ou as diferenças entre elas - embora fosse interessante.
+ Para os mais curiosos, recomendamos:
+\end_layout
+
+\begin_layout Itemize
+Introdução às Famílias de Linguagens de Programação: Primeiro capítulo do
+ livro 
+\emph on
+Modern Programming Languages: A Practical Introduction
+\emph default
+ (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.fbeedle.com/mpl/76-7-02.pdf
+\end_layout
+
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Itemize
+Uma lista e tabela de comparação do propósito usual de várias linguagens
  
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://en.wikipedia.org/wiki/Comparison_of_programming_languages
 \end_layout
 
-\begin_layout Standard
-Nas linguagens imperativas o programador escreve explicitamente todas as
- acções que o computador deve fazer, à semelhança de uma receita.
- Nas declarativas, de um modo geral, o programador escreve o que quer que
- o programa faça, sem específicar exactamente como ou em que ordem.
- Notem que isto não quer dizer que o programador possa escrever 'Computador,
- calcula-me o sentido da vida' - o computador não saberia o que fazer.
- O programador necessita de utilizar os elementos básicos da linguagem e
- relacioná-los de maneira a resolver o problema.
- A diferença é que nas linguagens imperativas o programador dá ordens de
- manipulação destes elementos, nas declarativas o programador estabelece
- relações entre eles.
- [É PRECISO EXPLICAR MELHOR]
+\end_inset
+
+;
 \end_layout
 
-\begin_layout Standard
-Embora fosse interessante, não vamos falar aqui sobre as várias linguagens
- de programação, pois está fora dos nossos objectivos.
- No entanto, os mais curiosos podem espreitar no apêndice 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "cha:Linguagens-de-Programação"
+\begin_layout Itemize
+Estatísticas sobre a popularidade de cada linguagem no mundo: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://langpop.com/
+\end_layout
 
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+No nosso caso optamos por uma linguagem chamada Python.
 \end_layout
 
 \begin_layout Section
@@ -302,9 +335,8 @@ Esta deve permitir-nos expôr os resultados de forma conveniente - numéros,
 \end_layout
 
 \begin_layout Itemize
-Deve ser gratuito, e fácil de instalar seja em Linux, em MacOSX ou em Windows.
- Pômos assim de parte linguagens que se pagam ou que necessitam de um curso
- só para as instalar;
+Deve ser de acesso fácil e gratuito e funcione em qualquer computador ou
+ sistema operativo;
 \end_layout
 
 \begin_layout Itemize
@@ -313,13 +345,13 @@ Necessitamos de uma linguagem com uma sintaxe simples cujos elementos básicos
 \end_layout
 
 \begin_layout Standard
-Embora existam várias linguagens que de certo modo preencham os 4 requisitos
+Embora existam várias linguagens que de certo modo preencham os 4 requerimentos,
  existe uma que achamos especialmente adequada: Python.
  Esta distingue-se especialmente por ter uma sintaxe clara e ter elementos
  básicos simples.
- É relativamente fácil de usar e tem ainda a vantagem de possuir vastas
- bibliotecas igualmente simples de usar.
- 
+ Esta tem ainda a vantagem de possuir vastas bibliotecas, igualmente simples
+ de usar, que nos permitem fazer gráficos, animações e interagir com o utilizado
+r.
 \end_layout
 
 \begin_layout Standard
@@ -336,7 +368,6 @@ Neste capítulo vamos aprender a usar o básico do Python, com ele o aluno
  será capaz de fazer vários programas, simples mas poderosos.
  Supomos que o aluno usa Linux, as diferenças para outros sistemas operativos
  (Windows, MacOSX...) não são significativas.
- [pensar num apêndice]
 \end_layout
 
 \begin_layout Section
@@ -346,7 +377,28 @@ Interpretador e Operações Básicas
 \begin_layout Standard
 O método mais simples de trabalhar com Python é através do interpretador.
  Este pode ser usado por vários caminhos: na linha de comandos, pela internet
- [], por interfaces gráficas próprias [] ou até dentro doutros programas.
+ (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://try-python.mired.org/
+\end_layout
+
+\end_inset
+
+,
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+http://codepad.org
+\end_layout
+
+\end_inset
+
+), ou até dentro doutros programas.
  Na Escola de Física será usado na linha de comandos.
  Para abrir o interpretador, introduz-se 
 \emph on
@@ -4372,13 +4424,28 @@ from visual import *
 
 \begin_layout Plain Layout
 
-floor = box (pos=(0,0,0), length=4, height=0.5, width=4, color=color.blue)
+# Cria uma caixa na posição (0,0,0) de comprimento 4, altura 0.5 e espessura
+ 4 de cor azul
+\end_layout
+
+\begin_layout Plain Layout
+
+caixa = box(pos=(0,0,0), length=4, height=0.5, width=4, color=color.blue)
  
 \end_layout
 
 \begin_layout Plain Layout
 
-ball = sphere (pos=(0,4,0), radius=1, color=color.red) 
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria uma esfera na posição (0,4,0) de raio 1 e de cor vermelha
+\end_layout
+
+\begin_layout Plain Layout
+
+bola = sphere(pos=(0,4,0), radius=1, color=color.red) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4394,40 +4461,7 @@ end{python}
 \end_layout
 
 \begin_layout Standard
-Na primeira linha definimos um objecto chamado 
-\begin_inset Quotes eld
-\end_inset
-
-floor
-\begin_inset Quotes erd
-\end_inset
-
- que é uma caixa (
-\begin_inset Quotes eld
-\end_inset
-
-box
-\begin_inset Quotes erd
-\end_inset
-
-) na posição (0,0,0) e um outro objecto chamado 
-\begin_inset Quotes eld
-\end_inset
-
-ball
-\begin_inset Quotes erd
-\end_inset
-
- que é uma esfera (
-\begin_inset Quotes eld
-\end_inset
-
-sphere
-\begin_inset Quotes erd
-\end_inset
-
-) centrada no ponto (0,4,0).
- O resultado pode ser visto na seguinte figura:
+O resultado pode ser visto na seguinte figura:
 \end_layout
 
 \begin_layout Standard
@@ -4478,18 +4512,6 @@ end{center}
  a janela e movendo-o.
  Procedendo da mesma maneira com o botão do meio permite-nos ampliar ou
  reduzir.
- As chamadas 
-\emph on
-box
-\emph default
- e 
-\emph on
-sphere
-\emph default
- criam os respectivos objectos.
- Se for necessário referir-nos a esses objectos posteriormente é necessário
- atribuir essas chamadas a uma variável como no exemplo.
- 
 \end_layout
 
 \begin_layout Standard
@@ -4574,7 +4596,7 @@ box
 \begin_inset Text
 
 \begin_layout Plain Layout
-pos=<p>,lenght=<x>,height=<x>,width=<x>
+pos=<p>,length=<x>,height=<x>,width=<x>
 \end_layout
 
 \end_inset
@@ -4748,7 +4770,7 @@ ellipsoid
 \begin_inset Text
 
 \begin_layout Plain Layout
-pos=<p>,lenght=<x>,height=<x>,width=<n>
+pos=<p>,length=<x>,height=<x>,width=<n>
 \end_layout
 
 \end_inset
@@ -4927,8 +4949,8 @@ Em que <p> é um ponto, por exempo
 
 \begin_layout Standard
 Com o Visual Python podemos animar facilmente objectos, basta para isso
- actualizar as propriedades dos objectos, vejamos uma bola a orbitar em
- torno dum cilindro:
+ alterar as propriedades dos objectos num ciclo.
+ Vejamos uma bola a orbitar em torno dum cilindro:
 \end_layout
 
 \begin_layout Standard
@@ -5026,12 +5048,25 @@ for i in range(N):
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
   x=sin(i*T/N)
 \end_layout
 
 \begin_layout Plain Layout
 
   y=cos(i*T/N)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  # Actualiza a posição da bola
 \end_layout
 
 \begin_layout Plain Layout
@@ -5048,8 +5083,7 @@ end{python}
 
 \end_inset
 
-para actualizar a posição da bola basta-nos escrever bola.pos=<nova posição>.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -5064,7 +5098,20 @@ http://vpython.org/contents/doc.html
 
 \end_inset
 
- um tutorial informações mais detalhadas sobre o Visual Python
+ informações mais detalhadas sobre o Visual Python.
+ Um bom tutorial será 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://vpython.org/contents/docs/visual/VPython_Intro.pdf
+\end_layout
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5072,6 +5119,7 @@ http://vpython.org/contents/doc.html
 status open
 
 \begin_layout Plain Layout
+
 
 \backslash
 begin{ex}
@@ -5084,6 +5132,7 @@ Anime uma bola, fazendo-a aumentar e diminuir de volume sinusoidalmente.
 status open
 
 \begin_layout Plain Layout
+
 
 \backslash
 end{ex}
@@ -7069,11 +7118,353 @@ end{python}
 \end_layout
 
 \begin_layout Chapter
-Problema do bêbado
+Passeio Aleatório
 \end_layout
 
 \begin_layout Standard
-Vinho branco ou vinho tinto?
+Neste capítulo vai ser apresentado um modelo estatístico adequado a explicar
+ o movimento Browniano.
+ Vamos começar por estudar o problema do passeio aleatório, o qual é a base
+ do nosso modelo, e depois aplicá-lo ao estudo do movimento Browniano.
+\end_layout
+
+\begin_layout Section
+Experiência
+\end_layout
+
+\begin_layout Standard
+Começemos por uma experiência conceptual.
+ Imaginem alguem que ingeriu uma grande quantidade de bebidas alcoólicas,
+ ao ponto de perder completamente o seu sentido de orientação.
+ Imaginemos que este, devido à sua falta de equilíbrio, em cada instante
+ de tempo dá um passo numa direcção aleatória.
+ A nossa pergunta é: ao fim de um dado tempo, e a que distância estará este
+ da sua posição inicial? (neste caso vai-nos interessar o quadrado desta
+ distância, também chamado de desvio quadrático.
+ Vai ser claro porquê mais à frente.) POSICAO MÈDIA TB
+\end_layout
+
+\begin_layout Standard
+Para responder a esta pergunta, podemos utilizar os nossos conhecimentos
+ de python e fazer um programa que simule esta situação improvável de observar
+ na vida real.
+ Começemos por definir o nosso problema: queremos calcular uma trajectória
+ com N passos, onde em cada um deles se dá um passo numa direcção aleatória.
+ Queremos também calcular o desvio quadrático ao longo dos N passos.
+ Para simplificar vamos assumir que só existem 4 direcções possívels: cima,
+ baixo, esquerda e direita.
+ Como implementar isto? 
+\end_layout
+
+\begin_layout Itemize
+Qual a maneira mais indicada para guardar os dados da trajectória e desvio
+ quadrático? Necessitamos de guardar N valores de x e y e R2.
+ A estrutura de dados mais imediata para este efeito é a lista.
+ 
+\end_layout
+
+\begin_layout Itemize
+O facto de haverem N passos implica que temos de fazer um ciclo, que corre
+ N vezes, adicionando um ponto à trajectória de cada vez.
+\end_layout
+
+\begin_layout Itemize
+É necessário escolher direcções aleatórias - logo será necessário gerar
+ números aleatórios, e fazer uma decisão consoante o resultado.
+\end_layout
+
+\begin_layout Standard
+Uma implementação possível:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab
+\end_layout
+
+\begin_layout Plain Layout
+
+import random
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria as listas que representam a nossa trajectória x,y 
+\end_layout
+
+\begin_layout Plain Layout
+
+# inicialmente estamos no ponto (0,0) 
+\end_layout
+
+\begin_layout Plain Layout
+
+x = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+y = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+trajectoria_x = [0] 
+\end_layout
+
+\begin_layout Plain Layout
+
+trajectoria_y = [0]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Cria a lista do R^2
+\end_layout
+
+\begin_layout Plain Layout
+
+R2 = [0]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Adiciona um ponto novo à trajectória N vezes
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in xrange(N):
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Adiciona valores as listas com os dados de x e y da nossa trajectória
+\end_layout
+
+\begin_layout Plain Layout
+
+    # segundo um passeio aleatorio
+\end_layout
+
+\begin_layout Plain Layout
+
+    p = random.random()*4
+\end_layout
+
+\begin_layout Plain Layout
+
+    if(p < 1):
+\end_layout
+
+\begin_layout Plain Layout
+
+        x = x + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    elif(p < 2):
+\end_layout
+
+\begin_layout Plain Layout
+
+        x = x - 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    elif(p < 3):
+\end_layout
+
+\begin_layout Plain Layout
+
+        y = y + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+        y = y + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    trajectoria_x.append(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+    trajectoria_y.append(y)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    R2.append(x**2 + y**2)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Desenha um linha com a trajectória 
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.subplot(211)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(trajectoria_x,trajectoria_y) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Desenha o gráfico do R^2
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.subplot(212)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(R2) 
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.show()
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usando este programa, que resultados obtemos? Vejamos três resultados:
+\end_layout
+
+\begin_layout Standard
+TRES SCREENSHOTS
+\end_layout
+
+\begin_layout Standard
+A trajectória parece caótica, sem nenhum padrão óbvio.
+ De facto, observando as trajectórias não há muitas conclusões que se possam
+ tirar.
+ No entanto, o gráfico do desvio quadrático parece FALAR DA POSIÇÂO MÈDIA
+\end_layout
+
+\begin_layout Standard
+É apenas quando se faz uma análise estatística que o problema fica interessante.
+ 
+\end_layout
+
+\begin_layout Section
+Vários Caminhantes
+\end_layout
+
+\begin_layout Standard
+ESTATISTICA, POSICAO MÈDIA NA MESMA MAS R2 linear
+\end_layout
+
+\begin_layout Section
+Realidade
+\end_layout
+
+\begin_layout Standard
+MAS ONDE TEM ESTE MODELO APLICAçÕES?
+\end_layout
+
+\begin_layout Standard
+DAR VARIOS EXEMPLOS
+\end_layout
+
+\begin_layout Section
+Previsão
+\end_layout
+
+\begin_layout Standard
+Explicar efeito da inclinação
+\end_layout
+
+\begin_layout Section
+Estimar a Constante de Boltzmann
 \end_layout
 
 \begin_layout Chapter
@@ -9313,7 +9704,7 @@ No capítulo 3 já foram usadas bibliotecas para poder usar funções matemátic
 \end_layout
 
 \begin_layout Subsection*
-1) Grafico animado (matplotlib)
+1) Grafico animado (pylab/matplotlib)
 \end_layout
 
 \begin_layout Standard
@@ -9490,7 +9881,7 @@ for i in xrange(100):
 
 \begin_layout Plain Layout
 
-    else:=======
+    else:
 \end_layout
 
 \begin_layout Plain Layout
@@ -9578,7 +9969,7 @@ end{python}
 \end_layout
 
 \begin_layout Subsection*
-2) Vários gráficos animados na mesma janela (matplotlib)
+2) Vários gráficos animados na mesma janela (pylab/matplotlib)
 \end_layout
 
 \begin_layout Standard
@@ -10237,7 +10628,7 @@ end{python}
 \end_layout
 
 \begin_layout Subsection*
-3) Gráficos z=f(x,y) e o conjunto de mandelbrot (matplotlib)
+3) Gráficos z=f(x,y) e o conjunto de mandelbrot (pylab/matplotlib)
 \end_layout
 
 \begin_layout Standard
@@ -10761,12 +11152,8 @@ while 1:
 
 \begin_layout Plain Layout
 
-        #calcula a aceleração devido à força gravítica         
-\end_layout
-
-\begin_layout Plain Layout
-
-        dx = float(satelite_x[i])-400.
+        #calcula a aceleração devido à força gravítica         dx = float(sateli
+te_x[i])-400.
 \end_layout
 
 \begin_layout Plain Layout
@@ -10815,12 +11202,12 @@ while 1:
 
 \begin_layout Plain Layout
 
-        dt = 0.25
+                  dt = 0.25
 \end_layout
 
 \begin_layout Plain Layout
 
-  # valor arbitrário, neste programa não precisamos de valores realistas.
+#valor arbitrário, neste programa não precisamos de valores realistas.
 \end_layout
 
 \begin_layout Plain Layout
@@ -10836,13 +11223,9 @@ while 1:
 
 \begin_layout Plain Layout
 
-         # integração utilizando o método de euler-cromer -  
-\end_layout
-
-\begin_layout Plain Layout
-
-         # http://wiki.vdrift.net/Numerical_Integration#Newton-Stormer-Verlet_.28NS
-V.29_.2F_Symplectic_Euler_.2F_Euler.E2.80.93Cromer_algorithm
+        # integração utilizando o método de euler-cromer - http://wiki.vdrift.net/
+Numerical_Integration#Newton-Stormer-Verlet_.28NSV.29_.2F_Symplectic_Euler_.2F_Euler.
+E2.80.93Cromer_algorithm
 \end_layout
 
 \begin_layout Plain Layout
@@ -10857,7 +11240,7 @@ V.29_.2F_Symplectic_Euler_.2F_Euler.E2.80.93Cromer_algorithm
 
 \begin_layout Plain Layout
 
-       satelite_x[i] += dt*satelite_vx[i]
+        satelite_x[i] += dt*satelite_vx[i]
 \end_layout
 
 \begin_layout Plain Layout
@@ -10993,8 +11376,12 @@ te_y[i])), 2,1)
 
 \begin_layout Plain Layout
 
-        if event.type == QUIT:  #Se ele tentou fechar a janela          
-   quit()
+        if event.type == QUIT:  #Se ele tentou fechar a janela
+\end_layout
+
+\begin_layout Plain Layout
+
+            quit()
 \end_layout
 
 \begin_layout Plain Layout

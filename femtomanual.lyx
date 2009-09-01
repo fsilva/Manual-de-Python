@@ -9,6 +9,7 @@
 \usepackage{textcomp}
 \usepackage{setspace}
 \usepackage{palatino}
+\usepackage{geometry}
 
 \theoremstyle{plain}
 \newtheorem{ex}{Exercício}[chapter]
@@ -101,7 +102,7 @@ theorems-ams
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize a4paper
-\use_geometry true
+\use_geometry false
 \use_amsmath 1
 \use_esint 1
 \cite_engine basic
@@ -131,7 +132,46 @@ Manual de Python
 \end_layout
 
 \begin_layout Author
-Francisco Silva, Tiago Dinis
+Francisco Silva 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ João Gomes 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Miguel Zilhão 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Tiago Dinis
 \end_layout
 
 \begin_layout Date
@@ -225,6 +265,7 @@ Podem ver no sítio
 status collapsed
 
 \begin_layout Plain Layout
+
 http://static.howstuffworks.com/flash/nanotechnology.swf
 \end_layout
 
@@ -393,6 +434,7 @@ http://try-python.mired.org/
 status collapsed
 
 \begin_layout Plain Layout
+
 http://codepad.org
 \end_layout
 
@@ -1673,6 +1715,67 @@ E por fim, o programa devolve o valor de
 \begin_inset Formula $n^{2}$
 \end_inset
 
+.
+\end_layout
+
+\begin_layout Standard
+Outra forma de escrever este exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+n=5
+\end_layout
+
+\begin_layout Plain Layout
+
+print "Este é o meu primeiro cálculo:
+\backslash
+n %i ao quadrado é %i" % (n,n**2)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notem que utilizamos o operador 
+\emph on
+%i 
+\emph default
+para introduzir uma variável inteira.
+ Para variáveis reais usa-se 
+\emph on
+%f 
+\emph default
+e para cadeias usa-se 
+\emph on
+%s
+\emph default
 .
 \end_layout
 
@@ -3465,6 +3568,12 @@ O módulo time permite várias operações com o tempo;
 
 \end_deeper
 \begin_layout Itemize
+numpy extende as potencialidades do Python, definindo vectores, matrizes
+ multi-dimensionais bem como funções que operam nesses objectos.
+ Existe ainda o scipy que o complementa;
+\end_layout
+
+\begin_layout Itemize
 A biblioteca matplotlib que contém o módulo pylab que define várias rotinas
  para desenhar gráficos, ver secção 
 \begin_inset CommandInset ref
@@ -3479,12 +3588,6 @@ reference "sub:pylab"
 \begin_layout Itemize
 A biblioteca VPython ou Visual Python permite-nos criar, de forma simples,
  gráficos e animações a 3d interactivos.
-\end_layout
-
-\begin_layout Itemize
-numpy extende as potencialidades do Python, definindo vectores, matrizes
- multi-dimensionais bem como funções que operam nesses objectos.
- Existe ainda o scipy que o complementa;
 \end_layout
 
 \begin_layout Standard
@@ -3609,7 +3712,23 @@ name "sub:mathmath"
 
 \begin_layout Standard
 Um dos módulos que nós mais vamos usar é o math, dele fazem parte as seguintes
- funções:
+ funções
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3953,6 +4072,22 @@ pi
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Duas notas.
  O seno, coseno e tangente usam radianos.
  No caso do logaritmo não nepariano usa-se log(,base)
@@ -4072,6 +4207,138 @@ status open
 
 \backslash
 end{ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+O módulo numpy
+\end_layout
+
+\begin_layout Standard
+Vamos usar o módulo numpy para criar e manipular vectores e matrizes.
+ Um pequeno exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+import numpy
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria um vector tridimensional de valores reais
+\end_layout
+
+\begin_layout Plain Layout
+
+a=numpy.array([3],Float)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Damos um valor às componentes do vector
+\end_layout
+
+\begin_layout Plain Layout
+
+a[0]=1
+\end_layout
+
+\begin_layout Plain Layout
+
+a[1]=3.2
+\end_layout
+
+\begin_layout Plain Layout
+
+a[2]=0.1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria uma matriz 3x3 de valores inteiros inicializada a zero
+\end_layout
+
+\begin_layout Plain Layout
+
+M=numpy.zeros([3,3],Int)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Altera o valor das entradas da matriz
+\end_layout
+
+\begin_layout Plain Layout
+
+M[0][2]=1
+\end_layout
+
+\begin_layout Plain Layout
+
+M[1][1]=-1
+\end_layout
+
+\begin_layout Plain Layout
+
+M[2][0]=1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Imprime a matriz
+\end_layout
+
+\begin_layout Plain Layout
+
+print M
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
 \end_layout
 
 \end_inset
@@ -4981,21 +5248,11 @@ from math import *
 
 \begin_layout Plain Layout
 
-import time
 \end_layout
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-N=1000  #Número de iterações
-\end_layout
-
-\begin_layout Plain Layout
-
-T=2*pi   #Amplitude total da órbita em radanos
+N=1000   #Número de iterações
 \end_layout
 
 \begin_layout Plain Layout
@@ -5043,7 +5300,7 @@ for i in range(N):
 
 \begin_layout Plain Layout
 
-  time.sleep(0.01) #Faz uma pausa de 0.01 segundos
+  rate(100) #Limita o número de actualizações por segundo a 100
 \end_layout
 
 \begin_layout Plain Layout
@@ -5052,12 +5309,12 @@ for i in range(N):
 
 \begin_layout Plain Layout
 
-  x=sin(i*T/N)
+  x=sin(i*2*pi/N)
 \end_layout
 
 \begin_layout Plain Layout
 
-  y=cos(i*T/N)
+  y=cos(i*2*pi/N)
 \end_layout
 
 \begin_layout Plain Layout
@@ -5386,7 +5643,10 @@ end{python}
 
 \begin_layout Standard
 O comando fic.readline() lê uma linha e passa para a seguinte.
- Já o comando fic.read() lê o ficheiro completo.
+ O comando fic.read() lê o ficheiro completo e retorna-o numa cadeia de caractere
+s.
+ O fic.readlines() lê também o ficheiro completo mas devolve uma lista cujos
+ elementos são as linhas.
  
 \end_layout
 

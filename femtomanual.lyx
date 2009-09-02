@@ -8297,7 +8297,11 @@ Ao aumentarmos o número de caminhantes, vemos duas tendências claras: a
  publicação: 'Investigações na teoria do movimento browniano', a qual explicou
  o movimento errático de partículas de polen suspensas em água com argumentos
  baseados em moléculas e átomos, conceitos bastante disputados na altura.
- Assim, pode-se dizer que este modelo simples do passeio aleatório e a teoria
+ 
+\end_layout
+
+\begin_layout Standard
+Assim, pode-se dizer que este modelo simples do passeio aleatório e a teoria
  desenvolvida por Einstein dão uma explicação para o comportamento dos grãos
  de polen de brown, de maneira a reforçar a credibilidade da ideia que a
  matéria é composta por átomos.
@@ -8305,23 +8309,133 @@ Ao aumentarmos o número de caminhantes, vemos duas tendências claras: a
 \end_layout
 
 \begin_layout Section
-Realidade
-\end_layout
-
-\begin_layout Standard
-MAS ONDE TEM ESTE MODELO APLICAçÕES?
-\end_layout
-
-\begin_layout Standard
-DAR VARIOS EXEMPLOS
-\end_layout
-
-\begin_layout Section
 Previsão
 \end_layout
 
 \begin_layout Standard
-Explicar efeito da inclinação
+Não fiquemos por aqui.
+ Usemos o nosso modelo teórico para prever o que acontece noutras situações.
+ Por exemplo, imaginem grãos de polen suspensos em água.
+ Estes estão sujeitos a uma grande quantidade de choques por parte das moléculas
+ de água, logo idealmente vão descrever movimento browniano.
+ Mas o que acontece quando se encontram numa superfície inclinada, ou quando
+ existe uma pequena corrente na água para um dos lados? Naturalmente as
+ suas trajectórias serão mais direccionadas para uma das direcções.
+ 
+\end_layout
+
+\begin_layout Standard
+Como podemos inserir isto no nosso modelo? Uma maneira será atribuir uma
+ maior probabilidade de o caminhante se deslocar para um dos lados do que
+ para os outros.
+ Isto pode ser feito substituindo, no exemplo anterior, a linha:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+        p = random.random()*4
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+        p = random.random()*5 #ou um número maior
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assim, a probabilidade do caminhante se deslocar para baixo será o dobro
+ das outras direcções.
+ Porquê? Vejamos os resultados possíveis: se sair um número entre 0 e 1,
+ vai para a direita, entre 1 e 2, vai para a esquerda, 2 e 3, cima, 3 e
+ 5, baixo.
+ Como é duas vezes mais provável ir para baixo do que ir para uma das outras
+ direcções, o efeito é equivalente à presença de inclinação ou fluxo de
+ água.
+ Um resultado possível, com N=1000 e M=500 será:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename brown_exemplo3.png
+	lyxscale 40
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vemos que o y médio decresceu quase linearmente ao longo do tempo, tal como
+ num movimento rectilíneo.
+ Não surpreendentemente, a média de 
+\begin_inset Formula $r^{2}$
+\end_inset
+
+ aumenta quadráticamente, tal como no movimento rectilíneo (se a posição
+ é 
+\begin_inset Formula $x=0,y=mt$
+\end_inset
+
+, o desvio quadrático será 
+\begin_inset Formula $r^{2}=x^{2}+y^{2}=m^{2}t^{2}$
+\end_inset
+
+, quadrático no tempo).
+ Assim, se fizermos uma experiência seguindo as trajectórias de partículas
+ em água , e calculando o desvio quadrático médio, esperamos um gráfico
+ com uma recta caso a amostra esteja nivelada e sem correntes ou uma parábola
+ caso contrário.
+ 
 \end_layout
 
 \begin_layout Chapter

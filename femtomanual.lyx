@@ -7399,18 +7399,23 @@ Começemos por uma experiência conceptual.
  Imaginemos que este, devido à sua falta de equilíbrio, em cada instante
  de tempo dá um passo numa direcção aleatória.
  A nossa pergunta é: ao fim de um dado tempo, e a que distância estará este
- da sua posição inicial? (neste caso vai-nos interessar o quadrado desta
- distância, também chamado de desvio quadrático.
- Vai ser claro porquê mais à frente.) POSICAO MÈDIA TB
+ da sua posição inicial e qual a sua posição média? (neste caso vai-nos
+ interessar o quadrado desta distância, também chamado de desvio quadrático.
+ Vai ser claro porquê mais à frente.)
 \end_layout
 
 \begin_layout Standard
 Para responder a esta pergunta, podemos utilizar os nossos conhecimentos
  de python e fazer um programa que simule esta situação improvável de observar
  na vida real.
- Começemos por definir o nosso problema: queremos calcular uma trajectória
- com N passos, onde em cada um deles se dá um passo numa direcção aleatória.
- Queremos também calcular o desvio quadrático ao longo dos N passos.
+\end_layout
+
+\begin_layout Standard
+Começemos por definir o nosso problema de um modo mais formal: queremos
+ calcular uma trajectória com N passos, onde em cada um deles se dá um passo
+ numa direcção aleatória.
+ Queremos também calcular o desvio quadrático e a sua posição média ao longo
+ dos N passos.
  Para simplificar vamos assumir que só existem 4 direcções possívels: cima,
  baixo, esquerda e direita.
  Como implementar isto? 
@@ -7418,8 +7423,13 @@ Para responder a esta pergunta, podemos utilizar os nossos conhecimentos
 
 \begin_layout Itemize
 Qual a maneira mais indicada para guardar os dados da trajectória e desvio
- quadrático? Necessitamos de guardar N valores de x e y e R2.
- A estrutura de dados mais imediata para este efeito é a lista.
+ quadrático? Necessitamos de guardar N valores de x, y, x médio, y médio
+ e 
+\begin_inset Formula $r^{2}$
+\end_inset
+
+.
+ A maneira mais imediata de fazer isto é usar uma lista.
  
 \end_layout
 
@@ -7507,16 +7517,41 @@ trajectoria_y = [0]
 
 \begin_layout Plain Layout
 
-#Cria a lista do R^2
+#Cria a lista do R^2, x médio e y médio
 \end_layout
 
 \begin_layout Plain Layout
 
-R2 = [0]
+R2      = [0]
 \end_layout
 
 \begin_layout Plain Layout
 
+soma_x  = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+x_medio = [0]
+\end_layout
+
+\begin_layout Plain Layout
+
+soma_y  = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+y_medio = [0]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N = 1000
 \end_layout
 
 \begin_layout Plain Layout
@@ -7585,7 +7620,7 @@ for i in xrange(N):
 
 \begin_layout Plain Layout
 
-        y = y + 1
+        y = y - 1
 \end_layout
 
 \begin_layout Plain Layout
@@ -7617,6 +7652,40 @@ for i in xrange(N):
 
 \begin_layout Plain Layout
 
+    soma_x += x
+\end_layout
+
+\begin_layout Plain Layout
+
+    x_medio.append(soma_x/(i+1))
+\end_layout
+
+\begin_layout Plain Layout
+
+    soma_y += y
+\end_layout
+
+\begin_layout Plain Layout
+
+    y_medio.append(soma_y/(i+1))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#força o gráfico a ter um aspecto rectangular 14x4
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.figure(0,figsize=(14,4))
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -7626,7 +7695,12 @@ for i in xrange(N):
 
 \begin_layout Plain Layout
 
-pylab.subplot(211)
+pylab.subplot(131)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title('Trajectoria')
 \end_layout
 
 \begin_layout Plain Layout
@@ -7640,17 +7714,55 @@ pylab.plot(trajectoria_x,trajectoria_y)
 
 \begin_layout Plain Layout
 
+#Desenha o gráfico do x médio e y médio
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.subplot(132)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title('X e Y medios em funcao do tempo')
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(x_medio) 
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(y_medio)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 #Desenha o gráfico do R^2
 \end_layout
 
 \begin_layout Plain Layout
 
-pylab.subplot(212)
+pylab.subplot(133)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title('r**2 em funcao do tempo')
 \end_layout
 
 \begin_layout Plain Layout
 
 pylab.plot(R2) 
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -7676,22 +7788,49 @@ end{python}
 \end_layout
 
 \begin_layout Standard
-Usando este programa, que resultados obtemos? Vejamos três resultados:
+Usando este programa, que resultados obtemos? Dois resultados possíveis,
+ com N=5000 e N=100000:
 \end_layout
 
 \begin_layout Standard
-TRES SCREENSHOTS
+\begin_inset Graphics
+	filename /Users/fsilva/Desktop/untitled folder/femtomanual_actualizado/brown_exemplo1_5000.png
+	height 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/fsilva/Desktop/untitled folder/femtomanual_actualizado/brown_exemplo1_10000.png
+	height 75col%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 A trajectória parece caótica, sem nenhum padrão óbvio.
- De facto, observando as trajectórias não há muitas conclusões que se possam
- tirar.
- No entanto, o gráfico do desvio quadrático parece FALAR DA POSIÇÂO MÈDIA
+ De facto, executando o programa várias vezes e observando várias trajectórias
+ diferentes não há muitas conclusões que se possam tirar.
+ Mesmo os gráficos do x e y médios são 
+\emph on
+geralmente 
+\emph default
+diferentes do que esperariamos intuitivamente: se há a mesma probabilidade
+ de andar para um lado que para o outro, seria de esperar que em média o
+ deslocamento fosse 0.
+ 
 \end_layout
 
 \begin_layout Standard
-É apenas quando se faz uma análise estatística que o problema fica interessante.
+Vemos assim que não é muito vantajoso analisarmos o problema em termos de
+ uma só partícula.
+ Na verdade é apenas quando se faz uma estatística sob a trajectória de
+ várias partículas que o problema fica interessante.
  
 \end_layout
 
@@ -7700,7 +7839,453 @@ Vários Caminhantes
 \end_layout
 
 \begin_layout Standard
-ESTATISTICA, POSICAO MÈDIA NA MESMA MAS R2 linear
+Imaginemos o mesmo problema, mas em vez de termos apenas um bêbado temos
+ uma comitiva de M bêbados.
+ Queremos estudar os seus deslocamentos médios em x e y (num dado instante
+ de tempo, não ao longo do tempo como no exemplo anterior) e a média dos
+ seus desvios quadráticos.
+ Usemos outra vez o python para resolver o problema.
+ Agora em vez de haver apenas um caminhante, existem M caminhantes, logo
+ M posições x,y.
+ Como não vamos fazer os gráficos das trajectórias, apenas necessitamos
+ de guardar a posição corrente dos caminhantes, ao contrário do exemplo
+ anterior que guardavamos a trajectória ao longo do tempo.
+ Assim, podemos utilizar uma lista para guardar todos os valores de x num
+ dado instante de tempo (e outra para y).
+\end_layout
+
+\begin_layout Standard
+Uma implementação possível:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{python}
+\end_layout
+
+\begin_layout Plain Layout
+
+#coding=utf8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import pylab 
+\end_layout
+
+\begin_layout Plain Layout
+
+import random
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Número de Caminhantes
+\end_layout
+
+\begin_layout Plain Layout
+
+M = 50
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Cria as listas que vão conter os pontos x_i,y_i no último instante de
+ tempo
+\end_layout
+
+\begin_layout Plain Layout
+
+trajectorias_x = []
+\end_layout
+
+\begin_layout Plain Layout
+
+trajectorias_y = []
+\end_layout
+
+\begin_layout Plain Layout
+
+# Adiciona M pontos iniciais às trajectórias
+\end_layout
+
+\begin_layout Plain Layout
+
+for j in range(M):
+\end_layout
+
+\begin_layout Plain Layout
+
+    trajectorias_x.append(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+    trajectorias_y.append(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Cria a lista do R^2, x médio e y médio
+\end_layout
+
+\begin_layout Plain Layout
+
+R2      = [0]
+\end_layout
+
+\begin_layout Plain Layout
+
+x_medio = [0]
+\end_layout
+
+\begin_layout Plain Layout
+
+y_medio = [0]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N = 1000 
+\end_layout
+
+\begin_layout Plain Layout
+
+# Processa pontos novos N vezes
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in xrange(N):
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Adiciona valores as listas com os dados de x e y das nossas trajectórias
+\end_layout
+
+\begin_layout Plain Layout
+
+     # segundo um passeio aleatorio
+\end_layout
+
+\begin_layout Plain Layout
+
+    for j in range(M):
+\end_layout
+
+\begin_layout Plain Layout
+
+        p = random.random()*4
+\end_layout
+
+\begin_layout Plain Layout
+
+        if(p < 1):
+\end_layout
+
+\begin_layout Plain Layout
+
+            trajectorias_x[j] = trajectorias_x[j] + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        elif(p < 2):
+\end_layout
+
+\begin_layout Plain Layout
+
+            trajectorias_x[j] = trajectorias_x[j] - 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        elif(p < 3):
+\end_layout
+
+\begin_layout Plain Layout
+
+            trajectorias_y[j] = trajectorias_y[j] + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        else:
+\end_layout
+
+\begin_layout Plain Layout
+
+            trajectorias_y[j] = trajectorias_y[j] - 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Calcula a média dos desvios quadráticos
+\end_layout
+
+\begin_layout Plain Layout
+
+    soma_R2 = 0.
+\end_layout
+
+\begin_layout Plain Layout
+
+    for k in range(M):
+\end_layout
+
+\begin_layout Plain Layout
+
+        soma_R2 = soma_R2 + trajectorias_x[k]**2+trajectorias_y[k]**2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    R2.append(soma_R2/M)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Calcula a posição média entre as partículas
+\end_layout
+
+\begin_layout Plain Layout
+
+    soma_x = 0.
+\end_layout
+
+\begin_layout Plain Layout
+
+    soma_y = 0.
+\end_layout
+
+\begin_layout Plain Layout
+
+    for l in range(M):
+\end_layout
+
+\begin_layout Plain Layout
+
+        soma_x = soma_x + trajectorias_x[l]
+\end_layout
+
+\begin_layout Plain Layout
+
+        soma_y = soma_y + trajectorias_y[l]
+\end_layout
+
+\begin_layout Plain Layout
+
+    x_medio.append(soma_x/M)
+\end_layout
+
+\begin_layout Plain Layout
+
+    y_medio.append(soma_y/M)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#força o gráfico a ter um aspecto rectangular 10x4
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.figure(0,figsize=(10,4))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Desenha o gráfico do x médio e y médio
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.subplot(121)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(x_medio)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(y_medio)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title('X e Y medios em funcao do tempo') 
+\end_layout
+
+\begin_layout Plain Layout
+
+#força a escala em y de -10 a 10 
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.ylim((-10,10))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Desenha o gráfico do R^2
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.subplot(122)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.plot(R2)
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.title('r**2 medio em funcao do tempo')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pylab.show()
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{python}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vejamos resultados possíveis.
+ Para N=1000, M=1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/fsilva/Desktop/untitled folder/femtomanual_actualizado/brown_exemplo2_1.png
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apenas um caminhante.
+ O resultado é semelhante ao do exemplo anterior.
+ Para N = 1000, M=10:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/fsilva/Desktop/untitled folder/femtomanual_actualizado/brown_exemplo2_10.png
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para N = 1000, M = 50:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/fsilva/Desktop/untitled folder/femtomanual_actualizado/brown_exemplo2_50.png
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para N = 1000, M = 500:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/fsilva/Desktop/untitled folder/femtomanual_actualizado/brown_exemplo2_500.png
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ao aumentarmos o número de caminhantes, vemos duas tendências claras: a
+ média dos deslocamentos das partículas mantem-se cada vez mais próxima
+ de zero durante as trajectórias e o desvio quadrático médio torna-se cada
+ vez mais próximo de uma recta.
+ Estes resultados implicam que, em média, as partículas se afastam da posição
+ inicial, de maneira que o quadrado
 \end_layout
 
 \begin_layout Section
@@ -7721,10 +8306,6 @@ Previsão
 
 \begin_layout Standard
 Explicar efeito da inclinação
-\end_layout
-
-\begin_layout Section
-Estimar a Constante de Boltzmann
 \end_layout
 
 \begin_layout Chapter

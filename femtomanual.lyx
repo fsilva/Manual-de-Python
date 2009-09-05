@@ -11177,7 +11177,7 @@ theta_i=70.
 
 \begin_layout Plain Layout
 
-u[2]=vel_i*cos(theta_i*pi/180.)    # componente x da velicidade da sonda
+u[2]=vel_i*cos(theta_i*pi/180.)    # componente x da velocidade da sonda
  
 \end_layout
 
@@ -11206,12 +11206,12 @@ u[5]=0.
 \begin_layout Plain Layout
 
 u[6]=0.
-                            # componente x da velicidade de Júpiter 
+                            # componente x da velocidade de Júpiter 
 \end_layout
 
 \begin_layout Plain Layout
 
-u[7]=1.*omega * r2                 # componente y da velicidade de Júpiter
+u[7]=1.*omega * r2                 # componente y da velocidade de Júpiter
 \end_layout
 
 \begin_layout Plain Layout
